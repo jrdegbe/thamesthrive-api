@@ -333,16 +333,45 @@ async def debug_flow(flow: FlowGraph, event_id: Optional[str] = None):
             duration=session.metadata.time.duration
         )
         session.operation.new = True
+
+@router.post("/flow/debug", tags=["flow"],
+             include_in_schema=server.expose_gui_api)
+async def debug_flow(flow: FlowGraph, event_id: Optional[str] = None):
+    """
+        Debugs flow sent in request body
+    """
+
+    if event_id is None:
+        profile = Profile(id="@debug-profile-id",
+                          metadata=ProfileMetadata(
+                              time=ProfileTime(
+                                  insert=datetime.utcnow()
+                              )
+                          ))
+        session = Session(id="@debug-session-id",
+                          metadata=SessionMetadata(
+                              time=SessionTime(
+                                  insert=datetime.utcnow(),
+                                  timestamp=datetime.timestamp(datetime.utcnow())
+                              )
+                          ))
+        event_session = EventSession(
+            id=session.id,
+            start=session.metadata.time.insert,
+            duration=session.metadata.time.duration
+        )
+        session.operation.new = True
+
         source = Entity(id="@debug-source-id")
 
         event = Event(
-            metadata=EventMetadata(time=EventTime(insert=datetime.utcnow())),
+            metadata=EventMetadata(time=EventTime()),
             id='@debug-event-id',
             type="@debug-event-type",
-            source=source,
+            source=Resource(id="@debug-source-id", type="web-page"),
             session=event_session,
             profile=profile,
-            context={}
+            context=Context()
         )
 
     else:
@@ -381,9 +410,7 @@ async def debug_flow(flow: FlowGraph, event_id: Optional[str] = None):
         context={},
         request={},
         properties={},
-        events=[EventPayload(type=event.type, properties=event.properties)],
-        # options={"scheduledFlowId": "c186d8b4-5b66-426b-89bb-a546931e083b",
-        # "scheduledNodeId": "e61e6a7e-a847-4754-99e7-74fb7446a748"}
+        events=[EventPayload(type=event.type, properties=event.properties)]
     )
 
     tracker_payload.set_ephemeral(True)
@@ -433,25 +460,4 @@ async def debug_flow(flow: FlowGraph, event_id: Optional[str] = None):
         "debugInfo": flow_invoke_result.debug_info.dict(),
         "update": profile_save_result,
         "ux": ux
-    }
-
-
-@router.delete("/flow/{id}", tags=["flow"], response_model=Optional[dict], include_in_schema=server.expose_gui_api)
-async def delete_flow(id: str, response: Response):
-    """
-    Deletes flow with given id (str)
-    """
-    # Delete rule before flow
-    rule_delete_result = await rule_db.delete_by_id(id)
-    flow_delete_result = await flow_db.delete_by_id(id)
-
-    if flow_delete_result is None:
-        response.status_code = 404
-        return None
-
-    await flow_db.refresh()
-
-    return {
-        "rule": rule_delete_result,
-        "flow": flow_delete_result
     }
