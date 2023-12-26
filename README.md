@@ -1,44 +1,7 @@
-![github_banner](https://user-images.githubusercontent.com/16271564/148845983-7c9e85c1-465f-44ed-b1e9-7112908d2e83.png)
-
-  <p align="center">
-   Customer data and engagement suite, an open-source alternative to Segment, RudderStack, etc.
-  </p>
-
-  <p align="center">
-   <br/>
-    <a href="https://docs.ThamesThrive.com" rel="dofollow"><strong>Explore ThamesThrive Documentation</strong></a> ·
-    <a href="https://opencollective.com/ThamesThrive-cdp">⭐️ Support the project</a> ·
-    <a href="https://join.slack.com/t/ThamesThrive/shared_invite/zt-1bpf35skl-8Fr5FX5a6cji7tX18JNNDA">👨‍💻 Join community</a> ·
-    <a href="https://bit.ly/3pbdbPR">:tv: Watch tutorials on YOUTUBE</a>
-   <br/>
-  </p>
-  
- <p align="center">
-  <a href="https://github.com/ThamesThrive/ThamesThrive/">
-    <img alt="GitHub Repository Stars Count" src="https://img.shields.io/github/stars/ThamesThrive/ThamesThrive?style=social" />
-  </a>
-    <a href="https://twitter.com/ThamesThrive">
-        <img alt="Follow Us on Twitter" src="https://img.shields.io/twitter/follow/ThamesThrive?style=social" />
-    </a>
-    <a href="https://www.youtube.com/channel/UC0atjYqW43MdqNiSJBvN__Q">
-        <img alt="Subscribe on our Youtube Channel" src="https://img.shields.io/youtube/channel/subscribers/UC0atjYqW43MdqNiSJBvN__Q?style=social" />
-    </a>
-    <a href="https://opencollective.com/ThamesThrive-cdp">
-        <img alt="Subscribe on our Youtube Channel" src="https://opencollective.com/ThamesThrive-cdp/tiers/badge.svg" />
-    </a>
-    <a href="https://join.slack.com/t/ThamesThrive/shared_invite/zt-1bpf35skl-8Fr5FX5a6cji7tX18JNNDA">
-        <img alt="Subscribe on our Youtube Channel" src="https://img.shields.io/badge/slack-join_chat-white.svg?logo=slack&style=social" />
-    </a>
-</p>
-
-# Open-source Customer Engagement and Data Platform
+Customer Engagement and Data Platform
 
 [ThamesThrive](http://www.ThamesThrive.com) is an API-first solution, low-code / no-code platform aimed at any business that 
 wants to start using user data for automated customer engagement. ThamesThrive is intended for anyone who carries out any type of customer interaction, be it through sales or service delivery. ThamesThrive __collects data from customer journeys__ and assigns it to a profile, automates __data enhancement__, facilitates 🚀 __Machine Learning APIs__ usage.
-
-## ⭐️ Screenshots
-
-[![flow-1](https://user-images.githubusercontent.com/16271564/145562599-a188de6e-639b-479a-b263-863e9133df53.png)](https://www.youtube.com/watch?v=JrzFAfyctKw)
 
 ## ✨ Features
 
