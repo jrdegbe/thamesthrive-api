@@ -1,24 +1,24 @@
 # Data flow
 
-The data flow in Tracardi goes through the following stages:
+The data flow in ThamesThrive goes through the following stages:
 
 | Stage            | Description                                                                   |
 |------------------|-------------------------------------------------------------------------------|
-| `Source validation`| Tracardi must have event source defined and enabled in the system.            |
-| `Event data validation` | Tracardi can validate the event daa schema.                                |
+| `Source validation`| ThamesThrive must have event source defined and enabled in the system.            |
+| `Event data validation` | ThamesThrive can validate the event daa schema.                                |
 | `Identity resolution` | If an event is an idification point then this step is performed. |
-| `Event reshaping` | Tracardi can change the event schema if needed.                               |
-| `Event collection` | Tracardi saves the event.                                                     |
-| `Event routing`    | Tracardi reads a rule that defines which workflow must precess event.         |
-| `Processing`       | Tracardi runs a workflow that processed event data, enhances the data,routes  |
+| `Event reshaping` | ThamesThrive can change the event schema if needed.                               |
+| `Event collection` | ThamesThrive saves the event.                                                     |
+| `Event routing`    | ThamesThrive reads a rule that defines which workflow must precess event.         |
+| `Processing`       | ThamesThrive runs a workflow that processed event data, enhances the data,routes  |
 |                  | it to external systems, etc.                                                  |
-| `Profile merging`  | Tracardi checks if after processing the profile can be merged with other      |
+| `Profile merging`  | ThamesThrive checks if after processing the profile can be merged with other      |
 |                  | profile that seems to be the same.                                            |
-| `Profile segmentation` | Tracardi segments profile based on the rules provided by the system administator. |
+| `Profile segmentation` | ThamesThrive segments profile based on the rules provided by the system administator. |
 
 # Source validation
 
-Tracardi can collect data from many places, but all of them enter the system via two API endpoints (`/track`
+ThamesThrive can collect data from many places, but all of them enter the system via two API endpoints (`/track`
 and `/collect`).
 
 However, in order to transfer data to the system, the system administrator must enable it. By creating an event source,
@@ -26,7 +26,7 @@ creates a token that, when attached to the event data, will allow it to be sent 
 
 !!! Tips
 
-    Event sources can be found in Tracardi GUI under Traffic. We have inbound traffic that comes to Tracardi - 
+    Event sources can be found in ThamesThrive GUI under Traffic. We have inbound traffic that comes to ThamesThrive - 
     we call it `event sources`. And there is outboud traffic sometimes called the destination. This is the external
     system that the profile data can be sent when profile changes.
     
@@ -38,7 +38,7 @@ Event data validation is an important part of ensuring the quality and reliabili
 
 ## Event collection
 
-Event collection refers to the process of gathering data about events within Tracardi. 
+Event collection refers to the process of gathering data about events within ThamesThrive. 
 
 !!! Note "Example of an event"
 
@@ -47,7 +47,7 @@ Event collection refers to the process of gathering data about events within Tra
 
 All events go to a central database in elasticsearch and can be viewed via the GUI in the `Data` section.
 
-Events can be saved in the database or only processed. For each new event without an assigned user, Tracardi will create
+Events can be saved in the database or only processed. For each new event without an assigned user, ThamesThrive will create
 a new profile and assign upcoming events to it.
 
 ![Browsing events](../images/browsing-events.png)
@@ -55,7 +55,7 @@ a new profile and assign upcoming events to it.
 
 ## Event routing
 
-Tracardi saves the collected event and then looks for the rules that define the workflow to use to process the events. A
+ThamesThrive saves the collected event and then looks for the rules that define the workflow to use to process the events. A
 rule is a simple filtering process that checks that an event comes from a defined source and has a defined event type.
 For example, a simple rule might require a website to be the source of an event and a page-view for the event. Then, if
 an event occurs meets these criteria, the rule will run the defined flow and send the event data.
@@ -65,7 +65,7 @@ The rules connect events of a given type with the indicated workflow.
 !!! Warning
 
     Events that at the time of their registration did not have rules created, i.e. they were not connected to the process
-    that processes them, are not processed. They remain in the `received state`. Tracardi does not currently offer
+    that processes them, are not processed. They remain in the `received state`. ThamesThrive does not currently offer
     reprocessing of old data. More on events can be found in [Event's core definitions](../events/index.md)
 
 !!! Tip
@@ -75,7 +75,7 @@ The rules connect events of a given type with the indicated workflow.
 
 ## Processing
 
-Tracardi uses workflows to process data.
+ThamesThrive uses workflows to process data.
 
 Workflow is a graph of actions that will run when an event is matched with workflow. Actions may run one after another
 or in parallel. Workflow is represented as a graph of nodes and connections between them. Actions are assigned to nodes
@@ -84,7 +84,7 @@ query for additional data, send parts or whole data to another system or emit an
 
 ![Browsing events](../images/workflow.png)
 
-When the workflow ends Tracardi checks if there is a need for profile update, segmentation, and merging.
+When the workflow ends ThamesThrive checks if there is a need for profile update, segmentation, and merging.
 
 ## Segmentation
 
@@ -92,7 +92,7 @@ Segmentation is a term that refers to aggregating prospective customers into gro
 Segmentation enables companies to target different categories of consumers who perceive the full value of certain
 products and services differently from one another.
 
-Segmentation in Tracardi is based on a segment logic that is defined in the system, e.g. apply
+Segmentation in ThamesThrive is based on a segment logic that is defined in the system, e.g. apply
 segment `frequent-customer` to a profile that visited the page more than 10 times.
 
 Segmentation runs after the workflow ends.
@@ -105,7 +105,7 @@ Segmentation runs after the workflow ends.
 ## Merging
 
 Profile merging is the process of finding customer profiles that belong to one person and have been saved as separate
-records for various reasons. Tracardi runs profile merging after the workflow ends.
+records for various reasons. ThamesThrive runs profile merging after the workflow ends.
 
 !!! Question "How the profile can be merged?"
 
@@ -118,15 +118,15 @@ Summary
 
 Questions that this documentation answers:
 
-* What stages does data flow through in Tracardi?
-* How does Tracardi route events to the appropriate workflow?
-* What is the role of segmentation in Tracardi?
-* How does Tracardi handle profile merging?
-* What is event reshaping in Tracardi?
-* How does Tracardi determine which workflow to use when processing an event?
-* How does segmentation in Tracardi differ from traditional market segmentation techniques?
-* Can Tracardi be used to send data to multiple external systems simultaneously? If so, how?
-* How does Tracardi validate event data?
-* What are some examples of tasks that can be performed by actions in Tracardi workflows?
-* How does Tracardi segment profiles?
+* What stages does data flow through in ThamesThrive?
+* How does ThamesThrive route events to the appropriate workflow?
+* What is the role of segmentation in ThamesThrive?
+* How does ThamesThrive handle profile merging?
+* What is event reshaping in ThamesThrive?
+* How does ThamesThrive determine which workflow to use when processing an event?
+* How does segmentation in ThamesThrive differ from traditional market segmentation techniques?
+* Can ThamesThrive be used to send data to multiple external systems simultaneously? If so, how?
+* How does ThamesThrive validate event data?
+* What are some examples of tasks that can be performed by actions in ThamesThrive workflows?
+* How does ThamesThrive segment profiles?
 * How to merge profiles from different channels?

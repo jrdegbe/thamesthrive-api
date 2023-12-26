@@ -2,7 +2,7 @@
 
 The Sequencer Query plugin is used to retrieve an events sequence from the database based on a defined time range and
 context. It allows you to filter events using a query and set up the context for sequence matching. This plugin is part
-of the Tracardi Pro License.
+of the ThamesThrive Pro License.
 
 ## Description
 

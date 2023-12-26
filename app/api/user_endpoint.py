@@ -2,10 +2,10 @@ from uuid import uuid4
 
 from fastapi import APIRouter, Depends, HTTPException, Header, Response
 
-from tracardi.context import ServerContext, get_context
-from tracardi.domain.user import User
+from ThamesThrive.context import ServerContext, get_context
+from ThamesThrive.domain.user import User
 from app.config import server
-from tracardi.service.storage.driver.elastic import user as user_db
+from ThamesThrive.service.storage.driver.elastic import user as user_db
 from pydantic import BaseModel
 from typing import Optional, Union
 

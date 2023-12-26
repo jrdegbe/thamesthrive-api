@@ -1,16 +1,16 @@
 from fastapi import APIRouter, Depends, HTTPException
 
-from tracardi.config import tracardi
-from tracardi.service.storage.index import Resource
-from tracardi.service.storage.redis_client import RedisClient
-from tracardi.service.storage.elastic_client import ElasticClient
+from ThamesThrive.config import ThamesThrive
+from ThamesThrive.service.storage.index import Resource
+from ThamesThrive.service.storage.redis_client import RedisClient
+from ThamesThrive.service.storage.elastic_client import ElasticClient
 
 from app.api.auth.permissions import Permissions
 from app.config import server
 # from app.service.data_generator import generate_fake_data, generate_random_date
-# from tracardi.domain.event_source import EventSource
-# from tracardi.service.storage.driver.elastic import event_source as event_source_db
-from tracardi.service.storage.driver.elastic import raw as raw_db
+# from ThamesThrive.domain.event_source import EventSource
+# from ThamesThrive.service.storage.driver.elastic import event_source as event_source_db
+from ThamesThrive.service.storage.driver.elastic import raw as raw_db
 from datetime import datetime
 
 router = APIRouter(
@@ -51,7 +51,7 @@ router = APIRouter(
 @router.get("/test/redis", tags=["test"], include_in_schema=server.expose_gui_api)
 async def ping_redis():
     """
-    Tests connection between Redis instance and Tracardi instance. Accessible for roles: "admin"
+    Tests connection between Redis instance and ThamesThrive instance. Accessible for roles: "admin"
     """
     client = RedisClient()
     pong = client.ping()
@@ -62,7 +62,7 @@ async def ping_redis():
 @router.get("/test/elasticsearch", tags=["test"], include_in_schema=server.expose_gui_api)
 async def get_es_cluster_health():
     """
-    Tests connection between Elasticsearch and Tracardi by returning cluster info. Accessible for roles: "admin"
+    Tests connection between Elasticsearch and ThamesThrive by returning cluster info. Accessible for roles: "admin"
     """
     health = await raw_db.health()
     if not isinstance(health, dict):
@@ -76,7 +76,7 @@ async def get_es_indices():
     Returns list of indices in elasticsearch cluster. Accessible for roles: "admin"
     """
 
-    if tracardi.multi_tenant:
+    if ThamesThrive.multi_tenant:
         raise HTTPException(status_code=405, detail="This section is not allowed for multi-tenant server.")
 
     resource_aliases = Resource().list_aliases()

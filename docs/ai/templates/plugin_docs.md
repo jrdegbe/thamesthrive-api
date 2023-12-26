@@ -1,13 +1,13 @@
 # Your task
 
-You have been assigned the task of documenting the Tracardi plugin.
+You have been assigned the task of documenting the ThamesThrive plugin.
 
 Your goal is to create clear and understandable documentation for non-technical individuals who may not be familiar with
 terms like variable or class. You will be provided with the plugin's code and an available manual (if available), which
 you should incorporate into a single, consistent documentation in Markdown format.
 
-The documentation should begin with the plain plugin name not `Tracardi Plugin Documentation:`. Do not mention that user
-has to refer to the Tracardi documentation for more information (the generated text is the documentation).
+The documentation should begin with the plain plugin name not `ThamesThrive Plugin Documentation:`. Do not mention that user
+has to refer to the ThamesThrive documentation for more information (the generated text is the documentation).
 
 Use only plain English to describe the code and its components. Avoid including any code or plugin metadata in the
 documentation, except where necessary for clarity. Use the logic from the code to describe its purpose and how it works. 
@@ -19,17 +19,17 @@ Include the return data schema if possible.
 
 # General context
 
-Tracardi plugins are used in workflows. They are sometimes called actions or action plugins. Workflow passes data form 
+ThamesThrive plugins are used in workflows. They are sometimes called actions or action plugins. Workflow passes data form 
 plugin to plugin via its input and output ports. Plugin may have one input port and many output ports. 
 
 Workflow has internal state. It can be referenced byt the dot notation. In
-short, dot notation is a way of referencing data in Tracardi. It is used to access data from the internal state of the
+short, dot notation is a way of referencing data in ThamesThrive. It is used to access data from the internal state of the
 workflow, such as the event, profile, payload, flow, session, and memory. It is written in the form of <source>@<
 path.to.data>, where the source is the type of data you are referencing and the path is a string of keys that indicate
 where the data is located. Class DotAccessor is used to access dot notated data. Usually the DotAccessor dict is
 returned by `self._get_dot_accessor(payload)`. DotAccessor extends dict and acts as dict.
 
-Workflow can also execute UX plugins that in return will inject some javascript to the page where the Tracardi 
+Workflow can also execute UX plugins that in return will inject some javascript to the page where the ThamesThrive 
 integration script is placed.
 
 # How the code is organized:
@@ -122,7 +122,7 @@ FormField(
 ```
 Mention it in the documentation. 
 
-Please use the above information to create clear and understandable documentation for the Tracardi plugin.
+Please use the above information to create clear and understandable documentation for the ThamesThrive plugin.
 
 
 ### Dot parser
@@ -189,14 +189,14 @@ and after the error the description when it may occur.>
 Here is the full plugin code:
 
 from uuid import uuid4
-from tracardi.domain.entity import Entity
-from tracardi.domain.event import EventSession
-from tracardi.domain.session import Session, SessionMetadata
-from tracardi.domain.value_object.operation import Operation
-from tracardi.service.plugin.domain.register import Plugin, Spec, MetaData, Documentation, PortDoc
-from tracardi.service.plugin.domain.result import Result
-from tracardi.service.plugin.runner import ActionRunner
-from tracardi.service.storage.driver.elastic import session as session_db
+from ThamesThrive.domain.entity import Entity
+from ThamesThrive.domain.event import EventSession
+from ThamesThrive.domain.session import Session, SessionMetadata
+from ThamesThrive.domain.value_object.operation import Operation
+from ThamesThrive.service.plugin.domain.register import Plugin, Spec, MetaData, Documentation, PortDoc
+from ThamesThrive.service.plugin.domain.result import Result
+from ThamesThrive.service.plugin.runner import ActionRunner
+from ThamesThrive.service.storage.driver.elastic import session as session_db
 
 
 class AddEmptySessionAction(ActionRunner):

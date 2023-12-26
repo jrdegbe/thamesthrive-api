@@ -11,7 +11,7 @@ To connect to Mautic, three parameters are needed:
 ## Public key and private key
 
 Go to API Credentials on the right side menu. Select __OAuth 2__ as a protocol,
-name the credentials to recognize them later, and fill in Tracardi API URL as
+name the credentials to recognize them later, and fill in ThamesThrive API URL as
 __Redirect URI__. This parameter is to specify all hosts (separated by commas), that
 are going to connect to Mautic API. Public and private key should now be generated.
 

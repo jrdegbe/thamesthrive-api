@@ -9,3 +9,4 @@ def convert_errors(e: ValidationError):
         field = ".".join(error['loc']) if isinstance(error['loc'], tuple) else error['loc']
         response[field] = error['msg'].capitalize()
     return response
+

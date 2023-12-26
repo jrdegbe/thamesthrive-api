@@ -5,3 +5,4 @@ The documentation also explains the auto indexing feature which helps to make da
 The documentation also explains the copy event data to profile feature which will automatically duplicate the data associated with an event in certain profile properties. The table provided explains the exact mapping of which fields will be copied. 
 
 Finally, the documentation provides a JSON example and a tracker example of the event "Sign-Up". The JSON example provides an example of the expected properties associated with the event and the tracker example provides an example of how to track the event.
+

@@ -6,10 +6,10 @@ from fastapi import APIRouter, Depends, HTTPException
 from app.api.auth.permissions import Permissions
 from app.config import server
 from app.service.grouping import group_records
-from tracardi.domain.event_type_metadata import EventTypeMetadata
-from tracardi.service.events import get_default_event_type_mapping
-from tracardi.service.storage.driver.elastic import event_management as event_management_db
-from tracardi.service.storage.driver.elastic import event as event_db
+from ThamesThrive.domain.event_type_metadata import EventTypeMetadata
+from ThamesThrive.service.events import get_default_event_type_mapping
+from ThamesThrive.service.storage.driver.elastic import event_management as event_management_db
+from ThamesThrive.service.storage.driver.elastic import event as event_db
 from typing import Optional
 
 router = APIRouter(

@@ -1,7 +1,7 @@
 # How to get integration javascript that I put on my web page? 
 
 1. Begin by creating an event source, which can be found in the "Inbound Traffic Event Source" tab. This tab is
-   specifically designed to handle incoming data to Tracardi.
+   specifically designed to handle incoming data to ThamesThrive.
 
 2. Locate the button to create a new event source and click on it. This will initiate the process of setting up a new
    source for events.

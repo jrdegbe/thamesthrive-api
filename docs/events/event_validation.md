@@ -1,6 +1,6 @@
 # Event validation
 
-Events can be validated. Event validation can be configured in the Tracardi GUI or via the API. The endpoints
+Events can be validated. Event validation can be configured in the ThamesThrive GUI or via the API. The endpoints
 responsible for creating the validation schemes are located at the following endpoints:
 
 | Method      | Path                                  |                                             |
@@ -12,7 +12,7 @@ responsible for creating the validation schemes are located at the following end
 As always, complete API documentation is available at:
 
 ```
-http://tracardi-host:8686/docs
+http://ThamesThrive-host:8686/docs
 ```
 
 ## New event validation schema
@@ -64,7 +64,7 @@ json schema itself.
 
 Validation is cached and the default Time To Live for cache is 180 seconds. It means that validation schema will stay
 the same for 3 minutes even if it was change by the user. It will be red again after 180 seconds. To make the period
-longer or shorter, run Tracardi with environment variable EVENT_VALIDATOR_TTL set to the number of seconds you would
+longer or shorter, run ThamesThrive with environment variable EVENT_VALIDATOR_TTL set to the number of seconds you would
 like the system to cache the validation.
 
 ## Validation errors

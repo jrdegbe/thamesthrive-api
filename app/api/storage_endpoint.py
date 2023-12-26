@@ -4,11 +4,11 @@ from fastapi import APIRouter, Depends, HTTPException
 
 from app.api.auth.permissions import Permissions
 from app.config import server
-from tracardi.config import tracardi
-from tracardi.service.storage.driver.elastic import raw as raw_db
-from tracardi.service.storage.driver.elastic import snapshot as snapshot_db
-from tracardi.service.storage.elastic_client import ElasticClient
-from tracardi.service.storage.indices_manager import check_indices_mappings_consistency
+from ThamesThrive.config import ThamesThrive
+from ThamesThrive.service.storage.driver.elastic import raw as raw_db
+from ThamesThrive.service.storage.driver.elastic import snapshot as snapshot_db
+from ThamesThrive.service.storage.elastic_client import ElasticClient
+from ThamesThrive.service.storage.indices_manager import check_indices_mappings_consistency
 
 router = APIRouter(
     dependencies=[Depends(Permissions(roles=["admin", "maintainer"]))]
@@ -39,7 +39,7 @@ async def get_index_mapping_metadata(index: str, filter: str = None):
     Returns metadata of given index (str)
     """
 
-    # if tracardi.multi_tenant:
+    # if ThamesThrive.multi_tenant:
     #     raise HTTPException(status_code=405, detail="This operation is not allowed for multi-tenant server.")
 
     result = await raw_db.get_mapping_fields(index)
@@ -54,7 +54,7 @@ async def get_index_mapping(index: str):
     Returns mapping of given index (str)
     """
 
-    if tracardi.multi_tenant:
+    if ThamesThrive.multi_tenant:
         raise HTTPException(status_code=405, detail="This operation is not allowed for multi-tenant server.")
 
     mapping = await raw_db.get_mapping(index)
@@ -76,7 +76,7 @@ async def reindex_data(source: str, destination: str, wait_for_completion: bool 
     Copies data from one index to another.
     """
 
-    if tracardi.multi_tenant:
+    if ThamesThrive.multi_tenant:
         raise HTTPException(status_code=405, detail="This operation is not allowed for multi-tenant server.")
 
     return await raw_db.reindex(source, destination, wait_for_completion)
@@ -88,7 +88,7 @@ async def delete_index(index_name: str):
     Deletes storage index
     """
 
-    if tracardi.multi_tenant:
+    if ThamesThrive.multi_tenant:
         raise HTTPException(status_code=405, detail="This operation is not allowed for multi-tenant server.")
 
     es = ElasticClient.instance()
@@ -105,7 +105,7 @@ async def get_snapshot_repository(name: str):
     List repository snapshots
     """
 
-    if tracardi.multi_tenant:
+    if ThamesThrive.multi_tenant:
         raise HTTPException(status_code=405, detail="This operation is not allowed for multi-tenant server.")
 
     return await snapshot_db.get_snapshot_repository(repo=name)
@@ -118,7 +118,7 @@ async def get_snapshot_repository_status(name: Optional[str] = "_all"):
     Lists available snapshots withing the repository name. Use _all as a name to get all repos snapshots.
     """
 
-    if tracardi.multi_tenant:
+    if ThamesThrive.multi_tenant:
         raise HTTPException(status_code=405, detail="This operation is not allowed for multi-tenant server.")
 
     return await snapshot_db.get_repository_snapshots(repo=name)

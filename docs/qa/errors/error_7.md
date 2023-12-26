@@ -1,4 +1,4 @@
-# What is the reason for the "Failed connection with error: CORS request did not succeed" error in Tracardi API connection?
+# What is the reason for the "Failed connection with error: CORS request did not succeed" error in ThamesThrive API connection?
 
 The "Failed connection with error: CORS request did not succeed" error indicates that the HTTP request, which utilizes
 Cross-Origin Resource Sharing (CORS), has failed at the network or protocol level. This error is not directly related to

@@ -4,7 +4,7 @@ engagement and retention.
 
 # Resource configuration and set-up
 
-In order to enable an integration between Mixpanel and Tracardi you need an API. Mixpanel has developed a number of APIs
+In order to enable an integration between Mixpanel and ThamesThrive you need an API. Mixpanel has developed a number of APIs
 for clients to use that provide a substantial amount of added functionality and give clients the means to customize data
 analysis. Mixpanel uses Project tokens for API authentication, it is an identification sent along with each piece of
 data you send to your project.

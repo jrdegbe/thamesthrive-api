@@ -3,19 +3,19 @@ from collections import defaultdict
 from typing import Optional
 
 from fastapi import APIRouter, HTTPException, Depends, Response
-from tracardi.config import tracardi
-from tracardi.domain.named_entity import NamedEntity
-from tracardi.domain.enum.type_enum import TypeEnum
-from tracardi.domain.event_source import EventSource
-from tracardi.exceptions.log_handler import log_handler
-from tracardi.service.event_source_manager import event_source_types, save_source
-from tracardi.service.storage.driver.elastic import event_source as event_source_db
+from ThamesThrive.config import ThamesThrive
+from ThamesThrive.domain.named_entity import NamedEntity
+from ThamesThrive.domain.enum.type_enum import TypeEnum
+from ThamesThrive.domain.event_source import EventSource
+from ThamesThrive.exceptions.log_handler import log_handler
+from ThamesThrive.service.event_source_manager import event_source_types, save_source
+from ThamesThrive.service.storage.driver.elastic import event_source as event_source_db
 from app.service.grouper import search
 from .auth.permissions import Permissions
 from ..config import server
 
 logger = logging.getLogger(__name__)
-logger.setLevel(tracardi.logging_level)
+logger.setLevel(ThamesThrive.logging_level)
 logger.addHandler(log_handler)
 
 router = APIRouter(

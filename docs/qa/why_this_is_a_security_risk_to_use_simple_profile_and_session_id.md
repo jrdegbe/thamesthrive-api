@@ -23,5 +23,5 @@ both profile and session identification. These IDs are difficult to guess, ensur
 system.
 
 By following this best practice and avoiding the use of simple numeric IDs, you can significantly reduce the likelihood
-of unauthorized access, fake event injection, and data corruption in your Tracardi workflow. By default, Tracardi use
+of unauthorized access, fake event injection, and data corruption in your ThamesThrive workflow. By default, ThamesThrive use
 UUID4 ids.

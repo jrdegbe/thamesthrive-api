@@ -42,9 +42,9 @@ The presence of warnings associated with the event is stored in the `metadata.wa
 
 The presence of errors associated with the event is stored in the `metadata.error` field of the event.
 
-# Where do I store information about the instance of Tracardi where the event was processed?
+# Where do I store information about the instance of ThamesThrive where the event was processed?
 
-Information about the instance of Tracardi where the event was processed is stored in the `metadata.instance` field of
+Information about the instance of ThamesThrive where the event was processed is stored in the `metadata.instance` field of
 the event.
 
 # Where do I store the event type?

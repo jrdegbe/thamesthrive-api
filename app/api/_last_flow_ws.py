@@ -9,8 +9,8 @@ from app.api.auth.permissions import Permissions
 from typing import Optional
 from fastapi import WebSocket, WebSocketDisconnect
 
-from tracardi.config import redis_config
-from tracardi.service.storage.redis_client import RedisClient
+from ThamesThrive.config import redis_config
+from ThamesThrive.service.storage.redis_client import RedisClient
 
 router = APIRouter(
     dependencies=[Depends(Permissions(roles=["admin", "maintainer"]))]
@@ -71,7 +71,7 @@ async def websocket_endpoint_redis(websocket: WebSocket):
         print(await p.subscribe("channel:1"))
     print(redis)
     # ------------------ SEND SUBSCRIBE RESULT THROUGH WEBSOCKET ----------------- #
-    # (channel,) = await redis.client.subscribe("tracardi:queue")
+    # (channel,) = await redis.client.subscribe("ThamesThrive:queue")
     # try:
     #     while True:
     #         response_raw = await channel.get()

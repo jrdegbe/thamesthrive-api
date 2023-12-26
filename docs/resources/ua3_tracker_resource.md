@@ -15,6 +15,6 @@ If you are a Universal Analytics user:
 3. In the left-hand column, click Tracking Info
 4. Click ‘Tracking Code’ 
 5. Your code will be available here. For Universal Analytics users, the codes start with “UA.”
-6. Copy the code and paste to the Tracardi Resource Form.
+6. Copy the code and paste to the ThamesThrive Resource Form.
 
 

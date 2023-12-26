@@ -1,6 +1,6 @@
-# What does staging mean in tracardi version?
+# What does staging mean in ThamesThrive version?
 
-In Tracardi, staging refers to a server environment used to test and debug configuration changes before they are
+In ThamesThrive, staging refers to a server environment used to test and debug configuration changes before they are
 deployed to a production server. The purpose of staging is to ensure that new configurations can be thoroughly
 tested in a controlled environment without impacting the live production website or application.
 

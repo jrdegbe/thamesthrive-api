@@ -5,3 +5,4 @@ The expected properties for this event are review, rate, and id. All properties 
 Auto indexing is also discussed in the documentation. This is a structure that organizes the data by copying information from the different parts of the data and putting it into a specific format that can be used to analyze and group the data. This table describes which event property will be copied to event traits. The event traits are ec.product.id, ec.product.review, and ec.product.rate. 
 
 Finally, the documentation states that data will not be copied to profile. An example JSON is also provided.
+

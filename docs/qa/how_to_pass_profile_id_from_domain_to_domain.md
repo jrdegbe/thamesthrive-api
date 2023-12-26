@@ -25,7 +25,7 @@ To activate `passing of profile ID` feature, add `trackExternalLinks` to `settin
             id: "3ee63fc6-490a-4fd8-bfb3-bf0c8c8d3387"
         },
         settings: {
-          trackExternalLinks: ['example.com', 'tracardi.com']
+          trackExternalLinks: ['example.com', 'ThamesThrive.com']
         }
     }
 }
@@ -34,11 +34,11 @@ To activate `passing of profile ID` feature, add `trackExternalLinks` to `settin
 This will automatically update all `A.href` links on the page with the `__tr_pid`, `__tr_src` parameter, which will
 contain the current profile ID, source ID respectively, if the A.href URL end with any of the defined domains
 in `trackExternalLinks`. In our example it is 'example.com' and ,
-'tracardi.com'.
+'ThamesThrive.com'.
 
-Here is the explanation how Tracardi treats referenced profiles and session IDs.
+Here is the explanation how ThamesThrive treats referenced profiles and session IDs.
 
-Tracardi checks if there is referer data containing a profile ID and source ID. If it exists and is valid, it merges the
+ThamesThrive checks if there is referer data containing a profile ID and source ID. If it exists and is valid, it merges the
 referred profile with the existing profile in the local storage on the visited page (domain). If there is no existing
 profile on visited page, it replaces current generated profile ID with the referred one.
 

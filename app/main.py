@@ -4,7 +4,7 @@ from datetime import datetime
 import sentry_sdk
 
 from app.middleware.context import ContextRequestMiddleware
-from tracardi.service.license import License, SCHEDULER, IDENTIFICATION, COMPLIANCE, RESHAPING, REDIRECTS, VALIDATOR, \
+from ThamesThrive.service.license import License, SCHEDULER, IDENTIFICATION, COMPLIANCE, RESHAPING, REDIRECTS, VALIDATOR, \
     LICENSE, MULTI_TENANT
 
 _local_dir = os.path.dirname(__file__)
@@ -14,7 +14,7 @@ import logging
 from starlette.responses import JSONResponse
 from time import time
 from app.config import server
-from tracardi.service.elastic.connection import wait_for_connection
+from ThamesThrive.service.elastic.connection import wait_for_connection
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, Request
 from starlette.staticfiles import StaticFiles
@@ -24,7 +24,7 @@ from app.api import rule_endpoint, resource_endpoint, event_endpoint, \
     tql_endpoint, health_endpoint, session_endpoint, plugins_endpoint, \
     settings_endpoint, event_source_endpoint, test_endpoint, \
     consent_type_endpoint, flow_action_endpoint, flows_endpoint, info_endpoint, \
-    user_endpoint, debug_endpoint, log_endpoint, tracardi_pro_endpoint, \
+    user_endpoint, debug_endpoint, log_endpoint, ThamesThrive_pro_endpoint, \
     event_type_predefined, \
     import_endpoint, \
     task_endpoint, \
@@ -39,57 +39,57 @@ from app.api import rule_endpoint, resource_endpoint, event_endpoint, \
     console_log_endpoint, event_type_mapping, \
     bridge_endpoint, entity_endpoint, staging_endpoint, customer_endpoint, event_to_profile
 from app.api.track import event_server_endpoint
-from tracardi.config import tracardi
-from tracardi.exceptions.log_handler import log_handler
-from tracardi.service.storage.elastic_client import ElasticClient
+from ThamesThrive.config import ThamesThrive
+from ThamesThrive.exceptions.log_handler import log_handler
+from ThamesThrive.service.storage.elastic_client import ElasticClient
 from app.api.licensed_endpoint import get_router
 
 # Licensed software
 if License.has_service(SCHEDULER):
-    from com_tracardi.endpoint import scheduler_endpoint
+    from com_ThamesThrive.endpoint import scheduler_endpoint
 else:
     scheduler_endpoint = get_router(prefix="/scheduler")
 
 if License.has_service(IDENTIFICATION):
-    from com_tracardi.endpoint import identification_point_endpoint
+    from com_ThamesThrive.endpoint import identification_point_endpoint
 else:
     identification_point_endpoint = get_router(prefix="/identification")
 
 if License.has_service(COMPLIANCE):
-    from com_tracardi.endpoint import consent_data_compliance_endpoint
+    from com_ThamesThrive.endpoint import consent_data_compliance_endpoint
 else:
     consent_data_compliance_endpoint = get_router(prefix="/consent/compliance")
 
 if License.has_service(RESHAPING):
-    from com_tracardi.endpoint import event_reshaping_schema_endpoint
+    from com_ThamesThrive.endpoint import event_reshaping_schema_endpoint
 else:
     event_reshaping_schema_endpoint = get_router(prefix="/event-reshape-schema")
 
 if License.has_service(REDIRECTS):
-    from com_tracardi.endpoint import event_source_redirects
+    from com_ThamesThrive.endpoint import event_source_redirects
 else:
     event_source_redirects = get_router(prefix="/event-redirect")
 
 if License.has_service(VALIDATOR):
-    from com_tracardi.endpoint import event_validator_endpoint
+    from com_ThamesThrive.endpoint import event_validator_endpoint
 else:
     event_validator_endpoint = get_router(prefix="/event-validator")
 
 if License.has_service(LICENSE):
-    from com_tracardi.endpoint import event_to_profile_copy
-    from com_tracardi.endpoint import event_props_to_event_traits_copy
+    from com_ThamesThrive.endpoint import event_to_profile_copy
+    from com_ThamesThrive.endpoint import event_props_to_event_traits_copy
 else:
     event_to_profile_copy = get_router(prefix="/events/copy")
     event_props_to_event_traits_copy = get_router(prefix="/events/index")
 
 
 if License.has_service(MULTI_TENANT):
-    from com_tracardi.endpoint import tenant_install_endpoint
+    from com_ThamesThrive.endpoint import tenant_install_endpoint
 
 
 logging.basicConfig(level=logging.ERROR)
 logger = logging.getLogger(__name__)
-logger.setLevel(tracardi.logging_level)
+logger.setLevel(ThamesThrive.logging_level)
 logger.addHandler(log_handler)
 
 print(f"""
@@ -102,7 +102,7 @@ print(f"""
     888     888  T88b   d8888888888 Y88b  d88P  d8888888888 888  T88b  888   d88P  888
     888     888   T88b d88P     888  "Y8888P"  d88P     888 888   T88b 8888888P" 8888888
 
-{str(tracardi.version)}""", flush=True)
+{str(ThamesThrive.version)}""", flush=True)
 if License.has_license():
     license = License.check()
 
@@ -117,42 +117,42 @@ else:
 tags_metadata = [
     {
         "name": "profile",
-        "description": "Manage profiles. Read more about core concepts of TRACARDI in documentation.",
+        "description": "Manage profiles. Read more about core concepts of ThamesThrive in documentation.",
         "externalDocs": {
             "description": "Profile external docs",
-            "url": "http://docs.tracardi.com",
+            "url": "http://docs.ThamesThrive.com",
         },
     },
     {
         "name": "resource",
-        "description": "Manage data resources. Read more about core concepts of TRACARDI in documentation.",
+        "description": "Manage data resources. Read more about core concepts of ThamesThrive in documentation.",
         "externalDocs": {
             "description": "Resource external docs",
-            "url": "http://docs.tracardi.com",
+            "url": "http://docs.ThamesThrive.com",
         },
     },
     {
         "name": "rule",
-        "description": "Manage flow rule triggers. Read more about core concepts of TRACARDI in documentation.",
+        "description": "Manage flow rule triggers. Read more about core concepts of ThamesThrive in documentation.",
         "externalDocs": {
             "description": "Rule external docs",
-            "url": "http://docs.tracardi.com",
+            "url": "http://docs.ThamesThrive.com",
         },
     },
     {
         "name": "flow",
-        "description": "Manage flows. Read more about core concepts of TRACARDI in documentation.",
+        "description": "Manage flows. Read more about core concepts of ThamesThrive in documentation.",
         "externalDocs": {
             "description": "Flows external docs",
-            "url": "http://docs.tracardi.com",
+            "url": "http://docs.ThamesThrive.com",
         },
     },
     {
         "name": "event",
-        "description": "Manage events. Read more about core concepts of TRACARDI in documentation.",
+        "description": "Manage events. Read more about core concepts of ThamesThrive in documentation.",
         "externalDocs": {
             "description": "Events external docs",
-            "url": "http://docs.tracardi.com",
+            "url": "http://docs.ThamesThrive.com",
         },
     },
     {
@@ -161,26 +161,26 @@ tags_metadata = [
     },
     {
         "name": "tracker",
-        "description": "Read more about TRACARDI event server in documentation. http://docs.tracardi.com",
+        "description": "Read more about ThamesThrive event server in documentation. http://docs.ThamesThrive.com",
         "externalDocs": {
             "description": "External docs",
-            "url": "http://docs.tracardi.com",
+            "url": "http://docs.ThamesThrive.com",
         },
     }
 ]
 
 application = FastAPI(
-    title="Tracardi Customer Data Platform",
-    description="The TRACARDI open-source customer data platform provides exceptional control over customer "
+    title="ThamesThrive Customer Data Platform",
+    description="The ThamesThrive open-source customer data platform provides exceptional control over customer "
                 "data through its comprehensive set of features.",
-    version=str(tracardi.version),
+    version=str(ThamesThrive.version),
     openapi_tags=tags_metadata if server.expose_gui_api else None,
     docs_url='/docs' if server.api_docs else None,
     redoc_url='/redoc' if server.api_docs else None,
     contact={
         "name": "Risto Kowaczewski",
-        "url": "http://github.com/tracardi/tracardi",
-        "email": "office@tracardi.com",
+        "url": "http://github.com/ThamesThrive/ThamesThrive",
+        "email": "office@ThamesThrive.com",
     }
 )
 
@@ -255,7 +255,7 @@ application.include_router(user_endpoint.router)
 application.include_router(event_source_endpoint.router)
 application.include_router(debug_endpoint.router)
 application.include_router(log_endpoint.router)
-application.include_router(tracardi_pro_endpoint.router)
+application.include_router(ThamesThrive_pro_endpoint.router)
 application.include_router(storage_endpoint.router)
 application.include_router(destination_endpoint.router)
 application.include_router(user_log_endpoint.router)
@@ -303,10 +303,10 @@ if server.performance_tracking:
 
 @application.on_event("startup")
 async def app_starts():
-    logger.info(f"TRACARDI version {str(tracardi.version)} set-up starts.")
+    logger.info(f"ThamesThrive version {str(ThamesThrive.version)} set-up starts.")
     await wait_for_connection(no_of_tries=10)
-    logger.info("TRACARDI set-up finished.")
-    logger.info(f"TRACARDI version {str(tracardi.version)} ready to operate.")
+    logger.info("ThamesThrive set-up finished.")
+    logger.info(f"ThamesThrive version {str(ThamesThrive.version)} ready to operate.")
 
 
 @application.middleware("http")

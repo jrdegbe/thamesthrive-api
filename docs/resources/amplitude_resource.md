@@ -2,7 +2,7 @@ Amplitude is a cloud based analytical system for better understanding of your cu
 
 # Resource configuration and set-up
 
-In order to connect Amplitude to Tracardi you need an API key. The API key allows you to use Analytics APIs that help
+In order to connect Amplitude to ThamesThrive you need an API key. The API key allows you to use Analytics APIs that help
 you gather and democratize data about how users engage with your apps.
 
 To find your Amplitude project's unique API key, follow these steps.

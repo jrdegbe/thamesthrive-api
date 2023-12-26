@@ -3,17 +3,17 @@
 # from random import randint
 # from uuid import uuid4
 #
-# from tracardi.domain.event_metadata import EventMetadata
-# from tracardi.domain.time import EventTime
+# from ThamesThrive.domain.event_metadata import EventMetadata
+# from ThamesThrive.domain.time import EventTime
 #
-# from tracardi.domain.event import Event
-# from tracardi.domain.entity import Entity
-# from tracardi.domain.session import Session, SessionMetadata
-# from tracardi.domain.time import ProfileTime, ProfileVisit
-# from tracardi.domain.metadata import ProfileMetadata
-# from tracardi.domain.profile_stats import ProfileStats
-# from tracardi.domain.profile import Profile
-# from tracardi.domain.event_source import EventSource
+# from ThamesThrive.domain.event import Event
+# from ThamesThrive.domain.entity import Entity
+# from ThamesThrive.domain.session import Session, SessionMetadata
+# from ThamesThrive.domain.time import ProfileTime, ProfileVisit
+# from ThamesThrive.domain.metadata import ProfileMetadata
+# from ThamesThrive.domain.profile_stats import ProfileStats
+# from ThamesThrive.domain.profile import Profile
+# from ThamesThrive.domain.event_source import EventSource
 
 
 # def generate_events_for_profile(profiles, sessions, sources):

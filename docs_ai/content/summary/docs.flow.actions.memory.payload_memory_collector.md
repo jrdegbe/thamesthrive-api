@@ -5,3 +5,4 @@ The Memory Payload Collector node can be connected to multiple nodes, meaning th
 The Memory Payload Collector node supports two types of connections: list type and dictionary type. The list type allows all incoming payloads to be seen in a list, while the dictionary type combines all incoming payloads into a dictionary type, where the key for each payload is the name of the connection (called sometimes graph edge) it came from.
 
 The Memory Payload Collector node also supports advanced configuration, which allows users to specify the name (key in memory object) that will hold the collected payloads, as well as the type of collection (list or dict). This advanced configuration is specified in a JSON format.
+

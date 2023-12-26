@@ -11,5 +11,5 @@ To obtain the API Key follow the steps:
 4. Click __"+"__ icon in the API Keys box
 5. Fill the form, add name, etc.
 6. Click __Save__ button.
-7. Copy __Key__ to Tracardi API Key field.
+7. Copy __Key__ to ThamesThrive API Key field.
 

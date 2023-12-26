@@ -1,7 +1,7 @@
-from tracardi.service.singleton import Singleton
-from tracardi.service.storage.redis.collections import Collection
-from tracardi.service.storage.redis_client import RedisClient
-from tracardi.config import tracardi
+from ThamesThrive.service.singleton import Singleton
+from ThamesThrive.service.storage.redis.collections import Collection
+from ThamesThrive.service.storage.redis_client import RedisClient
+from ThamesThrive.config import ThamesThrive
 from hashlib import sha1
 
 
@@ -10,7 +10,7 @@ class TokenMemory(metaclass=Singleton):
     def __init__(self):
         self._redis = RedisClient()
         self.ttl = 30 * 60
-        self.instance_hash = sha1(f"{Collection.token}{tracardi.version.version}.{tracardi.version.name}"
+        self.instance_hash = sha1(f"{Collection.token}{ThamesThrive.version.version}.{ThamesThrive.version.name}"
                                   .encode("utf-8")).hexdigest()
 
     def __setitem__(self, token, value):

@@ -1,6 +1,6 @@
 # How do I filter data? What query should I use to filer data?
 
-To filter data in Tracardi, you can use the query syntax provided by the platform. Here are some examples of how to
+To filter data in ThamesThrive, you can use the query syntax provided by the platform. Here are some examples of how to
 construct queries to filter data:
 
 1. Search by a specific field value:
@@ -43,5 +43,5 @@ For more information look for term `Data searching` in the documentation.
 
 ---
 This document also answers the questions:
-- How to search data in Tracardi?
-- How to find data in Tracardi?
+- How to search data in ThamesThrive?
+- How to find data in ThamesThrive?

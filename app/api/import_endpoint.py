@@ -1,11 +1,11 @@
 from fastapi import APIRouter, HTTPException, Depends
-from tracardi.service.storage.driver.elastic import import_config as import_config_db
-from tracardi.worker.celery_worker import celery
+from ThamesThrive.service.storage.driver.elastic import import_config as import_config_db
+from ThamesThrive.worker.celery_worker import celery
 from .auth.permissions import Permissions
 from ..config import server
-from tracardi.domain.import_config import ImportConfig
-from tracardi.service.setup.setup_import_types import get_import_types
-from tracardi.service.module_loader import import_package
+from ThamesThrive.domain.import_config import ImportConfig
+from ThamesThrive.service.setup.setup_import_types import get_import_types
+from ThamesThrive.service.module_loader import import_package
 from pydantic import ValidationError
 from celery.result import AsyncResult
 from starlette.responses import JSONResponse
@@ -75,7 +75,7 @@ def delete_import_task(task_id):
     return celery.control.revoke(task_id, terminate=True)
 
 
-# Tracardi endpoints
+# ThamesThrive endpoints
 
 @router.get("/import/types", tags=["import"], include_in_schema=server.expose_gui_api)
 async def load_import_types():

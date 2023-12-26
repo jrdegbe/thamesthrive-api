@@ -1,8 +1,8 @@
-Tracardi is available under MIT with Common Clause.
+ThamesThrive is available under MIT with Common Clause.
 
 # MIT License
 
-Copyright 2021 Tracardi
+Copyright 2021 ThamesThrive
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -19,6 +19,6 @@ Without limiting other conditions in the License, the grant of rights under the 
 
 For purposes of the foregoing, “Sell” means practicing any or all of the rights granted to you under the License to provide to third parties, for a fee or other consideration (including without limitation fees for hosting or consulting/ support services related to the Software), a product or service whose value derives, entirely or substantially, from the functionality of the Software. Any license notice or attribution required by the License must also include this Commons Clause License Condition notice.
 
-Software: Tracardi
+Software: ThamesThrive
 
 License: MIT + CC

@@ -28,7 +28,7 @@ If you get Elevated access level then you have to change User authentication set
 3. Change App permission to __"Read and write"__, choose type of your app (most probably __Web App, Automated App or
    Bot__)
 4. Fill App info with the following information:
-    1. Callback URI - the webhook from the Tracardi source. Create a source that will receive events from Twitter and
+    1. Callback URI - the webhook from the ThamesThrive source. Create a source that will receive events from Twitter and
        copy the source webhook to the form.
     2. Website URL - you website URL
     3. Organization name - you business name, or website name.
@@ -42,6 +42,6 @@ If the previous steps have been completed now you can generate your API keys.
 1. Expand __Projects and Apps__ and click __your app name__.
 2. Now select __"Keys and tokens"__ in the tabs (right after the app title).
 3. Click __Generate__ button in the __Consumer Keys__ section. Button next to __API Key and Secret__.
-4. Copy the __API Key and API Key Secret__ to the Tracardi form
+4. Copy the __API Key and API Key Secret__ to the ThamesThrive form
 5. Click __Generate__ button in the __Authentication Tokens__ section. Button next to __Access Token and Secret__.
-6. Copy the __Access Token and Access Token Secret__ to the Tracardi form
+6. Copy the __Access Token and Access Token Secret__ to the ThamesThrive form

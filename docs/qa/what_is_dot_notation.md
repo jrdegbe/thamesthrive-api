@@ -1,6 +1,6 @@
 # What is dot notation?
 
-In short, dot notation is a way of referencing data in Tracardi. It is used to access data from the internal state of
+In short, dot notation is a way of referencing data in ThamesThrive. It is used to access data from the internal state of
 the workflow, such as the event, profile, payload, flow, session, and memory. It is written in the form
 of `<source>@<path.to.data>`, where the source is the type of data you are referencing and the path is a string of keys
 that indicate where the data is located.

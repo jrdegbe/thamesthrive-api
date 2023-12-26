@@ -9,3 +9,4 @@ provided consent types to be granted by the profile, or only one consent.
 The advanced configuration requires users to provide a JSON object with a list of consent IDs and names, as well as a
 boolean value for the "require_all" field. This allows users to provide more detailed information about the consents
 that they want to require to be granted by the profile.
+

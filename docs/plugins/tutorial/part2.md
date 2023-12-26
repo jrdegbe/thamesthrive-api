@@ -1,4 +1,4 @@
-# Part 2: Configuring the plugin in Tracardi
+# Part 2: Configuring the plugin in ThamesThrive
 
 In the next part of our tutorial, we will learn how to configure a plugin and how to add a configuration form to that
 plugin.
@@ -29,7 +29,7 @@ From the previous tutorial, we remember that the plugin has the following life c
     async close ()
 
 It is easy to notice that it has a `set_up` method that accepts the `config` parameter, which is the plug-in's
-configuration. In the Tracardi system, the configuration is performed while editing the plug-in. We can do this in two
+configuration. In the ThamesThrive system, the configuration is performed while editing the plug-in. We can do this in two
 ways.
 
 The first by providing a dictionary with configuration values (Below is a screenshot showing such a configuration in the
@@ -68,7 +68,7 @@ This way we define that the object should have the "event_type" property, which 
 The entire register function should look like this:
 
 ```python hl_lines="11-13"
-from tracardi.service.plugin.domain.register import Plugin, Spec, MetaData
+from ThamesThrive.service.plugin.domain.register import Plugin, Spec, MetaData
 
 
 def register() -> Plugin:
@@ -103,7 +103,7 @@ the object.
 We will use the `set_up` method for this.
 
 ```python
-from tracardi.service.plugin.runner import ActionRunner
+from ThamesThrive.service.plugin.runner import ActionRunner
 
 
 class MyPlugin(ActionRunner):
@@ -122,8 +122,8 @@ This way we saved the configuration data in the plugin class.
 Now let's use the `self.config` property in the run method and replace __"my-event"__ with it.
 
 ```python
-from tracardi.service.plugin.runner import ActionRunner
-from tracardi.service.plugin.domain.result import Result
+from ThamesThrive.service.plugin.runner import ActionRunner
+from ThamesThrive.service.plugin.domain.result import Result
 
 
 class MyPlugin(ActionRunner):
@@ -161,12 +161,12 @@ comparison `if self.event.type == self.config['event-type']` in the run method.
 
 Complete code looks like this:
 
-=== "/tracardi/process_engine/action/v1/my_plugin_folder/my_plugin.py"
+=== "/ThamesThrive/process_engine/action/v1/my_plugin_folder/my_plugin.py"
 
     ```python
-    from tracardi.service.plugin.runner import ActionRunner
-    from tracardi.service.plugin.domain.result import Result
-    from tracardi.service.plugin.domain.register import Plugin, Spec, MetaData
+    from ThamesThrive.service.plugin.runner import ActionRunner
+    from ThamesThrive.service.plugin.domain.result import Result
+    from ThamesThrive.service.plugin.domain.register import Plugin, Spec, MetaData
     
     class MyPlugin (ActionRunner):
     
@@ -239,7 +239,7 @@ For this we will use the `PluginConfig` object.
 
 ```python
 from pydantic import validator
-from tracardi.service.plugin.domain.config import PluginConfig
+from ThamesThrive.service.plugin.domain.config import PluginConfig
 
 
 class Configuration(PluginConfig):
@@ -271,10 +271,10 @@ def validate(config: dict):
 And we'll use it when setting up `self.config`.
 
 ```python
-from tracardi.service.plugin.runner import ActionRunner
-from tracardi.service.plugin.domain.result import Result
+from ThamesThrive.service.plugin.runner import ActionRunner
+from ThamesThrive.service.plugin.domain.result import Result
 from pydantic import validator
-from tracardi.service.plugin.domain.config import PluginConfig
+from ThamesThrive.service.plugin.domain.config import PluginConfig
 
 
 class Configuration(PluginConfig):  # (1)
@@ -330,8 +330,8 @@ process of plugin configuration easier.
 As you probably guessed, it is done by adding another parameter to the register function.
 
 ```python
-from tracardi.service.plugin.domain.register import Plugin, Spec, MetaData
-from tracardi.service.plugin.domain.register import Form, FormGroup, FormField, FormComponent  # (1)
+from ThamesThrive.service.plugin.domain.register import Plugin, Spec, MetaData
+from ThamesThrive.service.plugin.domain.register import Form, FormGroup, FormField, FormComponent  # (1)
 
 
 def register() -> Plugin:

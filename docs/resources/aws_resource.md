@@ -25,5 +25,5 @@ use IAM to control who is authenticated (signed in) and authorized (has permissi
 
 # Plugins
 
-Plugins are automatically installed when you connect the AWS to Tracardi. Please search them in
+Plugins are automatically installed when you connect the AWS to ThamesThrive. Please search them in
 Workflow editor by typing "AWS" or "Amazon"

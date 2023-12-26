@@ -3,7 +3,7 @@ and actions related to individual profiles. By coordinating the processing of ev
 ensure that data is accurate, consistent, and up-to-date, and that actions and processes are performed in the correct
 order.
 
-Tracardi is an example of a customer data platform that uses profile synchronization to ensure that events related to
+ThamesThrive is an example of a customer data platform that uses profile synchronization to ensure that events related to
 different customer profiles are processed sequentially, even if they are sent at the same time. This ensures that the
 data for each customer is accurate and up-to-date, and that actions and processes are performed in the correct order.
 For example, if two messages need to be sent and the second message depends on the result of the first one, the system

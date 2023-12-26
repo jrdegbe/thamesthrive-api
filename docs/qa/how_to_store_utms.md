@@ -1,17 +1,17 @@
-# How to Tracardi stores UTMs?
+# How to ThamesThrive stores UTMs?
 
-Tracardi utilizes UTM to help track website traffic and better understand where it is coming from. UTM, which stands for
+ThamesThrive utilizes UTM to help track website traffic and better understand where it is coming from. UTM, which stands for
 Urchin Tracking Module, is parameter that is added to the end of a URL, allowing website owners to track various pieces
 of information about the source of the traffic, such as the campaign name, the medium used, and the source of the
 traffic.
 
-To store UTM information, Tracardi stores the first URL that contains the UTM code in a session. Subsequent clicks by
-the customer will retrieve this information from the session, allowing Tracardi to continue tracking the customer's
+To store UTM information, ThamesThrive stores the first URL that contains the UTM code in a session. Subsequent clicks by
+the customer will retrieve this information from the session, allowing ThamesThrive to continue tracking the customer's
 activity and providing connection with campaign that brought the customer to the page.
 
-In order to ensure that all UTMs are passed through to Tracardi, it is necessary to include them in the URL. This means
+In order to ensure that all UTMs are passed through to ThamesThrive, it is necessary to include them in the URL. This means
 that any campaign-specific parameters should be included at the end of the URL, following a question mark (?), with each
-parameter separated by an ampersand (&). By doing so, Tracardi will be able to track the source and success of each
+parameter separated by an ampersand (&). By doing so, ThamesThrive will be able to track the source and success of each
 campaign, providing valuable data that can be used to optimize future marketing efforts.
 
 ## Example

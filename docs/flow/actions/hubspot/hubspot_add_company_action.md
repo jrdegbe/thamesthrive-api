@@ -12,7 +12,7 @@ This plugin returns response from HubSpot API on port **response**, or error inf
 
 ## HubSpot resource
 
-To connect Tracardi with HubSpot you need a HubSpot resource. If you do not have HubSpot resource set, go to Resources
+To connect ThamesThrive with HubSpot you need a HubSpot resource. If you do not have HubSpot resource set, go to Resources
 and create a new resource. More details on how to do it you can find in resource tab. If you did not install Hubspot then go to
 extensions and install it. It will create both resource and plugins.
 

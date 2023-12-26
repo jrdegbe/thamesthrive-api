@@ -1,6 +1,6 @@
 # Production services
 
-This is the list services/dockers for production ready Tracardi installation.
+This is the list services/dockers for production ready ThamesThrive installation.
 
 Service    | Description
 -----| -------------
@@ -14,7 +14,7 @@ Segmentation Job    | Periodically runs and checks for profiles to run through s
 Segmentation Worker    | Runs defined segmentation process.
 Trigger Worker    | Runs when a profile is segmented and a workflow should be triggered.
 Update and Migration    | Set of workers for system migration and data import.
-Bridges    | Services for collecting data from different channels, bridges transportation protocol to Tracardi event source.
+Bridges    | Services for collecting data from different channels, bridges transportation protocol to ThamesThrive event source.
 
 ## Collector API
 
@@ -108,8 +108,8 @@ The Update and Migration workers are responsible for various tasks such as syste
 ## Bridges
 
 The Bridges are services responsible for collecting data from different channels. They bridge the defined transportation
-protocol to tracardi event source.
+protocol to ThamesThrive event source.
 
 ### Functionality:
 
-The Bridges collect data from different channels and bridge the transportation protocol to the tracardi event source.
+The Bridges collect data from different channels and bridge the transportation protocol to the ThamesThrive event source.

@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException
 from app.config import server
-from tracardi.config import tracardi
-from tracardi.service.storage.driver.elastic import raw as raw_db
+from ThamesThrive.config import ThamesThrive
+from ThamesThrive.service.storage.driver.elastic import raw as raw_db
 from .auth.permissions import Permissions
 from typing import Optional
-from tracardi.domain.version import Version
+from ThamesThrive.domain.version import Version
 
 router = APIRouter(
     dependencies=[Depends(Permissions(roles=["admin"]))]
@@ -16,12 +16,12 @@ async def delete_old_indices(version: str, codename: Optional[str] = None):
 
     version = Version(version=version, name=codename)
 
-    if version == tracardi.version:
+    if version == ThamesThrive.version:
         raise HTTPException(status_code=409, detail="You cannot delete indices that are currently used.")
 
     indices = await raw_db.indices()
     to_delete = [index for index in indices if index.startswith(
-        f"{version.get_version_prefix()}.{version.name}.tracardi-"
+        f"{version.get_version_prefix()}.{version.name}.ThamesThrive-"
     )]
 
     result = {}

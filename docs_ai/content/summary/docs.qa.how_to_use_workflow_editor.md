@@ -1,4 +1,4 @@
-The Workflow Editor in Tracardi is a powerful tool for processing data. It allows users to create a workflow by dragging
+The Workflow Editor in ThamesThrive is a powerful tool for processing data. It allows users to create a workflow by dragging
 and dropping nodes onto the canvas, connecting them, and configuring them. To open the Workflow Editor, users can click
 on the icon in the top right corner of the screen. On the left side of the screen, users can search for nodes by typing
 their names. To connect nodes, users can select the node they want to connect and drag an edge to the next node. Nodes

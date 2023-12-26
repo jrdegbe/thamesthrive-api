@@ -4,27 +4,27 @@ from typing import Optional
 
 from fastapi import APIRouter, Request, status, HTTPException
 from fastapi.responses import RedirectResponse
-from tracardi.service.notation.dict_traverser import DictTraverser
-from tracardi.service.notation.dot_accessor import DotAccessor
+from ThamesThrive.service.notation.dict_traverser import DictTraverser
+from ThamesThrive.service.notation.dot_accessor import DotAccessor
 
 from app.api.track.service.http import get_headers
-from tracardi.domain.entity import Entity
-from tracardi.domain.event_metadata import EventPayloadMetadata
-from tracardi.domain.payload.event_payload import EventPayload
-from tracardi.domain.time import Time
-from tracardi.service.storage.driver.elastic import event_redirect as event_redirect_db
-from tracardi.service.storage.driver.elastic import session as session_db
-from tracardi.service.tracker import track_event
-from tracardi.config import tracardi
-from tracardi.domain.payload.tracker_payload import TrackerPayload
-from tracardi.exceptions.exception import UnauthorizedException, FieldTypeConflictException, \
+from ThamesThrive.domain.entity import Entity
+from ThamesThrive.domain.event_metadata import EventPayloadMetadata
+from ThamesThrive.domain.payload.event_payload import EventPayload
+from ThamesThrive.domain.time import Time
+from ThamesThrive.service.storage.driver.elastic import event_redirect as event_redirect_db
+from ThamesThrive.service.storage.driver.elastic import session as session_db
+from ThamesThrive.service.tracker import track_event
+from ThamesThrive.config import ThamesThrive
+from ThamesThrive.domain.payload.tracker_payload import TrackerPayload
+from ThamesThrive.exceptions.exception import UnauthorizedException, FieldTypeConflictException, \
     EventValidationException
-from tracardi.exceptions.log_handler import log_handler
+from ThamesThrive.exceptions.log_handler import log_handler
 from app.api.track.service.ip_address import get_ip_address
-from tracardi.service.url_constructor import url_query_params_to_dict
+from ThamesThrive.service.url_constructor import url_query_params_to_dict
 
 logger = logging.getLogger(__name__)
-logger.setLevel(tracardi.logging_level)
+logger.setLevel(ThamesThrive.logging_level)
 logger.addHandler(log_handler)
 
 router = APIRouter()
@@ -242,7 +242,7 @@ async def request_redirect(request: Request, redirect_id: str, session_id: Optio
 
     # try to load session from cookie
     if not session_id:
-        key = 'tracardi-session-id'
+        key = 'ThamesThrive-session-id'
         if request.cookies and key in request.cookies:
             session_id = request.cookies[key]
 

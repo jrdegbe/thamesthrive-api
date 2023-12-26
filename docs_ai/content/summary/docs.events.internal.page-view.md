@@ -11,3 +11,4 @@ organizes the data. This structure is made by copying information from the diffe
 into a specific format that can be used to analyze and group the data. The event trait "hit.page.category" will be
 copied from the event property "category". Data will not be copied to profile. Finally, a JSON example is provided to
 demonstrate how the event should be structured.
+

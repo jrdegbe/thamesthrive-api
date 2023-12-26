@@ -1,6 +1,6 @@
 # Plug-ins getting started
 
-Plug-ins are python classes which can be installed in Tracardi and become a part of Tracardi workflow.
+Plug-ins are python classes which can be installed in ThamesThrive and become a part of ThamesThrive workflow.
 Plug-ins are sometimes called actions or action plug-ins.
 
 Below you will find information how to write plug-ins and how to install them in the system.

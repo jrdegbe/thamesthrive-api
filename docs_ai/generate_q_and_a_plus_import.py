@@ -18,7 +18,7 @@ def record_exists(client, hash):
 
     return (
         client.query
-            .get("Tracardi", ["question", "answer", 'file', 'hash'])
+            .get("ThamesThrive", ["question", "answer", 'file', 'hash'])
             .with_where(where_filter)
             .do()
     )
@@ -33,13 +33,13 @@ def delete_records(client, file_name):
 
     response = (
         client.query
-            .get("Tracardi", ["question", "answer", 'file', 'hash'])
+            .get("ThamesThrive", ["question", "answer", 'file', 'hash'])
             .with_additional(["id"])
             .with_where(where_filter)
             .do()
     )
-    for item in response['data']['Get']['Tracardi']:
-        client.data_object.delete(uuid=item['_additional']['id'], class_name="Tracardi")
+    for item in response['data']['Get']['ThamesThrive']:
+        client.data_object.delete(uuid=item['_additional']['id'], class_name="ThamesThrive")
 
 
 
@@ -75,7 +75,7 @@ def process(file_path, content) -> bool:
         return False
 
     summary_file_name = file_path.replace("/", "."). \
-        replace('.home.risto.PycharmProjects.tracardi-api.', '')
+        replace('.home.risto.PycharmProjects.ThamesThrive-api.', '')
 
     if has_summary(summary_file_name):
         return False
@@ -146,7 +146,7 @@ def get_content_and_paragraph_hash(document):
 
 
 def get_short_file_name(file_name):
-    _short_file_name = file_name.replace('/home/risto/PycharmProjects/tracardi-api/', '')
+    _short_file_name = file_name.replace('/home/risto/PycharmProjects/ThamesThrive-api/', '')
     _short_file_name = _short_file_name[5:]
     _short_file_name = _short_file_name.replace("/", "_")
     _short_file_name = _short_file_name.split('.')[0]
@@ -181,7 +181,7 @@ client = weaviate.Client(
 
 try:
     class_obj = {
-        "class": "Tracardi",
+        "class": "ThamesThrive",
         "vectorizer": "text2vec-openai",
         "moduleConfig": {
             "text2vec-openai": {
@@ -189,7 +189,7 @@ try:
             }
         }
     }
-    # client.schema.delete_class("Tracardi")
+    # client.schema.delete_class("ThamesThrive")
     client.schema.create_class(class_obj)
 except weaviate.exceptions.UnexpectedStatusCodeException:
     pass
@@ -214,7 +214,7 @@ with client.batch as batch:
         if content == "":
             continue
 
-        short_file_name = file_name.replace('/home/risto/PycharmProjects/tracardi-api/', '')
+        short_file_name = file_name.replace('/home/risto/PycharmProjects/ThamesThrive-api/', '')
         # Skip plugin documentation
         if short_file_name.startswith('docs/flow/action'):
             continue
@@ -244,7 +244,7 @@ with client.batch as batch:
 
         # Delete record for all hashes under the file_folder
 
-        delete_records(client, file_name.replace('/home/risto/PycharmProjects/tracardi-api/', ''))
+        delete_records(client, file_name.replace('/home/risto/PycharmProjects/ThamesThrive-api/', ''))
 
         # If we are able to create a content folder and delete all old content we can mark it as OK.
 
@@ -276,7 +276,7 @@ with client.batch as batch:
             questions = json_question.split("\n")
             questions = [q for q in questions if q != "Optional questions:" and q != ""]
             json_content = {
-                "file_name": file_name.replace('/home/risto/PycharmProjects/tracardi-api/', ''),
+                "file_name": file_name.replace('/home/risto/PycharmProjects/ThamesThrive-api/', ''),
                 "questions": questions,
                 "answer": paragraph,
                 "hash": paragraph_hash
@@ -286,6 +286,6 @@ with client.batch as batch:
 
             response = record_exists(client, paragraph_hash)
 
-            if len(response['data']['Get']['Tracardi']) == 0:
+            if len(response['data']['Get']['ThamesThrive']) == 0:
                 print("Saving to vector store.")
-                client.batch.add_data_object(json_content, "Tracardi")
+                client.batch.add_data_object(json_content, "ThamesThrive")

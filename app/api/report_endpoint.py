@@ -3,12 +3,12 @@ from fastapi import HTTPException, Depends
 from .auth.permissions import Permissions
 from ..config import server
 from ..service.grouping import group_records
-from tracardi.service.storage.driver.elastic import report as report_db
+from ThamesThrive.service.storage.driver.elastic import report as report_db
 from typing import Optional
-from tracardi.domain.report import Report
+from ThamesThrive.domain.report import Report
 from app.api.domain.report_test_payload import ReportTestPayload
-from tracardi.service.report_manager import ReportManager
-from tracardi.domain.named_entity import NamedEntity
+from ThamesThrive.service.report_manager import ReportManager
+from ThamesThrive.domain.named_entity import NamedEntity
 
 
 router = APIRouter(

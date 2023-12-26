@@ -3,26 +3,26 @@ import logging
 import os
 from typing import Optional
 from fastapi import APIRouter, HTTPException
-from tracardi.domain.payload.tracker_payload import TrackerPayload
-from tracardi.service.installation import install_system, check_installation
-from tracardi.service.tracker import track_event
+from ThamesThrive.domain.payload.tracker_payload import TrackerPayload
+from ThamesThrive.service.installation import install_system, check_installation
+from ThamesThrive.service.tracker import track_event
 from app.config import server
-from tracardi.config import tracardi
-from tracardi.domain.credentials import Credentials
-from tracardi.domain.event_source import EventSource
-from tracardi.domain.named_entity import NamedEntity
-from tracardi.exceptions.log_handler import log_handler
-from tracardi.service.fake_data_maker.generate_payload import generate_payload
-from tracardi.service.plugin.plugin_install import install_default_plugins
-from tracardi.service.setup.data.defaults import open_rest_source_bridge
-from tracardi.service.setup.setup_indices import add_ids
-from tracardi.service.storage.driver.elastic import raw as raw_db
-from tracardi.service.storage.driver.elastic import event_source as event_source_db
-from tracardi.service.storage.index import Resource
+from ThamesThrive.config import ThamesThrive
+from ThamesThrive.domain.credentials import Credentials
+from ThamesThrive.domain.event_source import EventSource
+from ThamesThrive.domain.named_entity import NamedEntity
+from ThamesThrive.exceptions.log_handler import log_handler
+from ThamesThrive.service.fake_data_maker.generate_payload import generate_payload
+from ThamesThrive.service.plugin.plugin_install import install_default_plugins
+from ThamesThrive.service.setup.data.defaults import open_rest_source_bridge
+from ThamesThrive.service.setup.setup_indices import add_ids
+from ThamesThrive.service.storage.driver.elastic import raw as raw_db
+from ThamesThrive.service.storage.driver.elastic import event_source as event_source_db
+from ThamesThrive.service.storage.index import Resource
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
-logger.setLevel(tracardi.logging_level)
+logger.setLevel(ThamesThrive.logging_level)
 logger.addHandler(log_handler)
 
 

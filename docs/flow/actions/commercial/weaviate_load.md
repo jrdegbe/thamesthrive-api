@@ -6,7 +6,7 @@ Loads a vector by ID from Weaviate.
 
 The Load vector plugin is used to retrieve a vector from the Weaviate schema based on the specified ID. It connects to
 the Weaviate instance and fetches the vector associated with the given ID. This plugin is useful for retrieving vectors
-from the Weaviate schema for further processing in Tracardi workflows.
+from the Weaviate schema for further processing in ThamesThrive workflows.
 
 This documentation is for version 0.8.1 of the Load vector plugin.
 

@@ -16,11 +16,11 @@ from google.protobuf import struct_pb2 as google_dot_protobuf_dot_struct__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='pro_services.proto',
-  package='tracardi_pro',
+  package='ThamesThrive_pro',
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x12pro_services.proto\x12\x0ctracardi_pro\x1a\x1cgoogle/protobuf/struct.proto\"\r\n\x0b\x45mptyParams\"\x88\x02\n\x0fServiceMetadata\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x0f\n\x07traffic\x18\x04 \x01(\t\x12\x0c\n\x04icon\x18\x05 \x01(\t\x12\x0c\n\x04tags\x18\x06 \x03(\t\x12\x0e\n\x06submit\x18\x07 \x03(\t\x12(\n\x07\x63ontext\x18\x08 \x01(\x0b\x32\x17.google.protobuf.Struct\x12-\n\x0crequirements\x18\t \x01(\x0b\x32\x17.google.protobuf.Struct\x12.\n\rdocumentation\x18\n \x01(\x0b\x32\x17.google.protobuf.Struct\"\x91\x01\n\x08Services\x12\x36\n\x08services\x18\x01 \x03(\x0b\x32$.tracardi_pro.Services.ServicesEntry\x1aM\n\rServicesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12+\n\x05value\x18\x02 \x01(\x0b\x32\x1c.tracardi_pro.ServiceEnvelop:\x02\x38\x01\" \n\x0ePluginMetaData\x12\x0e\n\x06module\x18\x01 \x01(\t\"V\n\x06Plugin\x12%\n\x04init\x18\x01 \x01(\x0b\x32\x17.google.protobuf.Struct\x12%\n\x04\x66orm\x18\x02 \x01(\x0b\x32\x17.google.protobuf.Struct\"\x16\n\x05Hosts\x12\r\n\x05hosts\x18\x01 \x03(\t\"\xe7\x01\n\x0eServiceEnvelop\x12/\n\x08metadata\x18\x01 \x01(\x0b\x32\x1d.tracardi_pro.ServiceMetadata\x12%\n\x04\x66orm\x18\x02 \x01(\x0b\x32\x17.google.protobuf.Struct\x12%\n\x04init\x18\x03 \x01(\x0b\x32\x17.google.protobuf.Struct\x12,\n\x0b\x64\x65stination\x18\x04 \x01(\x0b\x32\x17.google.protobuf.Struct\x12(\n\x07plugins\x18\x05 \x03(\x0b\x32\x17.google.protobuf.Struct\"1\n\x0b\x43redentials\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"C\n\x0fHostCredentials\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\x12\x0c\n\x04host\x18\x03 \x01(\t\"\x16\n\x05Token\x12\r\n\x05token\x18\x01 \x01(\t\"@\n\x0cServiceQuery\x12\r\n\x05query\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x03 \x01(\t\"\'\n\x08UserData\x12\r\n\x05token\x18\x01 \x01(\t\x12\x0c\n\x04host\x18\x02 \x01(\t2\xdc\x02\n\x07Service\x12N\n\x16get_available_services\x12\x1a.tracardi_pro.ServiceQuery\x1a\x16.tracardi_pro.Services\"\x00\x12\x42\n\nget_plugin\x12\x1c.tracardi_pro.PluginMetaData\x1a\x14.tracardi_pro.Plugin\"\x00\x12?\n\x07sign_up\x12\x1d.tracardi_pro.HostCredentials\x1a\x13.tracardi_pro.Token\"\x00\x12>\n\x07sign_in\x12\x19.tracardi_pro.Credentials\x1a\x16.tracardi_pro.UserData\"\x00\x12<\n\x08validate\x12\x19.tracardi_pro.EmptyParams\x1a\x13.tracardi_pro.Token\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x12pro_services.proto\x12\x0cThamesThrive_pro\x1a\x1cgoogle/protobuf/struct.proto\"\r\n\x0b\x45mptyParams\"\x88\x02\n\x0fServiceMetadata\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x0f\n\x07traffic\x18\x04 \x01(\t\x12\x0c\n\x04icon\x18\x05 \x01(\t\x12\x0c\n\x04tags\x18\x06 \x03(\t\x12\x0e\n\x06submit\x18\x07 \x03(\t\x12(\n\x07\x63ontext\x18\x08 \x01(\x0b\x32\x17.google.protobuf.Struct\x12-\n\x0crequirements\x18\t \x01(\x0b\x32\x17.google.protobuf.Struct\x12.\n\rdocumentation\x18\n \x01(\x0b\x32\x17.google.protobuf.Struct\"\x91\x01\n\x08Services\x12\x36\n\x08services\x18\x01 \x03(\x0b\x32$.ThamesThrive_pro.Services.ServicesEntry\x1aM\n\rServicesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12+\n\x05value\x18\x02 \x01(\x0b\x32\x1c.ThamesThrive_pro.ServiceEnvelop:\x02\x38\x01\" \n\x0ePluginMetaData\x12\x0e\n\x06module\x18\x01 \x01(\t\"V\n\x06Plugin\x12%\n\x04init\x18\x01 \x01(\x0b\x32\x17.google.protobuf.Struct\x12%\n\x04\x66orm\x18\x02 \x01(\x0b\x32\x17.google.protobuf.Struct\"\x16\n\x05Hosts\x12\r\n\x05hosts\x18\x01 \x03(\t\"\xe7\x01\n\x0eServiceEnvelop\x12/\n\x08metadata\x18\x01 \x01(\x0b\x32\x1d.ThamesThrive_pro.ServiceMetadata\x12%\n\x04\x66orm\x18\x02 \x01(\x0b\x32\x17.google.protobuf.Struct\x12%\n\x04init\x18\x03 \x01(\x0b\x32\x17.google.protobuf.Struct\x12,\n\x0b\x64\x65stination\x18\x04 \x01(\x0b\x32\x17.google.protobuf.Struct\x12(\n\x07plugins\x18\x05 \x03(\x0b\x32\x17.google.protobuf.Struct\"1\n\x0b\x43redentials\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"C\n\x0fHostCredentials\x12\x10\n\x08username\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\x12\x0c\n\x04host\x18\x03 \x01(\t\"\x16\n\x05Token\x12\r\n\x05token\x18\x01 \x01(\t\"@\n\x0cServiceQuery\x12\r\n\x05query\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x03 \x01(\t\"\'\n\x08UserData\x12\r\n\x05token\x18\x01 \x01(\t\x12\x0c\n\x04host\x18\x02 \x01(\t2\xdc\x02\n\x07Service\x12N\n\x16get_available_services\x12\x1a.ThamesThrive_pro.ServiceQuery\x1a\x16.ThamesThrive_pro.Services\"\x00\x12\x42\n\nget_plugin\x12\x1c.ThamesThrive_pro.PluginMetaData\x1a\x14.ThamesThrive_pro.Plugin\"\x00\x12?\n\x07sign_up\x12\x1d.ThamesThrive_pro.HostCredentials\x1a\x13.ThamesThrive_pro.Token\"\x00\x12>\n\x07sign_in\x12\x19.ThamesThrive_pro.Credentials\x1a\x16.ThamesThrive_pro.UserData\"\x00\x12<\n\x08validate\x12\x19.ThamesThrive_pro.EmptyParams\x1a\x13.ThamesThrive_pro.Token\"\x00\x62\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_struct__pb2.DESCRIPTOR,])
 
@@ -29,7 +29,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _EMPTYPARAMS = _descriptor.Descriptor(
   name='EmptyParams',
-  full_name='tracardi_pro.EmptyParams',
+  full_name='ThamesThrive_pro.EmptyParams',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -54,77 +54,77 @@ _EMPTYPARAMS = _descriptor.Descriptor(
 
 _SERVICEMETADATA = _descriptor.Descriptor(
   name='ServiceMetadata',
-  full_name='tracardi_pro.ServiceMetadata',
+  full_name='ThamesThrive_pro.ServiceMetadata',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='type', full_name='tracardi_pro.ServiceMetadata.type', index=0,
+      name='type', full_name='ThamesThrive_pro.ServiceMetadata.type', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='name', full_name='tracardi_pro.ServiceMetadata.name', index=1,
+      name='name', full_name='ThamesThrive_pro.ServiceMetadata.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='description', full_name='tracardi_pro.ServiceMetadata.description', index=2,
+      name='description', full_name='ThamesThrive_pro.ServiceMetadata.description', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='traffic', full_name='tracardi_pro.ServiceMetadata.traffic', index=3,
+      name='traffic', full_name='ThamesThrive_pro.ServiceMetadata.traffic', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='icon', full_name='tracardi_pro.ServiceMetadata.icon', index=4,
+      name='icon', full_name='ThamesThrive_pro.ServiceMetadata.icon', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='tracardi_pro.ServiceMetadata.tags', index=5,
+      name='tags', full_name='ThamesThrive_pro.ServiceMetadata.tags', index=5,
       number=6, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='submit', full_name='tracardi_pro.ServiceMetadata.submit', index=6,
+      name='submit', full_name='ThamesThrive_pro.ServiceMetadata.submit', index=6,
       number=7, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='context', full_name='tracardi_pro.ServiceMetadata.context', index=7,
+      name='context', full_name='ThamesThrive_pro.ServiceMetadata.context', index=7,
       number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='requirements', full_name='tracardi_pro.ServiceMetadata.requirements', index=8,
+      name='requirements', full_name='ThamesThrive_pro.ServiceMetadata.requirements', index=8,
       number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='documentation', full_name='tracardi_pro.ServiceMetadata.documentation', index=9,
+      name='documentation', full_name='ThamesThrive_pro.ServiceMetadata.documentation', index=9,
       number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -149,21 +149,21 @@ _SERVICEMETADATA = _descriptor.Descriptor(
 
 _SERVICES_SERVICESENTRY = _descriptor.Descriptor(
   name='ServicesEntry',
-  full_name='tracardi_pro.Services.ServicesEntry',
+  full_name='ThamesThrive_pro.Services.ServicesEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='tracardi_pro.Services.ServicesEntry.key', index=0,
+      name='key', full_name='ThamesThrive_pro.Services.ServicesEntry.key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='value', full_name='tracardi_pro.Services.ServicesEntry.value', index=1,
+      name='value', full_name='ThamesThrive_pro.Services.ServicesEntry.value', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -187,14 +187,14 @@ _SERVICES_SERVICESENTRY = _descriptor.Descriptor(
 
 _SERVICES = _descriptor.Descriptor(
   name='Services',
-  full_name='tracardi_pro.Services',
+  full_name='ThamesThrive_pro.Services',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='services', full_name='tracardi_pro.Services.services', index=0,
+      name='services', full_name='ThamesThrive_pro.Services.services', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -219,14 +219,14 @@ _SERVICES = _descriptor.Descriptor(
 
 _PLUGINMETADATA = _descriptor.Descriptor(
   name='PluginMetaData',
-  full_name='tracardi_pro.PluginMetaData',
+  full_name='ThamesThrive_pro.PluginMetaData',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='module', full_name='tracardi_pro.PluginMetaData.module', index=0,
+      name='module', full_name='ThamesThrive_pro.PluginMetaData.module', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -251,21 +251,21 @@ _PLUGINMETADATA = _descriptor.Descriptor(
 
 _PLUGIN = _descriptor.Descriptor(
   name='Plugin',
-  full_name='tracardi_pro.Plugin',
+  full_name='ThamesThrive_pro.Plugin',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='init', full_name='tracardi_pro.Plugin.init', index=0,
+      name='init', full_name='ThamesThrive_pro.Plugin.init', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='form', full_name='tracardi_pro.Plugin.form', index=1,
+      name='form', full_name='ThamesThrive_pro.Plugin.form', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -290,14 +290,14 @@ _PLUGIN = _descriptor.Descriptor(
 
 _HOSTS = _descriptor.Descriptor(
   name='Hosts',
-  full_name='tracardi_pro.Hosts',
+  full_name='ThamesThrive_pro.Hosts',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='hosts', full_name='tracardi_pro.Hosts.hosts', index=0,
+      name='hosts', full_name='ThamesThrive_pro.Hosts.hosts', index=0,
       number=1, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -322,42 +322,42 @@ _HOSTS = _descriptor.Descriptor(
 
 _SERVICEENVELOP = _descriptor.Descriptor(
   name='ServiceEnvelop',
-  full_name='tracardi_pro.ServiceEnvelop',
+  full_name='ThamesThrive_pro.ServiceEnvelop',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='metadata', full_name='tracardi_pro.ServiceEnvelop.metadata', index=0,
+      name='metadata', full_name='ThamesThrive_pro.ServiceEnvelop.metadata', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='form', full_name='tracardi_pro.ServiceEnvelop.form', index=1,
+      name='form', full_name='ThamesThrive_pro.ServiceEnvelop.form', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='init', full_name='tracardi_pro.ServiceEnvelop.init', index=2,
+      name='init', full_name='ThamesThrive_pro.ServiceEnvelop.init', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='destination', full_name='tracardi_pro.ServiceEnvelop.destination', index=3,
+      name='destination', full_name='ThamesThrive_pro.ServiceEnvelop.destination', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='plugins', full_name='tracardi_pro.ServiceEnvelop.plugins', index=4,
+      name='plugins', full_name='ThamesThrive_pro.ServiceEnvelop.plugins', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -382,21 +382,21 @@ _SERVICEENVELOP = _descriptor.Descriptor(
 
 _CREDENTIALS = _descriptor.Descriptor(
   name='Credentials',
-  full_name='tracardi_pro.Credentials',
+  full_name='ThamesThrive_pro.Credentials',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='username', full_name='tracardi_pro.Credentials.username', index=0,
+      name='username', full_name='ThamesThrive_pro.Credentials.username', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='password', full_name='tracardi_pro.Credentials.password', index=1,
+      name='password', full_name='ThamesThrive_pro.Credentials.password', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -421,28 +421,28 @@ _CREDENTIALS = _descriptor.Descriptor(
 
 _HOSTCREDENTIALS = _descriptor.Descriptor(
   name='HostCredentials',
-  full_name='tracardi_pro.HostCredentials',
+  full_name='ThamesThrive_pro.HostCredentials',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='username', full_name='tracardi_pro.HostCredentials.username', index=0,
+      name='username', full_name='ThamesThrive_pro.HostCredentials.username', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='password', full_name='tracardi_pro.HostCredentials.password', index=1,
+      name='password', full_name='ThamesThrive_pro.HostCredentials.password', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='host', full_name='tracardi_pro.HostCredentials.host', index=2,
+      name='host', full_name='ThamesThrive_pro.HostCredentials.host', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -467,14 +467,14 @@ _HOSTCREDENTIALS = _descriptor.Descriptor(
 
 _TOKEN = _descriptor.Descriptor(
   name='Token',
-  full_name='tracardi_pro.Token',
+  full_name='ThamesThrive_pro.Token',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='token', full_name='tracardi_pro.Token.token', index=0,
+      name='token', full_name='ThamesThrive_pro.Token.token', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -499,28 +499,28 @@ _TOKEN = _descriptor.Descriptor(
 
 _SERVICEQUERY = _descriptor.Descriptor(
   name='ServiceQuery',
-  full_name='tracardi_pro.ServiceQuery',
+  full_name='ThamesThrive_pro.ServiceQuery',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='query', full_name='tracardi_pro.ServiceQuery.query', index=0,
+      name='query', full_name='ThamesThrive_pro.ServiceQuery.query', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='version', full_name='tracardi_pro.ServiceQuery.version', index=1,
+      name='version', full_name='ThamesThrive_pro.ServiceQuery.version', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='category', full_name='tracardi_pro.ServiceQuery.category', index=2,
+      name='category', full_name='ThamesThrive_pro.ServiceQuery.category', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -545,21 +545,21 @@ _SERVICEQUERY = _descriptor.Descriptor(
 
 _USERDATA = _descriptor.Descriptor(
   name='UserData',
-  full_name='tracardi_pro.UserData',
+  full_name='ThamesThrive_pro.UserData',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='token', full_name='tracardi_pro.UserData.token', index=0,
+      name='token', full_name='ThamesThrive_pro.UserData.token', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='host', full_name='tracardi_pro.UserData.host', index=1,
+      name='host', full_name='ThamesThrive_pro.UserData.host', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -611,14 +611,14 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 EmptyParams = _reflection.GeneratedProtocolMessageType('EmptyParams', (_message.Message,), {
   'DESCRIPTOR' : _EMPTYPARAMS,
   '__module__' : 'pro_services_pb2'
-  # @@protoc_insertion_point(class_scope:tracardi_pro.EmptyParams)
+  # @@protoc_insertion_point(class_scope:ThamesThrive_pro.EmptyParams)
   })
 _sym_db.RegisterMessage(EmptyParams)
 
 ServiceMetadata = _reflection.GeneratedProtocolMessageType('ServiceMetadata', (_message.Message,), {
   'DESCRIPTOR' : _SERVICEMETADATA,
   '__module__' : 'pro_services_pb2'
-  # @@protoc_insertion_point(class_scope:tracardi_pro.ServiceMetadata)
+  # @@protoc_insertion_point(class_scope:ThamesThrive_pro.ServiceMetadata)
   })
 _sym_db.RegisterMessage(ServiceMetadata)
 
@@ -627,12 +627,12 @@ Services = _reflection.GeneratedProtocolMessageType('Services', (_message.Messag
   'ServicesEntry' : _reflection.GeneratedProtocolMessageType('ServicesEntry', (_message.Message,), {
     'DESCRIPTOR' : _SERVICES_SERVICESENTRY,
     '__module__' : 'pro_services_pb2'
-    # @@protoc_insertion_point(class_scope:tracardi_pro.Services.ServicesEntry)
+    # @@protoc_insertion_point(class_scope:ThamesThrive_pro.Services.ServicesEntry)
     })
   ,
   'DESCRIPTOR' : _SERVICES,
   '__module__' : 'pro_services_pb2'
-  # @@protoc_insertion_point(class_scope:tracardi_pro.Services)
+  # @@protoc_insertion_point(class_scope:ThamesThrive_pro.Services)
   })
 _sym_db.RegisterMessage(Services)
 _sym_db.RegisterMessage(Services.ServicesEntry)
@@ -640,63 +640,63 @@ _sym_db.RegisterMessage(Services.ServicesEntry)
 PluginMetaData = _reflection.GeneratedProtocolMessageType('PluginMetaData', (_message.Message,), {
   'DESCRIPTOR' : _PLUGINMETADATA,
   '__module__' : 'pro_services_pb2'
-  # @@protoc_insertion_point(class_scope:tracardi_pro.PluginMetaData)
+  # @@protoc_insertion_point(class_scope:ThamesThrive_pro.PluginMetaData)
   })
 _sym_db.RegisterMessage(PluginMetaData)
 
 Plugin = _reflection.GeneratedProtocolMessageType('Plugin', (_message.Message,), {
   'DESCRIPTOR' : _PLUGIN,
   '__module__' : 'pro_services_pb2'
-  # @@protoc_insertion_point(class_scope:tracardi_pro.Plugin)
+  # @@protoc_insertion_point(class_scope:ThamesThrive_pro.Plugin)
   })
 _sym_db.RegisterMessage(Plugin)
 
 Hosts = _reflection.GeneratedProtocolMessageType('Hosts', (_message.Message,), {
   'DESCRIPTOR' : _HOSTS,
   '__module__' : 'pro_services_pb2'
-  # @@protoc_insertion_point(class_scope:tracardi_pro.Hosts)
+  # @@protoc_insertion_point(class_scope:ThamesThrive_pro.Hosts)
   })
 _sym_db.RegisterMessage(Hosts)
 
 ServiceEnvelop = _reflection.GeneratedProtocolMessageType('ServiceEnvelop', (_message.Message,), {
   'DESCRIPTOR' : _SERVICEENVELOP,
   '__module__' : 'pro_services_pb2'
-  # @@protoc_insertion_point(class_scope:tracardi_pro.ServiceEnvelop)
+  # @@protoc_insertion_point(class_scope:ThamesThrive_pro.ServiceEnvelop)
   })
 _sym_db.RegisterMessage(ServiceEnvelop)
 
 Credentials = _reflection.GeneratedProtocolMessageType('Credentials', (_message.Message,), {
   'DESCRIPTOR' : _CREDENTIALS,
   '__module__' : 'pro_services_pb2'
-  # @@protoc_insertion_point(class_scope:tracardi_pro.Credentials)
+  # @@protoc_insertion_point(class_scope:ThamesThrive_pro.Credentials)
   })
 _sym_db.RegisterMessage(Credentials)
 
 HostCredentials = _reflection.GeneratedProtocolMessageType('HostCredentials', (_message.Message,), {
   'DESCRIPTOR' : _HOSTCREDENTIALS,
   '__module__' : 'pro_services_pb2'
-  # @@protoc_insertion_point(class_scope:tracardi_pro.HostCredentials)
+  # @@protoc_insertion_point(class_scope:ThamesThrive_pro.HostCredentials)
   })
 _sym_db.RegisterMessage(HostCredentials)
 
 Token = _reflection.GeneratedProtocolMessageType('Token', (_message.Message,), {
   'DESCRIPTOR' : _TOKEN,
   '__module__' : 'pro_services_pb2'
-  # @@protoc_insertion_point(class_scope:tracardi_pro.Token)
+  # @@protoc_insertion_point(class_scope:ThamesThrive_pro.Token)
   })
 _sym_db.RegisterMessage(Token)
 
 ServiceQuery = _reflection.GeneratedProtocolMessageType('ServiceQuery', (_message.Message,), {
   'DESCRIPTOR' : _SERVICEQUERY,
   '__module__' : 'pro_services_pb2'
-  # @@protoc_insertion_point(class_scope:tracardi_pro.ServiceQuery)
+  # @@protoc_insertion_point(class_scope:ThamesThrive_pro.ServiceQuery)
   })
 _sym_db.RegisterMessage(ServiceQuery)
 
 UserData = _reflection.GeneratedProtocolMessageType('UserData', (_message.Message,), {
   'DESCRIPTOR' : _USERDATA,
   '__module__' : 'pro_services_pb2'
-  # @@protoc_insertion_point(class_scope:tracardi_pro.UserData)
+  # @@protoc_insertion_point(class_scope:ThamesThrive_pro.UserData)
   })
 _sym_db.RegisterMessage(UserData)
 
@@ -705,7 +705,7 @@ _SERVICES_SERVICESENTRY._options = None
 
 _SERVICE = _descriptor.ServiceDescriptor(
   name='Service',
-  full_name='tracardi_pro.Service',
+  full_name='ThamesThrive_pro.Service',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
@@ -715,7 +715,7 @@ _SERVICE = _descriptor.ServiceDescriptor(
   methods=[
   _descriptor.MethodDescriptor(
     name='get_available_services',
-    full_name='tracardi_pro.Service.get_available_services',
+    full_name='ThamesThrive_pro.Service.get_available_services',
     index=0,
     containing_service=None,
     input_type=_SERVICEQUERY,
@@ -725,7 +725,7 @@ _SERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='get_plugin',
-    full_name='tracardi_pro.Service.get_plugin',
+    full_name='ThamesThrive_pro.Service.get_plugin',
     index=1,
     containing_service=None,
     input_type=_PLUGINMETADATA,
@@ -735,7 +735,7 @@ _SERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='sign_up',
-    full_name='tracardi_pro.Service.sign_up',
+    full_name='ThamesThrive_pro.Service.sign_up',
     index=2,
     containing_service=None,
     input_type=_HOSTCREDENTIALS,
@@ -745,7 +745,7 @@ _SERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='sign_in',
-    full_name='tracardi_pro.Service.sign_in',
+    full_name='ThamesThrive_pro.Service.sign_in',
     index=3,
     containing_service=None,
     input_type=_CREDENTIALS,
@@ -755,7 +755,7 @@ _SERVICE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='validate',
-    full_name='tracardi_pro.Service.validate',
+    full_name='ThamesThrive_pro.Service.validate',
     index=4,
     containing_service=None,
     input_type=_EMPTYPARAMS,

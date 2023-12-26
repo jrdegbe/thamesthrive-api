@@ -48,5 +48,5 @@ For example, an e-commerce platform might route events related to product purcha
 
 ## Events synchronization
 
-In Tracardi, event synchronization is the process of managing the order in which events are processed. This includes ensuring that events for a specific profile are processed in a specific order. Essentially, this means that events for one profile are processed sequentially, while events for other profiles are processed sequentially but in parallel to each other.
+In ThamesThrive, event synchronization is the process of managing the order in which events are processed. This includes ensuring that events for a specific profile are processed in a specific order. Essentially, this means that events for one profile are processed sequentially, while events for other profiles are processed sequentially but in parallel to each other.
 

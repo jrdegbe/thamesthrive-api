@@ -1,6 +1,6 @@
 # Why is my background task in a pending state?
 
-The most likely reason for this is that you either haven't started the Tracardi worker or it's not functioning properly.
+The most likely reason for this is that you either haven't started the ThamesThrive worker or it's not functioning properly.
 
 ---
 This document also answers the queries / questions:

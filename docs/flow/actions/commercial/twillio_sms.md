@@ -1,7 +1,7 @@
 # Send SMS
 
-The "Send SMS" plugin in Tracardi enables you to send SMS messages using the Twilio gateway. With this plugin, you can
-integrate SMS messaging functionality into your Tracardi workflows.
+The "Send SMS" plugin in ThamesThrive enables you to send SMS messages using the Twilio gateway. With this plugin, you can
+integrate SMS messaging functionality into your ThamesThrive workflows.
 
 ## Description
 

@@ -1,4 +1,4 @@
-# What are the pros and cons of multi-tenant setup of Tracardi?
+# What are the pros and cons of multi-tenant setup of ThamesThrive?
 
 Pros of Multi-tenant Setup:
 

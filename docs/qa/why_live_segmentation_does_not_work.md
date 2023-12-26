@@ -3,8 +3,8 @@
 There could be several reasons why your live segmentation is not working as expected. Here are some possible
 explanations:
 
-* Docker Configuration: Ensure that the required Docker containers, such as tracardi/com-tracardi-segmentation-job and
-  tracardi/com-tracardi-segmentation-worker, are properly installed and running. Check their status and logs to identify
+* Docker Configuration: Ensure that the required Docker containers, such as ThamesThrive/com-ThamesThrive-segmentation-job and
+  ThamesThrive/com-ThamesThrive-segmentation-worker, are properly installed and running. Check their status and logs to identify
   any potential issues or errors that could be preventing the live segmentation from working.
 
 * Schedule and Frequency: Verify the schedule and frequency at which the live segmentation is set to run. If the

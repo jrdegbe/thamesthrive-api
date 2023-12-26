@@ -1,6 +1,6 @@
 # What is the difference between event traits and properties and what is event indexing?
 
-Event traits and properties are both characteristics of an event in Tracardi, but they differ in their structure and
+Event traits and properties are both characteristics of an event in ThamesThrive, but they differ in their structure and
 purpose.
 
 Event properties are the basic characteristics of an event that can be recorded and searched, but they cannot be
@@ -11,7 +11,7 @@ this data even if it is inconsistent or has different data types.
 
 Event traits, on the other hand, are structured and have data types. Event traits are used for searching, analyzing, and
 aggregating events. If the data is inconsistent or has an incorrect data type, such as having "Age" as a number but
-receiving it as a string ("24 yeas old"), Tracardi will throw an error and not index it. Data in traits have structure and
+receiving it as a string ("24 yeas old"), ThamesThrive will throw an error and not index it. Data in traits have structure and
 types, allowing for aggregation, such as calculating the average age based on the "age" trait.
 
 To summarize, if an event includes a property, that property could be copied to a trait so that all events involving

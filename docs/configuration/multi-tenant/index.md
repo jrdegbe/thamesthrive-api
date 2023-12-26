@@ -1,6 +1,6 @@
 # Creating a New Tenant using API Call
 
-This documentation outlines the process of automating the creation of a new tenant through the Tracardi API. To achieve
+This documentation outlines the process of automating the creation of a new tenant through the ThamesThrive API. To achieve
 this, you'll need an API Key associated with the TMS, which is generated during the installation of the TMS.
 
 ## Prerequisites
@@ -9,7 +9,7 @@ this, you'll need an API Key associated with the TMS, which is generated during 
 
 ## API Endpoint and Method
 
-Make an API call to the Tracardi API using the POST method and the endpoint `/tenant/install`.
+Make an API call to the ThamesThrive API using the POST method and the endpoint `/tenant/install`.
 
 ## Payload
 
@@ -32,7 +32,7 @@ Here's an example of how to make the API call using the CURL command:
 
 ```bash
 curl -X POST \
-  https://tracardi-api-url/tenant/install \
+  https://ThamesThrive-api-url/tenant/install \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "name-of-the-tenant",

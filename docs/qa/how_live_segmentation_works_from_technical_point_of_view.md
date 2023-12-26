@@ -18,12 +18,12 @@ overview of how live segmentation works:
   is queued in a Redis queue, which acts as a job queue system. The queue holds the tasks until a worker is available to
   process them.
 
-* Segmentation Job Docker: The segmentation job docker container, named "tracardi/com-tracardi-segmentation-job", is
+* Segmentation Job Docker: The segmentation job docker container, named "ThamesThrive/com-ThamesThrive-segmentation-job", is
   responsible for orchestrating the segmentation tasks. It picks up all workflows, batches profiles and schedules them
   for processing.
 
 * Segmentation Worker Docker: The segmentation worker docker container, named "
-  tracardi/com-tracardi-segmentation-worker" performs the actual segmentation computations. When a worker receives a
+  ThamesThrive/com-ThamesThrive-segmentation-worker" performs the actual segmentation computations. When a worker receives a
   task from the job docker, it applies the workflow logic to the corresponding profile, determines the segment(s) the
   profile belongs to, and stores the segmentation results in profile. This way segmentation can run in parallel.
 
@@ -31,7 +31,7 @@ overview of how live segmentation works:
 
 * Cron Job: Live segmentation is often scheduled as a recurring task using a cron job. The cron job triggers the
   segmentation process at specified intervals, ensuring that profiles are regularly segmented based on the defined
-  workflows. Docker tracardi/com-tracardi-segmentation-job is responsible for this.
+  workflows. Docker ThamesThrive/com-ThamesThrive-segmentation-job is responsible for this.
 
 In summary, live segmentation involves defining workflows, retrieving profiles, queuing segmentation tasks, and
 executing the tasks using dedicated job and worker docker containers. The segmentation process applies the workflow

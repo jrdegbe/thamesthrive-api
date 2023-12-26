@@ -7,7 +7,7 @@ as a starting node in the workflow.
 
 The Run In Background plugin causes the entire workflow branch to be executed as a background task. It schedules the
 task to run in the background and continues the workflow execution without waiting for the task to complete. This plugin
-is part of the Tracardi Pro License.
+is part of the ThamesThrive Pro License.
 
 # Inputs and Outputs
 

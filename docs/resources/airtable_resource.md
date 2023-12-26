@@ -3,7 +3,7 @@ but applied to a spreadsheet.
 
 # Resource configuration and set-up
 
-In order to connect Airtable to Tracardi you need an API key. Airtable API key allows you to use system public API to
+In order to connect Airtable to ThamesThrive you need an API key. Airtable API key allows you to use system public API to
 create, fetch, update, and delete records in the bases you have access to.
 
 To find your Airtable API key

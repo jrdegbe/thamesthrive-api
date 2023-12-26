@@ -21,7 +21,7 @@ def record_exists(hash):
 
     return (
         client.query
-            .get("Tracardi", ["question", "answer", 'file', 'hash'])
+            .get("ThamesThrive", ["question", "answer", 'file', 'hash'])
             .with_where(where_filter)
             .do()
     )

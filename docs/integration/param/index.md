@@ -1,7 +1,7 @@
 # Forcing profile ID on the page
 
 Sometimes you want to make sure that you track a specific user's activity. This can be useful when redirecting from
-emails or other sources. If you already have the customer's profile because the email was sent from Tracardi, you may
+emails or other sources. If you already have the customer's profile because the email was sent from ThamesThrive, you may
 want to track that same profile when the user clicks on the link. To do this, you need to enable the static Profile ID
 in the event source that collects data and add the profile ID to the page's URL.
 

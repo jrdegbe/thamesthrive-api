@@ -4,9 +4,9 @@ Profile synchronization is an important aspect of data management, particularly 
 
 Here is an example of how profile synchronization might be used in a customer data platform:
 
-Imagine that an online retailer tracks events related to customer profiles, such as product searches, purchases, and customer service interactions. Tracardi might receive many events each second, including events related to different customer profiles.
+Imagine that an online retailer tracks events related to customer profiles, such as product searches, purchases, and customer service interactions. ThamesThrive might receive many events each second, including events related to different customer profiles.
 
-To ensure that events are processed accurately and consistently, Tracardi implements profile synchronization. This makes processing events for each customer profile sequentially, so that events related to one customer are fully processed one by one even if they are send at the same time. This ensures that the data for each customer is accurate and up-to-date, and that actions and processes are performed in the correct order.
+To ensure that events are processed accurately and consistently, ThamesThrive implements profile synchronization. This makes processing events for each customer profile sequentially, so that events related to one customer are fully processed one by one even if they are send at the same time. This ensures that the data for each customer is accurate and up-to-date, and that actions and processes are performed in the correct order.
 
 For example: If you want to send two messages and the second message depends on the result of the first one, the system must wait for the first event to be finished before sending the second message.
 

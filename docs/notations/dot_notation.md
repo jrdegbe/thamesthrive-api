@@ -1,7 +1,7 @@
 # Dot notation
 
 Dot notation is a way to access data in internal state of workflow. It is a standard 
-way to reference data in Tracardi. It is used across many places in Tracardi such as 
+way to reference data in ThamesThrive. It is used across many places in ThamesThrive such as 
 plugins, destinations, etc. 
 
 ## Example of dot notation
@@ -136,13 +136,13 @@ Notations that use dot notation:
 This documentation answers the following questions:
 
 * What is dot notation?
-* What is the purpose of dot notation in Tracardi?
-* What are the available sources for dot notation in Tracardi?
-* What is the format of dot notation in Tracardi?
-* What is the warning associated with dot notation in Tracardi?
-* How can a part of data be accessed using dot notation in Tracardi?
-* How can items in an array be accessed using dot notation in Tracardi?
-* Can objects embedded inside arrays be retrieved using dot notation in Tracardi?
-* How can I access profile data in tracardi?
-* How can I access event data in tracardi?
-* How can I access session data in tracardi?
+* What is the purpose of dot notation in ThamesThrive?
+* What are the available sources for dot notation in ThamesThrive?
+* What is the format of dot notation in ThamesThrive?
+* What is the warning associated with dot notation in ThamesThrive?
+* How can a part of data be accessed using dot notation in ThamesThrive?
+* How can items in an array be accessed using dot notation in ThamesThrive?
+* Can objects embedded inside arrays be retrieved using dot notation in ThamesThrive?
+* How can I access profile data in ThamesThrive?
+* How can I access event data in ThamesThrive?
+* How can I access session data in ThamesThrive?

@@ -1,4 +1,4 @@
-***RabbitMQ allows to process compute intensive data outside tracardi server. You may want to run some data processing in
+***RabbitMQ allows to process compute intensive data outside ThamesThrive server. You may want to run some data processing in
 the background and distribute the load to multiple servers.***
 
 For Extensive Information about RabbitMQ visit : https://www.rabbitmq.com/documentation.html

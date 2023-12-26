@@ -5,7 +5,7 @@ for example *event@properties.consents*.
 
 ## Consents payload
 
-The most possible use-case is when customer grants consents by filling a form. This data is sent to Tracardi as an event
+The most possible use-case is when customer grants consents by filling a form. This data is sent to ThamesThrive as an event
 with properties set to granted consents. Consents payload should be in form of:
 
 ```json

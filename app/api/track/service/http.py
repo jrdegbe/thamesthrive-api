@@ -8,3 +8,4 @@ def get_headers(request: Request):
     if 'cookie' in headers:
         del headers['cookie']
     return headers
+

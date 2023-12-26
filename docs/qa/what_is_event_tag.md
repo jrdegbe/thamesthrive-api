@@ -8,6 +8,6 @@ Event tags are customizable and can be used to represent various aspects of the 
 location, or any other relevant attribute. They offer a way to group events together based on common properties,
 facilitating better organization and management of event data.
 
-For example, in Tracardi, events related to product purchases could be tagged with labels like "
-purchase," "transaction," or "completed order." Some events in Tracardi are automatically tagged to create a customer
+For example, in ThamesThrive, events related to product purchases could be tagged with labels like "
+purchase," "transaction," or "completed order." Some events in ThamesThrive are automatically tagged to create a customer
 journey map, providing a visual representation of how customers engage over time.

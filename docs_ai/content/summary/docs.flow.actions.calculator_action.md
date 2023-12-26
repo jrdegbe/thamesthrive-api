@@ -7,3 +7,4 @@ Variables can also be used in calculations. For example, the equation `decay_rat
 Compound calculations can also be performed. For example, the equation `a = 1 + 2 / 3; b = (1 + 2) / 3; c = a + b` will return an object with the result and variables. Each number can be replaced by a variable or a field from the profile, event, etc. 
 
 Negative values can also be calculated. For example, the equation `event@counter = 1; -event@counter` will return an object with the result and variables. The result of this equation will be -1 and the event@counter will equal 1.
+

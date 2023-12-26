@@ -18,22 +18,22 @@ Install the above software, and we're ready to start.
 Open a terminal and go to the directory where you want to keep the code. Enter:
 
 ```bash
-git clone https://github.com/Tracardi/tracardi  #(1)
-git clone https://github.com/Tracardi/tracardi-api #(2)
+git clone https://github.com/ThamesThrive/ThamesThrive  #(1)
+git clone https://github.com/ThamesThrive/ThamesThrive-api #(2)
 ```
 
-1. Clones tracardi repository. Code will be available in tracardi folder.
-2. Clones tracardi-api repository
+1. Clones ThamesThrive repository. Code will be available in ThamesThrive folder.
+2. Clones ThamesThrive-api repository
 
 # Create virtual environments
 
 Type:
 
 ```bash
-cd tracardi-api
+cd ThamesThrive-api
 python3.9 -m venv venv  # (1)
 cd ..
-cd tracardi
+cd ThamesThrive
 python3.9 -m venv venv
 ```
 
@@ -49,7 +49,7 @@ python3.9 -m venv venv
 
     ```bash
     # Activates virtual environment (1)
-    cd tracardi-api
+    cd ThamesThrive-api
     source venv/bin/activate
 
     # Install wheel
@@ -62,13 +62,13 @@ python3.9 -m venv venv
     USER_NAME=admin PASSWORD=admin uvicorn app.main:application --host 0.0.0.0 --port 8686
     ```
 
-    1. Only tracardi-api is required to run the API. Tracardi library will be installed as dependency.
-    2. Sets default username: password as admin: admin and runs Tracardi API on port 8686.
+    1. Only ThamesThrive-api is required to run the API. ThamesThrive library will be installed as dependency.
+    2. Sets default username: password as admin: admin and runs ThamesThrive API on port 8686.
 
 === "Windows"
 
     ```bash
-    cd tracardi-api
+    cd ThamesThrive-api
     venv\Scripts\activate
     
     // Installs dependencies
@@ -82,7 +82,7 @@ python3.9 -m venv venv
 
     ```bash
     // Activates virtual environment
-    cd tracardi-api
+    cd ThamesThrive-api
     source venv/bin/activate
     
     // Installs dependencies

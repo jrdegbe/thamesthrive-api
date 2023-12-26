@@ -11,11 +11,11 @@
 
 Install the above software and we're ready to start.
 
-Docker is required to start Tracardi storage (Elasticsearch) and Redis.
+Docker is required to start ThamesThrive storage (Elasticsearch) and Redis.
 
 ## Launching Redis and Elasticsearch
 
-Redis instance is required to start Tracardi.
+Redis instance is required to start ThamesThrive.
 
 ### Redis instance
 
@@ -27,7 +27,7 @@ docker run -p 6379:6379 redis
 
 ### Elasticsearch instance
 
-Elasticsearch is the database that Tracardi uses for storing data.
+Elasticsearch is the database that ThamesThrive uses for storing data.
 
 Open a new terminal and enter to start Elasticsearch:
 
@@ -47,27 +47,27 @@ When you want to stop Elasticsearch or redis, press CTRL+C in the terminal you s
 Open a terminal and go to the directory where you want to keep the code. Enter:
 
 ```bash
-git clone https://github.com/Tracardi/tracardi  #(1)
-git clone https://github.com/Tracardi/tracardi-api #(2)
+git clone https://github.com/ThamesThrive/ThamesThrive  #(1)
+git clone https://github.com/ThamesThrive/ThamesThrive-api #(2)
 ```
 
-1. Clones tracardi repository. Code will be available in tracardi folder.
-2. Clones tracardi-api repository
+1. Clones ThamesThrive repository. Code will be available in ThamesThrive folder.
+2. Clones ThamesThrive-api repository
 
 ## Create virtual environments
 
 We need to create 2 virtual environments. Type:
 
 ```bash
-cd tracardi-api
+cd ThamesThrive-api
 python3.9 -m venv venv  # (1)
 cd ..
-cd tracardi
+cd ThamesThrive
 python3.9 -m venv venv # (2)
 ```
 
-1. Installs virtual environment with python 3.9 for tracardi API
-2. Installs virtual environment with python 3.9 for tracardi library
+1. Installs virtual environment with python 3.9 for ThamesThrive API
+2. Installs virtual environment with python 3.9 for ThamesThrive library
 
 !!! Tip
 
@@ -79,7 +79,7 @@ python3.9 -m venv venv # (2)
 
     ```bash
     # Activates virtual environment (1)
-    cd tracardi-api
+    cd ThamesThrive-api
     source venv/bin/activate
     
     # Installs dependencies
@@ -88,21 +88,21 @@ python3.9 -m venv venv # (2)
 
     cd ..
     
-    cd tracardi
+    cd ThamesThrive
     source venv/bin/activate
     
     # Installs dependencies (2)
-    pip install -r tracardi/requirements.txt
+    pip install -r ThamesThrive/requirements.txt
     deactivate
     ```
 
-    1. Only tracardi-api is required to run the API. Tracardi library will be installed as dependency.
-    2. Installs dependencies of Tracardi API.
+    1. Only ThamesThrive-api is required to run the API. ThamesThrive library will be installed as dependency.
+    2. Installs dependencies of ThamesThrive API.
 
 === "Windows"
 
     ```bash
-    cd tracardi-api
+    cd ThamesThrive-api
     venv\\Scripts\\activate
     
     // Installs dependencies
@@ -111,11 +111,11 @@ python3.9 -m venv venv # (2)
 
     cd ..
 
-    cd tracardi
+    cd ThamesThrive
     venv\\Scripts\\activate
     
     // Installs dependencies
-    pip install -r tracardi\\requirements.txt
+    pip install -r ThamesThrive\\requirements.txt
     deactivate
 
     ```
@@ -124,7 +124,7 @@ python3.9 -m venv venv # (2)
 
     ```bash
     # Activates virtual environment (1)
-    cd tracardi-api
+    cd ThamesThrive-api
     source venv/bin/activate
     
     # Installs dependencies
@@ -133,16 +133,16 @@ python3.9 -m venv venv # (2)
 
     cd ..
     
-    cd tracardi
+    cd ThamesThrive
     source venv/bin/activate
     
     # Installs dependencies (2)
-    pip install -r tracardi/requirements.txt
+    pip install -r ThamesThrive/requirements.txt
     deactivate
     ```
 
-    1. Only tracardi-api is required to run the API. Tracardi library will be installed as dependency.
-    2. Installs dependencies of Tracardi API.
+    1. Only ThamesThrive-api is required to run the API. ThamesThrive library will be installed as dependency.
+    2. Installs dependencies of ThamesThrive API.
 
 !!! Tip
 
@@ -156,21 +156,21 @@ python3.9 -m venv venv # (2)
 
 ## Importing project into PyCharm
 
-The API and tracardi library are installed. Now it is time to open IDE and run it inside code editor. Tracardi API
-depends on tracardi library we will need to reference library inside Tracardi API project.
+The API and ThamesThrive library are installed. Now it is time to open IDE and run it inside code editor. ThamesThrive API
+depends on ThamesThrive library we will need to reference library inside ThamesThrive API project.
 
 1. Open `PyCharm`
 2. Click `File/Open`
-3. Find and select `tracardi-api` folder
+3. Find and select `ThamesThrive-api` folder
 4. Click open project in `new window`
 5. In the right lower corner next to maser branch, select `<no-interpreter>`
 6. Click `add interpreter` and select existing environment
 
-Now it is time to open `tracardi library` and reference it as dependency of `tracardi-api`
+Now it is time to open `ThamesThrive library` and reference it as dependency of `ThamesThrive-api`
 
 1. Open `PyCharm`
 2. Click `File/Open`
-3. Find and select `tracardi` folder
+3. Find and select `ThamesThrive` folder
 4. Click open project as `attach`
 
 You should see something like this in your PyCharm editor.
@@ -179,11 +179,11 @@ You should see something like this in your PyCharm editor.
 
 ## Running inside PyCharm
 
-1. Find folder `app` in `tracardi-api`
+1. Find folder `app` in `ThamesThrive-api`
 2. Find file `main.py`
 3. Right click on it and select `Run 'main.py'`
 
-Now the Tracardi API is running. You should see the following logs:
+Now the ThamesThrive API is running. You should see the following logs:
 
 ```text
 INFO:     Started server process [59653]
@@ -211,9 +211,9 @@ INFO:uvicorn.error:Uvicorn running on http://0.0.0.0:8686 (Press CTRL+C to quit)
     uvicorn app.main:application --reload --host 0.0.0.0 --port 8686  #(1)
     ```
 
-    1. Runs Tracardi API on port 8686 via uvicorn.
+    1. Runs ThamesThrive API on port 8686 via uvicorn.
 
-    The above command will run serveral copies (workers) of Tracardi API.
+    The above command will run serveral copies (workers) of ThamesThrive API.
 
 !!! Tip
 
@@ -224,7 +224,7 @@ INFO:uvicorn.error:Uvicorn running on http://0.0.0.0:8686 (Press CTRL+C to quit)
     ```
 
     This warining may appear when you connect to elasticsearch without credentials set-up. This is not an issue when 
-    you run development version of Tracardi. 
+    you run development version of ThamesThrive. 
 
 
 ## Wrap-up
@@ -233,13 +233,13 @@ Testing API can be via `http://localhost:8686/docs`. If you need to test API wit
 command:
 
 ```bash
-docker run -p 8787:80 -e API_URL=//127.0.0.1:8787 tracardi/tracardi-gui:<version>
+docker run -p 8787:80 -e API_URL=//127.0.0.1:8787 ThamesThrive/ThamesThrive-gui:<version>
 ```
 
 !!! Info
 
     1. Replace `<version>` with current development version, for example: `0.7.3-dev`. If you do not know the current development version 
-       please contact us at: __office(at)tracardi.com__ or on any social media: __http://twitter.com/tracardi__, __http://www.youtube.com/@tracardi__,
-       or via __slack__ or __https://github.com/Tracardi/tracardi__
+       please contact us at: __office(at)ThamesThrive.com__ or on any social media: __http://twitter.com/ThamesThrive__, __http://www.youtube.com/@ThamesThrive__,
+       or via __slack__ or __https://github.com/ThamesThrive/ThamesThrive__
 
 GUI will be available at `http://localhost:8787`.

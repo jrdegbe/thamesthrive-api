@@ -3,8 +3,8 @@ from app.api.auth.permissions import Permissions
 from app.config import server
 from app.service.grouping import group_records
 
-from tracardi.domain.consent_type import ConsentType
-from tracardi.service.storage.driver.elastic import consent_type as consent_type_db
+from ThamesThrive.domain.consent_type import ConsentType
+from ThamesThrive.service.storage.driver.elastic import consent_type as consent_type_db
 
 router = APIRouter()
 

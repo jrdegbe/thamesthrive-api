@@ -38,5 +38,5 @@
    __Action__: Add the profile to the "Browsing Shoppers" segment.
 
 Remember, these workflows are just examples, and you can customize them based on your specific segmentation goals and
-requirements. Tracardi provides the flexibility to design workflows that suit your business needs and perform
+requirements. ThamesThrive provides the flexibility to design workflows that suit your business needs and perform
 segmentation effectively.

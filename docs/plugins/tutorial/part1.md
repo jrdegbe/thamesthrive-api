@@ -1,22 +1,22 @@
-# Part 1: Code simple plugin in Tracardi
+# Part 1: Code simple plugin in ThamesThrive
 
 Beginner Programmer's Guide
 
-So, you would like to know how to add a new item to a workflow in the Tracardi system.
-This article describes how a python programmer can extend Tracardi with new functions with so-called plugins.
+So, you would like to know how to add a new item to a workflow in the ThamesThrive system.
+This article describes how a python programmer can extend ThamesThrive with new functions with so-called plugins.
 
 ## Introduction
 
-Event handling in Tracardi is based on a __workflow__, which consists of individual __actions__ visualized as __nodes__
+Event handling in ThamesThrive is based on a __workflow__, which consists of individual __actions__ visualized as __nodes__
 in the workflow. Workflow control when each action/node should be triggered. The action consists of an __input__, __a
-program__ that computes the input data, and __an output__ (the result of the program computation). In tracardi, an action can have
+program__ that computes the input data, and __an output__ (the result of the program computation). In ThamesThrive, an action can have
 one input and many outputs. In addition, the action has a configuration, it is a set of data that define how the program
 should behave, Let's assume that we want to connect to external resources of some database, it is in the configuration
 that we will have information about where this database is, and what username and password to use to connect to the
 resource.
 
-Due to the fact that Tracardi can have many outputs, we must somehow indicate on which output our data should appear.
-That's why Tracardi introduces concepts such as a port. Thanks to them, we can indicate where the data will be returned.
+Due to the fact that ThamesThrive can have many outputs, we must somehow indicate on which output our data should appear.
+That's why ThamesThrive introduces concepts such as a port. Thanks to them, we can indicate where the data will be returned.
 The port that will not receive the data (returns the None value) causes that the workflow will not be performed in this
 branch of the workflow.
 
@@ -79,19 +79,19 @@ Theoretically, we should complete all the methods described above, but in our ca
 configuration, so set_up method is not needed, we don't have connection to external systems, so close method is not
 needed either, we don't have an internal state of class, so `__init__` will be empty.
 
-Before we start, let's create a file in which we will write the code. The Tracardi plugins are in the directory:
-`/tracardi/process_engine/action/v1`. You can create your own catalog there or use an existing one. I will create
+Before we start, let's create a file in which we will write the code. The ThamesThrive plugins are in the directory:
+`/ThamesThrive/process_engine/action/v1`. You can create your own catalog there or use an existing one. I will create
 my_plugin_folder directory and put my_plugin.py file in it.
 
 ### Now the code.
 
 Our plugin could look like this:
 
-=== "/tracardi/process_engine/action/v1/my_plugin_folder/my_plugin.py"
+=== "/ThamesThrive/process_engine/action/v1/my_plugin_folder/my_plugin.py"
 
     ```python
-    from tracardi.service.plugin.runner import ActionRunner
-    from tracardi.service.plugin.domain.result import Result
+    from ThamesThrive.service.plugin.runner import ActionRunner
+    from ThamesThrive.service.plugin.domain.result import Result
     
     class MyPlugin(ActionRunner):  # (1)
         async def run(self, payload: dict, in_edge=None):  # (2)
@@ -117,10 +117,10 @@ file.
 
 #### Example:
 
-=== "/tracardi/process_engine/action/v1/my_plugin_folder/my_plugin.py"
+=== "/ThamesThrive/process_engine/action/v1/my_plugin_folder/my_plugin.py"
 
     ```python
-    from tracardi.service.plugin.domain.register import Plugin, Spec, MetaData
+    from ThamesThrive.service.plugin.domain.register import Plugin, Spec, MetaData
 
     def register() -> Plugin:
         return Plugin(   # (1)
@@ -145,7 +145,7 @@ file.
     1. Returns Plugin class
     2. Sets spec property as Spec class
     3. Sets metadata property as Metadata class
-    4. Sets `__name__` because refister is in the same file as plugin: e.i. `/tracardi/process_engine/action/v1/my_plugin_folder/my_plugin.py`
+    4. Sets `__name__` because refister is in the same file as plugin: e.i. `/ThamesThrive/process_engine/action/v1/my_plugin_folder/my_plugin.py`
 
 Let's analyze this code. It returns a plugin class that has the following properties.
 
@@ -156,7 +156,7 @@ Let's analyze this code. It returns a plugin class that has the following proper
     * __module__ - where is the class package. `__name__` means that the class is in the same file as the register
       method.
       If we separate the plugin and register function, then you need to enter the package name of the plugin here, e.g.
-      `tracardi.process_engine.action.v1.my_plugin_folder`
+      `ThamesThrive.process_engine.action.v1.my_plugin_folder`
     * __className__ - the name of the class. We named it MyPlugin. See class `MyPlugin (ActionRunner)`
     * __inputs__ - list with the names of the input ports. There can only be one input port.
     * __outputs__ - list with names of output ports. Here we define what ports we have. Port names can have any name you
@@ -164,7 +164,7 @@ Let's analyze this code. It returns a plugin class that has the following proper
       time: `Result (port="MyEvent", value=payload)` and another time `Result (port="NotMyEvent", value={})`, i.e. 
       possible output ports are `["MyEvent", "NotMyEvent"]`
     * __version__ - enter the plugin version here
-    * __license__ - license type, Tracardi is able to attach the plug-in only under the `MIT` or `Apache 2.0` license
+    * __license__ - license type, ThamesThrive is able to attach the plug-in only under the `MIT` or `Apache 2.0` license
     * __author__ - author's first and last name
 * __metadata__ - contains additional data about the plugin.
     * __name__ - the name of the plugin to be displayed on the workflow graph
@@ -177,7 +177,7 @@ Let's analyze this code. It returns a plugin class that has the following proper
 The only thing left is to register the plug-in on the list of available plug-ins for installation. We do this by
 pointing to the file with the register function.
 
-To do that, go to the directory: `/tracardi/service/setup` and find the file `setup_plugins.py` This is the list of all
+To do that, go to the directory: `/ThamesThrive/service/setup` and find the file `setup_plugins.py` This is the list of all
 available plugins in the system.
 
 At the top of this file you will find the variable `installed_plugins: Dict [str, PluginTestTemplate]` which is a
@@ -185,10 +185,10 @@ dictionary where the key is the location of the register function. The value is 
 type, it is responsible for the test data for the plug-in. We will not write tests, so our block of code should look
 like this:
 
-=== "/tracardi/service/setup/setup_plugins.py"
+=== "/ThamesThrive/service/setup/setup_plugins.py"
 
     ```python
-    "tracardi.process_engine.action.v1.my_plugin_folder.my_plugin": PluginMetadata(  # (1)
+    "ThamesThrive.process_engine.action.v1.my_plugin_folder.my_plugin": PluginMetadata(  # (1)
         test=PluginTest(init=None, resource=None)
     ),
     ```
@@ -197,7 +197,7 @@ like this:
 
 Type this into the `installed_plugins` dictionary, and we are ready to install the plugin.
 
-Restart the Tracardi API so the changes are activated and go to `Processing/Workflows`, open any workflow and click the
+Restart the ThamesThrive API so the changes are activated and go to `Processing/Workflows`, open any workflow and click the
 `Reinstall Plugins` button. Alternatively you can go to `Maintenance/Plug-ins` and click the `Reinstall Plugins` button.
 
 ## Wrap-up

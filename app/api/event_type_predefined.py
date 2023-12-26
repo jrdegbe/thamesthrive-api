@@ -2,18 +2,18 @@ import logging
 from collections import defaultdict
 
 from fastapi import APIRouter, HTTPException, Depends, Response
-from tracardi.config import tracardi
-from tracardi.domain.event_source import EventSource
-from tracardi.exceptions.log_handler import log_handler
-from tracardi.service.events import cache_predefined_event_types, get_predefined_event_types, \
+from ThamesThrive.config import ThamesThrive
+from ThamesThrive.domain.event_source import EventSource
+from ThamesThrive.exceptions.log_handler import log_handler
+from ThamesThrive.service.events import cache_predefined_event_types, get_predefined_event_types, \
     get_default_event_type_schema
-from tracardi.service.storage.driver.elastic import event_source as event_source_db
+from ThamesThrive.service.storage.driver.elastic import event_source as event_source_db
 from app.service.grouper import search
 from .auth.permissions import Permissions
 from ..config import server
 
 logger = logging.getLogger(__name__)
-logger.setLevel(tracardi.logging_level)
+logger.setLevel(ThamesThrive.logging_level)
 logger.addHandler(log_handler)
 
 router = APIRouter(

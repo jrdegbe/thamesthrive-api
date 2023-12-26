@@ -1,17 +1,17 @@
 from typing import List, Optional
 
 from app.api.auth.permissions import Permissions
-from tracardi.config import elastic, redis_config, tracardi, memory_cache
+from ThamesThrive.config import elastic, redis_config, ThamesThrive, memory_cache
 from app.config import *
 from fastapi import APIRouter, Depends
-from tracardi.domain.settings import SystemSettings
+from ThamesThrive.domain.settings import SystemSettings
 
 system_settings = [
     SystemSettings(
         **{
             "label": "UPDATE_PLUGINS_ON_STARTUP",
             "value": server.update_plugins_on_start_up,
-            "desc": "Default: no. If equals yes it will update all installed plugins on Tracardi start."
+            "desc": "Default: no. If equals yes it will update all installed plugins on ThamesThrive start."
         }
     ),
     SystemSettings(
@@ -32,14 +32,14 @@ system_settings = [
     SystemSettings(
         **{
             "label": "SYSTEM_EVENTS",
-            "value": tracardi.system_events,
+            "value": ThamesThrive.system_events,
             "desc": "Default: Yes. Register system events like: profile-created, session-opened, etc."
         }
     ),
     SystemSettings(
         **{
             "label": "MULTI_TENANT",
-            "value": tracardi.multi_tenant,
+            "value": ThamesThrive.multi_tenant,
             "desc": "Default: No. Turns on multi tenancy feature for commercial versions."
         }
     ),
@@ -78,44 +78,44 @@ system_settings = [
     SystemSettings(
         **{
             "label": "TRACK_DEBUG",
-            "value": tracardi.track_debug,
+            "value": ThamesThrive.track_debug,
             "desc": "Track debug or not, defaults to False."
         }
     ),
     SystemSettings(
         **{
             "label": "QUERY_LANGUAGE",
-            "value": tracardi.query_language,
+            "value": ThamesThrive.query_language,
             "desc": "Defines what type of query language to use for filtering data. Default: Kibana Query Language (kql)."
-                    " Other possible values Tracardi Query Language (tql)"
+                    " Other possible values ThamesThrive Query Language (tql)"
         }
     ),
     SystemSettings(
         **{
-            "label": "TRACARDI_PRO_HOST",
-            "value": tracardi.tracardi_pro_host,
-            "desc": "Defines the Tracardi Pro Services Host."
+            "label": "ThamesThrive_PRO_HOST",
+            "value": ThamesThrive.ThamesThrive_pro_host,
+            "desc": "Defines the ThamesThrive Pro Services Host."
         }
     ),
     SystemSettings(
         **{
-            "label": "TRACARDI_PRO_PORT",
-            "value": tracardi.tracardi_pro_port,
-            "desc": "Defines the Tracardi Pro Services Port."
+            "label": "ThamesThrive_PRO_PORT",
+            "value": ThamesThrive.ThamesThrive_pro_port,
+            "desc": "Defines the ThamesThrive Pro Services Port."
         }
     ),
     SystemSettings(
         **{
-            "label": "TRACARDI_SCHEDULER_HOST",
-            "value": tracardi.tracardi_scheduler_host,
-            "desc": "Defines the Tracardi Pro Scheduler Host."
+            "label": "ThamesThrive_SCHEDULER_HOST",
+            "value": ThamesThrive.ThamesThrive_scheduler_host,
+            "desc": "Defines the ThamesThrive Pro Scheduler Host."
         }
     ),
 
     SystemSettings(
         **{
             "label": "CACHE_PROFILE",
-            "value": tracardi.cache_profiles,
+            "value": ThamesThrive.cache_profiles,
             "desc": "Default: no. Profiles can be cached, but it is not recommended as this option is experimental."
         }
     ),
@@ -172,7 +172,7 @@ system_settings = [
     SystemSettings(
         **{
             "label": "SYNC_PROFILE_TRACKS_MAX_REPEATS",
-            "value": tracardi.sync_profile_tracks_max_repeats,
+            "value": ThamesThrive.sync_profile_tracks_max_repeats,
             "desc": "Maximum number of repeated requests the must be synchronized. If this number is crossed then "
                     "the requests will not be synchronized. Do not set it to big number as this can block server. "
                     "Default: 10"
@@ -181,7 +181,7 @@ system_settings = [
     SystemSettings(
         **{
             "label": "SYNC_PROFILE_TRACKS_WAIT",
-            "value": tracardi.sync_profile_tracks_wait,
+            "value": ThamesThrive.sync_profile_tracks_wait,
             "desc": "Maximum number of seconds to wait between profile synchronization attempts. Profile must be saved "
                     "before the next rule can be run  on it. Default: 1"
         }
@@ -189,11 +189,11 @@ system_settings = [
     SystemSettings(
         **{
             "label": "POSTPONE_DESTINATION_SYNC",
-            "value": tracardi.postpone_destination_sync,
+            "value": ThamesThrive.postpone_destination_sync,
             "desc": "Postpone destination synchronisation. Default 0, means do not wait. Destinations are called only "
                     "when the profile is changed. If there is a stream of changes then with every change of profile "
                     "synchronisation will be triggered. To avoid unnecessary calls to external systems you can set this "
-                    "variable to eg. 60 seconds and Tracardi will wait between 60 and 120 seconds after the last "
+                    "variable to eg. 60 seconds and ThamesThrive will wait between 60 and 120 seconds after the last "
                     "change of profile before it will trigger destination synchronisation. This features requires "
                     "REDIS."
         }
@@ -201,21 +201,21 @@ system_settings = [
     SystemSettings(
         **{
             "label": "STORAGE_DRIVER",
-            "value": tracardi.storage_driver,
+            "value": ThamesThrive.storage_driver,
             "desc": "The name of storage driver, defaults to 'elastic'."
         }
     ),
     SystemSettings(
         **{
             "label": "LOGGING_LEVEL",
-            "value": tracardi.logging_level,
+            "value": ThamesThrive.logging_level,
             "desc": "The logging level. Defaults to logging.WARNING."
         }
     ),
     SystemSettings(
         **{
             "label": "PRODUCTION",
-            "value": tracardi.version.production,
+            "value": ThamesThrive.version.production,
             "desc": "This variable defines default API context. If it is set to \"production,\" "
                     "the data will be accessible within the production GUI context."
         }
@@ -245,8 +245,8 @@ system_settings = [
     SystemSettings(
         **{
             "label": "TENANT_NAME",
-            "value": tracardi.version.name,
-            "desc": "Default: None. This setting defines a prefix for all tracardi indices."
+            "value": ThamesThrive.version.name,
+            "desc": "Default: None. This setting defines a prefix for all ThamesThrive indices."
         }
     ),
     SystemSettings(
@@ -363,7 +363,7 @@ system_settings = [
             "label": "ELASTIC_LOGGING_LEVEL",
             "value": elastic.logging_level,
             "desc": "Default WARNING. Sets logging level of elastic requests. It may be useful to set it to INFO when"
-                    " debugging Tracardi."
+                    " debugging ThamesThrive."
         }
     ),
     SystemSettings(
@@ -372,7 +372,7 @@ system_settings = [
             "value": redis_config.redis_host,
             "desc": "Default: redis://localhost:6379. This setting is used only when SYNC_PROFILE_TRACKS is equal to "
                     "yes. This is the host URI of Redis instance that is required to synchronize profile tracks. "
-                    "Available only in commercial version of Tracardi."
+                    "Available only in commercial version of ThamesThrive."
         }
     ),
     SystemSettings(
@@ -385,35 +385,35 @@ system_settings = [
     SystemSettings(
         **{
             "label": "SAVE_LOGS",
-            "value": tracardi.save_logs,
-            "desc": "Default: yes. When set to yes all logs will be saved n tracardi log."
+            "value": ThamesThrive.save_logs,
+            "desc": "Default: yes. When set to yes all logs will be saved n ThamesThrive log."
         }
     ),
     SystemSettings(
         **{
             "label": "ENABLE_WORKFLOW",
-            "value": tracardi.enable_workflow,
+            "value": ThamesThrive.enable_workflow,
             "desc": "Default: no. Disables processing events by workflows."
         }
     ),
     SystemSettings(
         **{
             "label": "ENABLE_SEGMENTATION_WF_TRIGGERS",
-            "value": tracardi.enable_segmentation_wf_triggers,
+            "value": ThamesThrive.enable_segmentation_wf_triggers,
             "desc": "Default: yes. Disables triggering events by profile added to segments."
         }
     ),
     SystemSettings(
         **{
             "label": "ENABLE_EVENT_DESTINATIONS",
-            "value": tracardi.enable_event_destinations,
+            "value": ThamesThrive.enable_event_destinations,
             "desc": "Default: no. Disables dispatching events to destinations."
         }
     ),
     SystemSettings(
         **{
             "label": "ENABLE_PROFILE_DESTINATIONS",
-            "value": tracardi.enable_profile_destinations,
+            "value": ThamesThrive.enable_profile_destinations,
             "desc": "Default: no. Disables dispatching profiles to destinations."
         }
     )

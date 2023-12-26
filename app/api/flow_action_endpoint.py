@@ -4,14 +4,14 @@ from typing import Optional
 from fastapi import APIRouter
 from fastapi import HTTPException, Depends
 
-from tracardi.service.storage.driver.elastic import action as action_db
+from ThamesThrive.service.storage.driver.elastic import action as action_db
 from app.service.grouper import search
-from tracardi.domain.enum.yes_no import YesNo
-from tracardi.domain.entity import Entity
-from tracardi.domain.flow_action_plugin import FlowActionPlugin
-from tracardi.domain.record.flow_action_plugin_record import FlowActionPluginRecord
-from tracardi.domain.settings import Settings
-from tracardi.domain.value_object.bulk_insert_result import BulkInsertResult
+from ThamesThrive.domain.enum.yes_no import YesNo
+from ThamesThrive.domain.entity import Entity
+from ThamesThrive.domain.flow_action_plugin import FlowActionPlugin
+from ThamesThrive.domain.record.flow_action_plugin_record import FlowActionPluginRecord
+from ThamesThrive.domain.settings import Settings
+from ThamesThrive.domain.value_object.bulk_insert_result import BulkInsertResult
 from .auth.permissions import Permissions
 from ..config import server
 

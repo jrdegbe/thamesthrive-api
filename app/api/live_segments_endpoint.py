@@ -5,10 +5,10 @@ from typing import Optional
 from fastapi import APIRouter
 from fastapi import Depends
 
-from tracardi.domain.live_segment import LiveSegment
-from tracardi.service.storage.driver.elastic import live_segment as live_segment_db
+from ThamesThrive.domain.live_segment import LiveSegment
+from ThamesThrive.service.storage.driver.elastic import live_segment as live_segment_db
 from app.service.grouper import search
-from tracardi.domain.value_object.bulk_insert_result import BulkInsertResult
+from ThamesThrive.domain.value_object.bulk_insert_result import BulkInsertResult
 from .auth.permissions import Permissions
 from ..config import server
 

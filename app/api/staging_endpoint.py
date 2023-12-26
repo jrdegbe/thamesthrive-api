@@ -1,6 +1,6 @@
 from elasticsearch.exceptions import NotFoundError
 from fastapi import APIRouter, Depends, HTTPException
-from tracardi.service.staging import move_from_staging_to_production, add_alias_staging_to_production, \
+from ThamesThrive.service.staging import move_from_staging_to_production, add_alias_staging_to_production, \
     remove_alias_staging_to_production
 
 from app.api.auth.permissions import Permissions

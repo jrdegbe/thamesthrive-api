@@ -6,3 +6,4 @@ the profile.
 To ensure that the changes made to the profile are saved, a __profile update__ is necessary. This means that after the
 segment is removed, you need to perform a profile update to finalize the changes and ensure they are reflected in the
 updated profile.
+

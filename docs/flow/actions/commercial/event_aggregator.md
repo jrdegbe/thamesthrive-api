@@ -1,4 +1,4 @@
-# Event Aggregator
+# Event Aggregator  
 
 This plugin collects and tallies up the occurrences of a specific category of information during a certain period of
 time for the current profile.

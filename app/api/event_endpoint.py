@@ -1,13 +1,13 @@
 from datetime import datetime
 from typing import List
 from fastapi import APIRouter, Depends, Response
-from tracardi.domain.enum.time_span import TimeSpan
-from tracardi.service import events
-from tracardi.service.events import get_default_event_type_schema
-from tracardi.service.storage.driver.elastic import event as event_db
-from tracardi.service.storage.driver.elastic import debug_info as debug_info_db
-from tracardi.domain.record.event_debug_record import EventDebugRecord
-from tracardi.service.wf.domain.debug_info import DebugInfo
+from ThamesThrive.domain.enum.time_span import TimeSpan
+from ThamesThrive.service import events
+from ThamesThrive.service.events import get_default_event_type_schema
+from ThamesThrive.service.storage.driver.elastic import event as event_db
+from ThamesThrive.service.storage.driver.elastic import debug_info as debug_info_db
+from ThamesThrive.domain.record.event_debug_record import EventDebugRecord
+from ThamesThrive.service.wf.domain.debug_info import DebugInfo
 from .auth.permissions import Permissions
 
 from ..config import server

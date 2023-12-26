@@ -4,3 +4,4 @@ which is explained in the link to the dot notation documentation. An example of 
 how to reference data from the payload. The plugin returns a string with the placeholder replaced by values from the
 referenced data. The workflow internal state documentation provides more information on the data saved inside the
 workflow.
+

@@ -49,6 +49,6 @@ for row in read_csv(config[0]):
 
 ---
 This document also answers the questions:
-- How to programmatically import data to Tracardi?
-- Is there a way to use code to import data to Tracardi?
+- How to programmatically import data to ThamesThrive?
+- Is there a way to use code to import data to ThamesThrive?
 - How to use API to import data?

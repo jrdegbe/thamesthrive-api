@@ -1,7 +1,7 @@
-# Tracardi Jobs
+# ThamesThrive Jobs
 
-Tracardi uses jobs that can be initiated through Kubernetes (k8s) or set up as crontab jobs. These jobs play crucial
-roles in the commercial Tracardi platform. The following jobs need to be started:
+ThamesThrive uses jobs that can be initiated through Kubernetes (k8s) or set up as crontab jobs. These jobs play crucial
+roles in the commercial ThamesThrive platform. The following jobs need to be started:
 
 1. **Heartbeat Job**: This task closes visits, flags profiles and sessions as inactive. Heartbeats are regular checks
    that spot patterns suggesting inactivity. For instance, if a user left the page, this task sends a "visit-ended"
@@ -14,7 +14,7 @@ roles in the commercial Tracardi platform. The following jobs need to be started
 
 ### Heartbeat Job
 
-To run the Heartbeat Job, use the following Docker command for the `tracardi/com-heartbeat-job` container:
+To run the Heartbeat Job, use the following Docker command for the `ThamesThrive/com-heartbeat-job` container:
 
 ```bash
 docker run \
@@ -26,7 +26,7 @@ docker run \
 -e SKIP_SECONDS=900 \
 -e QUALIFY_BY=inactive-session \
 -e EVENT_TYPE=session-inactive \
-tracardi/com-heartbeat-job:0.8.1
+ThamesThrive/com-heartbeat-job:0.8.1
 ```
 
 Description of environment variables:
@@ -67,17 +67,17 @@ docker run \
 -e SKIP_SECONDS=1800 \
 -e OPEN_EVENT_TYPE="visit-started" \
 -e CLOSE_EVENT_TYPE="visit-ended" \
-tracardi/com-heartbeat-job:0.8.1
+ThamesThrive/com-heartbeat-job:0.8.1
 ```
 
 Ensure that you replace `<elastic-ip>` and `<redis-ip>` with the actual IP addresses for your ElasticSearch and Redis
-instances, respectively. Also, make sure to provide the correct image version (`0.8.1`) based on your Tracardi setup.
+instances, respectively. Also, make sure to provide the correct image version (`0.8.1`) based on your ThamesThrive setup.
 
 Jobs can be scheduled and run using crontab or Kubernetes cron jobs based on your preferred deployment method.
 
 ### Segmentation Job
 
-To run the Segmentation Job, use the following Docker command for the `tracardi/com-tracardi-segmentation-job`
+To run the Segmentation Job, use the following Docker command for the `ThamesThrive/com-ThamesThrive-segmentation-job`
 container:
 
 ```bash
@@ -85,9 +85,9 @@ docker run \
 -e ELASTIC_HOST=http://<elastic-ip>:9200 \
 -e REDIS_HOST=redis://<redis-ip>:6379 \
 -e REDIS_PASSWORD=<password> \
-tracardi/com-tracardi-segmentation-job:0.8.1
+ThamesThrive/com-ThamesThrive-segmentation-job:0.8.1
 ```
 
-The Segmentation Job uses the same environment variables as `tracardi/com-tracardi-api`. Ensure that all the connections are
+The Segmentation Job uses the same environment variables as `ThamesThrive/com-ThamesThrive-api`. Ensure that all the connections are
 configured correctly.
 

@@ -1,10 +1,10 @@
 # Troubleshooting "Network Error" when Selecting the API URL
 
 If you encounter the error message "Status: undefined, Message: undefined, Details Error: Network Error" while trying to
-access the API URL, it indicates that there might be an issue with the connection to the Tracardi API. To troubleshoot
+access the API URL, it indicates that there might be an issue with the connection to the ThamesThrive API. To troubleshoot
 this problem, follow these steps:
 
-1. **Double-check the API URL**: Ensure that the API URL you are using is accurate and correctly points to the Tracardi
+1. **Double-check the API URL**: Ensure that the API URL you are using is accurate and correctly points to the ThamesThrive
    API. A mistyped or incorrect URL could lead to a 404 response or similar errors.
 
 2. **Test the API URL in the browser**: To confirm if the URL is correct, enter the API URL directly into your web

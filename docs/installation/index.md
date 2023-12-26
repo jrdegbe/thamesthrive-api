@@ -1,6 +1,6 @@
-# Tracardi Installation
+# ThamesThrive Installation
 
-There are three versions of tracardi. Select which one would you like to install:
+There are three versions of ThamesThrive. Select which one would you like to install:
 
 * [Open-source](opensource/index.md)
 * [Commercial](commercial/index.md)

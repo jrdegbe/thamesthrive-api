@@ -1,5 +1,5 @@
 FROM tiangolo/uvicorn-gunicorn-fastapi:python3.10
-MAINTAINER office@tracardi.com
+MAINTAINER office@ThamesThrive.com
 
 RUN apt-get update
 RUN apt-get install -y git
@@ -16,7 +16,7 @@ COPY app/requirements.txt .
 RUN pip install wheel
 RUN pip --default-timeout=240 install -r requirements.txt
 
-RUN pip show tracardi
+RUN pip show ThamesThrive
 RUN pip list
 
 

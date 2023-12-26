@@ -1,6 +1,6 @@
 # Sequencer Matcher
 
-The Sequencer Matcher plugin is used to look for a sequence of events in a given list of events. It allows you to define a sequence of events and check if that sequence occurs in the list of events. This plugin is part of the Tracardi Pro License.
+The Sequencer Matcher plugin is used to look for a sequence of events in a given list of events. It allows you to define a sequence of events and check if that sequence occurs in the list of events. This plugin is part of the ThamesThrive Pro License.
 
 ## Description
 

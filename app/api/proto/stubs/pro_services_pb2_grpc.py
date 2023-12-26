@@ -15,27 +15,27 @@ class ServiceStub(object):
             channel: A grpc.Channel.
         """
         self.get_available_services = channel.unary_unary(
-                '/tracardi_pro.Service/get_available_services',
+                '/ThamesThrive_pro.Service/get_available_services',
                 request_serializer=pro__services__pb2.EmptyParams.SerializeToString,
                 response_deserializer=pro__services__pb2.Services.FromString,
                 )
         self.get_plugin = channel.unary_unary(
-                '/tracardi_pro.Service/get_plugin',
+                '/ThamesThrive_pro.Service/get_plugin',
                 request_serializer=pro__services__pb2.PluginMetaData.SerializeToString,
                 response_deserializer=pro__services__pb2.Plugin.FromString,
                 )
         self.sign_up = channel.unary_unary(
-                '/tracardi_pro.Service/sign_up',
+                '/ThamesThrive_pro.Service/sign_up',
                 request_serializer=pro__services__pb2.HostCredentials.SerializeToString,
                 response_deserializer=pro__services__pb2.Token.FromString,
                 )
         self.sign_in = channel.unary_unary(
-                '/tracardi_pro.Service/sign_in',
+                '/ThamesThrive_pro.Service/sign_in',
                 request_serializer=pro__services__pb2.Credentials.SerializeToString,
                 response_deserializer=pro__services__pb2.UserData.FromString,
                 )
         self.validate = channel.unary_unary(
-                '/tracardi_pro.Service/validate',
+                '/ThamesThrive_pro.Service/validate',
                 request_serializer=pro__services__pb2.EmptyParams.SerializeToString,
                 response_deserializer=pro__services__pb2.Token.FromString,
                 )
@@ -104,7 +104,7 @@ def add_ServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'tracardi_pro.Service', rpc_method_handlers)
+            'ThamesThrive_pro.Service', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -123,7 +123,7 @@ class Service(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/tracardi_pro.Service/get_available_services',
+        return grpc.experimental.unary_unary(request, target, '/ThamesThrive_pro.Service/get_available_services',
             pro__services__pb2.EmptyParams.SerializeToString,
             pro__services__pb2.Services.FromString,
             options, channel_credentials,
@@ -140,7 +140,7 @@ class Service(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/tracardi_pro.Service/get_plugin',
+        return grpc.experimental.unary_unary(request, target, '/ThamesThrive_pro.Service/get_plugin',
             pro__services__pb2.PluginMetaData.SerializeToString,
             pro__services__pb2.Plugin.FromString,
             options, channel_credentials,
@@ -157,7 +157,7 @@ class Service(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/tracardi_pro.Service/sign_up',
+        return grpc.experimental.unary_unary(request, target, '/ThamesThrive_pro.Service/sign_up',
             pro__services__pb2.HostCredentials.SerializeToString,
             pro__services__pb2.Token.FromString,
             options, channel_credentials,
@@ -174,7 +174,7 @@ class Service(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/tracardi_pro.Service/sign_in',
+        return grpc.experimental.unary_unary(request, target, '/ThamesThrive_pro.Service/sign_in',
             pro__services__pb2.Credentials.SerializeToString,
             pro__services__pb2.UserData.FromString,
             options, channel_credentials,
@@ -191,7 +191,7 @@ class Service(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/tracardi_pro.Service/validate',
+        return grpc.experimental.unary_unary(request, target, '/ThamesThrive_pro.Service/validate',
             pro__services__pb2.EmptyParams.SerializeToString,
             pro__services__pb2.Token.FromString,
             options, channel_credentials,

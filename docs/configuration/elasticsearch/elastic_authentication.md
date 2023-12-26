@@ -4,7 +4,7 @@ When preparing on you production installation you may need to authenticate to
 elastic search.
 
 We provide different types of elastic search authentication. If you experience 
-Authentication Error please take a closer look at the Tracardi configuration. 
+Authentication Error please take a closer look at the ThamesThrive configuration. 
 You probably need to provide a username and password for an elastic-search 
 connection. 
 
@@ -18,7 +18,7 @@ Example of elastic search URI for authenticated access.
 
 File docker-standalone.yaml
 ```yaml
-  tracardi:
+  ThamesThrive:
     build: .
     environment:
       ELASTIC_HOST: https://user:name@elastic-search-ip:443  <- change here for ssl connection
@@ -33,7 +33,7 @@ File docker-standalone.yaml
 For unencrypted connection set ELASTIC_HOST in docker-standalone.yaml to:
 
 ```yaml
-  tracardi:
+  ThamesThrive:
     ...
     environment:
       ELASTIC_HOST: user:name@elastic-search-ip:9200

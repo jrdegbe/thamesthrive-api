@@ -1,6 +1,6 @@
 from typing import List, Optional
 from pydantic import BaseModel, validator
-from tracardi.service.valiadator import validate_email
+from ThamesThrive.service.valiadator import validate_email
 from datetime import datetime
 
 

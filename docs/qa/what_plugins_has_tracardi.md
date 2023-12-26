@@ -1,6 +1,6 @@
-# What plugins has Tracardi?
+# What plugins has ThamesThrive?
 
-Here is a list of Tracardi plugins:
+Here is a list of ThamesThrive plugins:
 
 * Enrich profile: This plugin retrieves data about the provided e-mail from FullContact service. (Version: v0.6.1)
 * HTML fetcher: Fetches HTML page. (Version: v0.6.1)
@@ -125,7 +125,7 @@ Here is a list of Tracardi plugins:
 * YouTube widget: Shows a YouTube video widget. (Version: v0.8.1)
 * Telegram message: Sends a Telegram message via the bot. (Version: v0.8.0)
 * Google Analytics 4 event: Send your custom event to the Google Analytics 4 event tracker. (Version: v0.7.3)
-* Google Spreadsheet: This plugin connects Tracardi to Google Sheets. (Version: v0.6.1)
+* Google Spreadsheet: This plugin connects ThamesThrive to Google Sheets. (Version: v0.6.1)
 * Google Translate: Translates text. (Version: v0.7.2)
 * Google UA events: Send your customized event to the Google Universal Analytics event tracker. (Version: v0.8.0)
 * End: Ends the workflow. (Version: v0.1)

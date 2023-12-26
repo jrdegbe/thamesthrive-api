@@ -1,10 +1,10 @@
-# How tracardi process event context
+# How ThamesThrive process event context
 
-This documentation describes in detail how Tracardi retrieves event context and profile geo location, utm parameters, etc.
+This documentation describes in detail how ThamesThrive retrieves event context and profile geo location, utm parameters, etc.
 
 ## Description
 
-The code for retrieving the profile's geo location in Tracardi follows the following steps:
+The code for retrieving the profile's geo location in ThamesThrive follows the following steps:
 
 1. It first checks if the session is new by evaluating the `session.operation.new` condition. If the session is
    new, it proceeds with the following steps. If not, it skips the subsequent steps and moves to the next part of the
@@ -96,7 +96,7 @@ part.
 
 22. If there is an error while fetching the geo location using the MaxMind API, the code logs the error message.
 
-The code for retrieving the profile's geo location in Tracardi follows the logic described above, enabling the system to
+The code for retrieving the profile's geo location in ThamesThrive follows the logic described above, enabling the system to
 determine and update the geo location information associated with the profile based on the available data from sessions,
 user agents, headers, and external APIs.
 

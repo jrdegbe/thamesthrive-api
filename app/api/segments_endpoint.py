@@ -4,11 +4,11 @@ from typing import Optional
 from fastapi import APIRouter
 from fastapi import Depends
 
-from tracardi.domain.named_entity import NamedEntity
-from tracardi.service.storage.driver.elastic import segment as segment_db
+from ThamesThrive.domain.named_entity import NamedEntity
+from ThamesThrive.service.storage.driver.elastic import segment as segment_db
 from app.service.grouper import search
-from tracardi.domain.segment import Segment
-from tracardi.domain.value_object.bulk_insert_result import BulkInsertResult
+from ThamesThrive.domain.segment import Segment
+from ThamesThrive.domain.value_object.bulk_insert_result import BulkInsertResult
 from .auth.permissions import Permissions
 from ..config import server
 

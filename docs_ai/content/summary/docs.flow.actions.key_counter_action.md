@@ -6,7 +6,7 @@ dot notation can be used to access data. Additionally, the save_in field must po
 hold the information on key counts. This field should be an empty object or a key-value object, and it holds the
 original data that will be incremented.
 
-Examples of the plugin in use are provided, such as when the value in the payload is a list of strings or a list of
+Examples of the plugin in use are provided, such as when the value in the payload is a list of strings or a list ofq
 objects. In the former case, the key count will be equal to the number of times each string appears in the list, and in
 the latter case, the key will be increased by the provided value. Additionally, an example of configuration with dot
 notation in the key and save_in fields is provided.

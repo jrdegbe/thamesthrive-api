@@ -2,13 +2,13 @@
 
 ## Sending event on demand
 
-Tracardi offers the flexibility to send events immediately when the fire parameter is set to true, enabling real-time
+ThamesThrive offers the flexibility to send events immediately when the fire parameter is set to true, enabling real-time
 event triggering and ensuring that data is captured and processed instantly. By default, events are queued and sent when
 the web page is fully rendered, which is beneficial for consolidating events and sending them as a single request.
 However, there are scenarios where sending events immediately upon certain actions, such as button clicks, is necessary.
 Sending Events in Real-Time
 
-To send events in real-time, simply set the `fire` parameter to `true` when making API requests or using the Tracardi
+To send events in real-time, simply set the `fire` parameter to `true` when making API requests or using the ThamesThrive
 JavaScript snippet on your web page. This will bypass the event queue and send the events without any delay.
 
 This feature is particularly useful in scenarios where real-time data processing is critical, such as tracking user
@@ -28,7 +28,7 @@ window.tracker.track("page-view",{});
 
 ## Forcing Profile ID
 
-In certain situations, you may want to send a specific profile ID to Tracardi that comes from your backend system. To
+In certain situations, you may want to send a specific profile ID to ThamesThrive that comes from your backend system. To
 enable this feature, static ID must be enabled in the event source that collects data, and the profile ID must be added
 to the script configuration.
 
@@ -92,14 +92,14 @@ Where the **testClick** function sends an event.
 </script>
 ```
 
-Please note that in this case, the event is recorded in the console but not sent to Tracardi by default. 
+Please note that in this case, the event is recorded in the console but not sent to ThamesThrive by default. 
 
 ```
 [Tracker] Event track 
 Object { type: "track", event: "page-view", properties: {…}, options: {}, userId: null, anonymousId: "642aa4a6-9a48-4c08-8fd5-f0772415c824", meta: {…} }
 ```
 
-To trigger the event and send it to Tracardi immediately, you can add the `fire` attribute with a value of `true` as a
+To trigger the event and send it to ThamesThrive immediately, you can add the `fire` attribute with a value of `true` as a
 parameter to the window.tracker.track function, as shown in the example below:
 
 ```html title="Example" linenums="1"

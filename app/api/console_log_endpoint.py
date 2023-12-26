@@ -4,9 +4,9 @@ from fastapi import APIRouter, Depends
 
 from app.api.auth.permissions import Permissions
 from app.config import server
-from tracardi.domain.console import Console
+from ThamesThrive.domain.console import Console
 
-from tracardi.service.storage.driver.elastic import console_log as console_log_db
+from ThamesThrive.service.storage.driver.elastic import console_log as console_log_db
 
 router = APIRouter()
 

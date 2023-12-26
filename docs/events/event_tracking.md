@@ -23,11 +23,11 @@ Events consist of three main components:
 
 ## Event registration
 
-To register an event with Tracardi, you will need to send a POST request to the `/track` endpoint on the server where Tracardi is installed. 
+To register an event with ThamesThrive, you will need to send a POST request to the `/track` endpoint on the server where ThamesThrive is installed. 
 
 
 You need to write a code that will connect to the POST method to the url e.g.
-http://tracardi.page.com/track and send the data about event plus additional information on the source and session.
+http://ThamesThrive.page.com/track and send the data about event plus additional information on the source and session.
 
 ```json title="Example of track data payload" linenums="1" hl_lines="13-24"
 {
@@ -91,7 +91,7 @@ When registering an event, we need the following data.
 
 * Data about the event, i.e. `the type of the event` and its `properties`. There may be several events within one query.
 
-* `Source id`. It must match the event source ([inbound traffic](../getting_started/core_definitions.md#traffic)) defined in Tracardi.
+* `Source id`. It must match the event source ([inbound traffic](../getting_started/core_definitions.md#traffic)) defined in ThamesThrive.
   Otherwise the Authorization error wil be returned.
 
 * And the `session id`. The session id is the saved id of the last session. If this is the first visit, you should
@@ -100,7 +100,7 @@ When registering an event, we need the following data.
   the [core definitions section](../getting_started/core_definitions.md#session)
 
 Additionally, the `profile id` should be sent to the system. For the first visit, there is no profile id so profile id
-field is not sent. After first connection Tracardi will return a profile id that should be attached with each subsequent
+field is not sent. After first connection ThamesThrive will return a profile id that should be attached with each subsequent
 connection to /track endpoint.
 
 If no `profile id` is defined in sent data then new profile id will be generated.
@@ -140,7 +140,7 @@ Example of event data payload with context `attached`.
 
 ## Event options
 
-There is an `options` section in the data sent to tracardi. It allows you to configure how the server should respond to
+There is an `options` section in the data sent to ThamesThrive. It allows you to configure how the server should respond to
 the query.
 
 ```json title="Example of track data payload with options" linenums="1" hl_lines="20"
@@ -169,12 +169,12 @@ the query.
 
 We have the following options.
 
-* `debugger` - True / False value - whether Tracardi should send back data on how the workflow has gone through, if the
+* `debugger` - True / False value - whether ThamesThrive should send back data on how the workflow has gone through, if the
   events and profiles have been created. E.g. In a production environment, the debugger should be set to False.
-* `profile` - True / False value - whether tracardi should send back the full user profile or just his id. In most
+* `profile` - True / False value - whether ThamesThrive should send back the full user profile or just his id. In most
   cases, the id alone is enough.
-* `saveSession` - True / False value - whether tracardi should save the session data.
-* `saveEvents` - True / False value - whether tracardi should save the event or just process it
+* `saveSession` - True / False value - whether ThamesThrive should save the session data.
+* `saveEvents` - True / False value - whether ThamesThrive should save the event or just process it
 
 ### Example of debugger data
 

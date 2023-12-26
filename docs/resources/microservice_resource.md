@@ -1,15 +1,15 @@
-Tracardi microservice plugin is a new way to extend Tracardi without system upgrade. 
+ThamesThrive microservice plugin is a new way to extend ThamesThrive without system upgrade. 
 Each microservice can deliver a set of new plugins that you can easily plug and use. 
-The main benefit of using Tracardi microservices is access to continuously growing set of services 
+The main benefit of using ThamesThrive microservices is access to continuously growing set of services 
 and zero maintenance cost.
 
-# Tracardi Microservice Credentials
+# ThamesThrive Microservice Credentials
 
-To use the Tracardi microservice plugin you will need to provide an API KEY.
+To use the ThamesThrive microservice plugin you will need to provide an API KEY.
 
 ## Where to get Microservice's API key
 
-Microservice is usually a new docker that you start on your server. Tracardi microservices require you to set 
+Microservice is usually a new docker that you start on your server. ThamesThrive microservices require you to set 
 API_KEY environment variable. It must be at least 32 char long. And must be a random value hard to guess.
 
 Please paste this value to API key input and click __get secret__. Your APIKEY will be replaced by token

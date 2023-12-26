@@ -3,11 +3,11 @@ from typing import List, Optional
 
 from fastapi import APIRouter, Response, HTTPException, Depends
 
-from tracardi.domain.flow_meta_data import FlowMetaData
-from tracardi.service.storage.driver.elastic import event_source as event_source_db
-from tracardi.service.storage.driver.elastic import rule as rule_db
-from tracardi.service.storage.driver.elastic import flow as flow_db
-from tracardi.domain.rule import Rule
+from ThamesThrive.domain.flow_meta_data import FlowMetaData
+from ThamesThrive.service.storage.driver.elastic import event_source as event_source_db
+from ThamesThrive.service.storage.driver.elastic import rule as rule_db
+from ThamesThrive.service.storage.driver.elastic import flow as flow_db
+from ThamesThrive.domain.rule import Rule
 from .auth.permissions import Permissions
 from ..config import server
 from ..service.grouping import group_records

@@ -1,13 +1,13 @@
 from fastapi import APIRouter
 from fastapi import HTTPException, Depends
 
-from tracardi.domain.setting import Setting
+from ThamesThrive.domain.setting import Setting
 from .auth.permissions import Permissions
 from ..config import server
 from ..service.grouping import group_records
-from tracardi.service.storage.driver.elastic import setting as setting_db
+from ThamesThrive.service.storage.driver.elastic import setting as setting_db
 from typing import Optional
-from tracardi.domain.named_entity import NamedEntity
+from ThamesThrive.domain.named_entity import NamedEntity
 
 router = APIRouter(
     dependencies=[Depends(Permissions(roles=["admin", "developer", "marketer"]))]

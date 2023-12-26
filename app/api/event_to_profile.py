@@ -5,12 +5,12 @@ from fastapi import APIRouter, Depends, HTTPException
 from app.api.auth.permissions import Permissions
 from app.config import server
 from app.service.grouping import group_records
-from tracardi.domain.event_to_profile import EventToProfile
-from tracardi.service.events import get_default_event_type_mapping
-from tracardi.service.storage.driver.elastic import event_to_profile as event_to_profile_db
+from ThamesThrive.domain.event_to_profile import EventToProfile
+from ThamesThrive.service.events import get_default_event_type_mapping
+from ThamesThrive.service.storage.driver.elastic import event_to_profile as event_to_profile_db
 from typing import Optional
 
-from tracardi.service.string_manager import capitalize_event_type_id
+from ThamesThrive.service.string_manager import capitalize_event_type_id
 
 router = APIRouter(
     dependencies=[Depends(Permissions(roles=["admin", "developer"]))]

@@ -1,7 +1,7 @@
 # Generic UIX Plugin
 
-The Generic UIX Plugin is a Tracardi plugin that allows you to display a custom JavaScript widget in your workflow. It
-is designed to integrate external JavaScript code into Tracardi and extend its functionality.
+The Generic UIX Plugin is a ThamesThrive plugin that allows you to display a custom JavaScript widget in your workflow. It
+is designed to integrate external JavaScript code into ThamesThrive and extend its functionality.
 
 ## Version
 
@@ -9,7 +9,7 @@ This documentation is based on version 0.8.1 of the Generic UIX Plugin.
 
 ## Description
 
-The Generic UIX Plugin enables you to embed custom JavaScript widgets within your Tracardi workflow. It takes the
+The Generic UIX Plugin enables you to embed custom JavaScript widgets within your ThamesThrive workflow. It takes the
 payload as input, processes it, and displays the custom widget based on the provided configuration. The plugin adds
 a `<div>` element with the specified properties to the user interface and injects the JavaScript code by appending
 a `<script>` element with the source URL.

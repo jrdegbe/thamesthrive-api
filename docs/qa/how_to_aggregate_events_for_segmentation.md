@@ -1,6 +1,6 @@
 # How to aggregate events for segmentation?
 
-To aggregate data for segmentation in Tracardi, you can follow these steps:
+To aggregate data for segmentation in ThamesThrive, you can follow these steps:
 
 1. Ensure that events (certain event type) capture the relevant information you need for segmentation, such as transaction amounts and wallet
    additions.

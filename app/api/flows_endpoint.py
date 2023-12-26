@@ -2,10 +2,10 @@ from typing import Optional
 
 from fastapi import APIRouter
 from fastapi import Depends
-from tracardi.service.storage.driver.elastic import flow as flow_db
-from tracardi.service.wf.domain.named_entity import NamedEntity
+from ThamesThrive.service.storage.driver.elastic import flow as flow_db
+from ThamesThrive.service.wf.domain.named_entity import NamedEntity
 from app.service.grouper import search
-from tracardi.domain.flow import FlowRecord
+from ThamesThrive.domain.flow import FlowRecord
 from .auth.permissions import Permissions
 from ..config import server
 from ..service.grouping import group_records

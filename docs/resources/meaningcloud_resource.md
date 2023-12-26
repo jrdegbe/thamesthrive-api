@@ -12,5 +12,5 @@ In order to start using Meaning Cloud Plugin please follow the steps:
 
 # Plugins
 
-Plugins are automatically installed when you connect the Meaning Cloud to Tracardi. Please search them in
+Plugins are automatically installed when you connect the Meaning Cloud to ThamesThrive. Please search them in
 Workflow editor by typing "Meaning Cloud" or "Machine learning"

@@ -1,2 +1,2 @@
-docker build . --rm -f docker.docs.Dockerfile -t tracardi/tracardi-docs
-docker push tracardi/tracardi-docs
+docker build . --rm -f docker.docs.Dockerfile -t ThamesThrive/ThamesThrive-docs
+docker push ThamesThrive/ThamesThrive-docs

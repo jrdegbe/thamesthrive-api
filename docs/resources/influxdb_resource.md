@@ -4,9 +4,9 @@ more.
 
 # Resource configuration and set-up
 
-In order to enable an integration between __InfluxDB__ and Tracardi you need an API. The __InfluxDB__ API provides a programmatic 
+In order to enable an integration between __InfluxDB__ and ThamesThrive you need an API. The __InfluxDB__ API provides a programmatic 
 interface for all interactions with __InfluxDB__, it uses API tokens to authorize API requests. API tokens ensure secure 
-interaction between __InfluxDB__ and Tracardi. An API token belongs to a specific user and identifies InfluxDB permissions 
+interaction between __InfluxDB__ and ThamesThrive. An API token belongs to a specific user and identifies InfluxDB permissions 
 within the user’s organization.
 
 To manage InfluxDB API Tokens in the __InfluxDB UI__:

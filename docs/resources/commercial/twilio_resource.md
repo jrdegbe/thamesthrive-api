@@ -1,5 +1,5 @@
 To use Twilio's services, you will need an __account_sid__ and an __auth_token__. Twilio is a cloud communications platform
-that allows you to send SMS messages, make voice calls, and more using their API. Here's how you can obtain
+that allows you to send SMS messages, make voice calls, and more using their API. Here's how you can obtainq
 the __account_sid__ and __auth_token__:
 
 1. **Sign up for a Twilio account**: If you don't have a Twilio account, you can sign up for a new account on their

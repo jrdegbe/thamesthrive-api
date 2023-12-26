@@ -3,3 +3,4 @@ def search(query, groups):
         if query in group.lower():
             return True
     return False
+

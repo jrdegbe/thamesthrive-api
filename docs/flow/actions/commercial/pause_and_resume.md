@@ -1,6 +1,6 @@
 # Pause and Resume
 
-The "Pause and Resume" plugin in Tracardi allows you to pause the workflow for a specified duration and then resume it at the same node. This plugin is useful for introducing delays or scheduling events within a workflow.
+The "Pause and Resume" plugin in ThamesThrive allows you to pause the workflow for a specified duration and then resume it at the same node. This plugin is useful for introducing delays or scheduling events within a workflow.
 
 ## Description
 

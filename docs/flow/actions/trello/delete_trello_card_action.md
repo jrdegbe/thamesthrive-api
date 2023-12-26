@@ -13,7 +13,7 @@ on **error** port, if an error occurs.
 
 ## Trello Resource Configuration
 
-To begin working with Trello inside Tracardi, you need an API key and token. These can be typed inside Tracardi resources.
+To begin working with Trello inside ThamesThrive, you need an API key and token. These can be typed inside ThamesThrive resources.
 Resources can be found under Traffic -> Outbound resources. More information on how to create a resource can be found below.
 
 ### Trello API KEY
@@ -27,7 +27,7 @@ When the page loads you should see the header __Developer API Keys__ and a __Key
 164a9547a52d0951f3ed781b723d03c1b60d9abd
 ```
 
-You will need this key to copy to Trello Resource in Tracardi.
+You will need this key to copy to Trello Resource in ThamesThrive.
 
 ### Trello TOKEN
 
@@ -50,7 +50,7 @@ b723d03c1b60d9abd164a9547a52d0951f3ed781b164a9547a52d0951f3ed781723d0
 
 ### Trello Resource
 
-Now it is time to create a Tracardi Trello Resource.
+Now it is time to create a ThamesThrive Trello Resource.
 
 * Go to Traffic -> Outbound resources. 
 * Click new resource
@@ -74,7 +74,7 @@ Now it is time to create a Tracardi Trello Resource.
 - URL of Trello board - Paste in your Trello board's URL. That's the same URL you can see
   on top of your browser window while seeing the board.
 - Name of Trello list - Type in the name of the list that you want to delete a card from.
-  In fact, Trello requires its ID, but Tracardi will find it for you, using provided list name.
+  In fact, Trello requires its ID, but ThamesThrive will find it for you, using provided list name.
 - Name of your card - That's the name of the card that you want to delete. It can be either a name or a dot path to the 
   data inside event, payload, etc.
 
@@ -91,11 +91,11 @@ Now it is time to create a Tracardi Trello Resource.
   "card_name": "<exact-name-of-your-trello-card>",
 }
 ```
-**NOTE**: list_id parameter does not matter. Tracardi uses it to store ID of found list.
+**NOTE**: list_id parameter does not matter. ThamesThrive uses it to store ID of found list.
 It should be left as **""** or **null**.
 
 ## Warning
-If you have two lists with same names on one board, then Tracardi will pick one of them,
+If you have two lists with same names on one board, then ThamesThrive will pick one of them,
 without a method of specifying which one will be picked. This rule also applies to the cards.
 
 

@@ -4,7 +4,7 @@ Shows a YouTube video widget.
 
 ## Description
 
-The YouTube widget plugin allows you to embed a YouTube video widget in Tracardi. This plugin displays a YouTube video
+The YouTube widget plugin allows you to embed a YouTube video widget in ThamesThrive. This plugin displays a YouTube video
 based on the provided configuration. You can customize the display type, position, and other settings to suit your
 needs.
 

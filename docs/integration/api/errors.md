@@ -6,7 +6,7 @@ This error occurs when the tracker payload is missing some data. Usually it will
 
 ## Response - Unauthorized
 
-This error occurs when the `source.id` that is sent with payload does not exist in Tracardi.
+This error occurs when the `source.id` that is sent with payload does not exist in ThamesThrive.
 
 ## Response - Headers
 

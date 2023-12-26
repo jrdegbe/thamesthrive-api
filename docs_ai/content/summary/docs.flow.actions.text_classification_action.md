@@ -7,3 +7,4 @@ is a unique identifier for the category. The label is a description of the categ
 value that indicates the relevance of the category to the text. The relevance is a percentage value that indicates the
 relevance of the category to the text. This plugin is useful for classifying text and determining the relevance of the
 text to various categories.
+

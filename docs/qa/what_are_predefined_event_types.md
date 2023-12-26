@@ -1,16 +1,16 @@
 # What are build-in event types?
 
 
-Predefined event types in Tracardi are built-in event types that come with default properties. These event types are
-designed to track the customer journey on websites or applications. When these internal event types are used, Tracardi
+Predefined event types in ThamesThrive are built-in event types that come with default properties. These event types are
+designed to track the customer journey on websites or applications. When these internal event types are used, ThamesThrive
 automatically detects them and populates the profile and session with relevant data.
 
-Using predefined event types streamlines the use of Tracardi and simplifies the process of data collection and analysis.
+Using predefined event types streamlines the use of ThamesThrive and simplifies the process of data collection and analysis.
 The default properties of these event types eliminate the need for manual copying. They include information such as the
 event type, event properties (characteristics or attributes of the event), and contextual data that provides additional
 details about the event.
 
-Some examples of predefined event types in Tracardi include:
+Some examples of predefined event types in ThamesThrive include:
 
 * Page View: Triggered when a customer visits a new page on the website or application. It captures the URL of the page and the time of the visit.
 * Search: Triggered when a customer performs a search on the website or application. It captures the search query and the category of the search.

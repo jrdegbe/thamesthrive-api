@@ -1,16 +1,16 @@
 from collections import defaultdict
 from fastapi import APIRouter, Depends, HTTPException
-from tracardi.context import get_context
+from ThamesThrive.context import get_context
 
-from tracardi.domain.version import Version
-from tracardi.service.storage.driver.elastic import raw as raw_db
-from tracardi.service.storage.indices_manager import check_indices_mappings_consistency
+from ThamesThrive.domain.version import Version
+from ThamesThrive.service.storage.driver.elastic import raw as raw_db
+from ThamesThrive.service.storage.indices_manager import check_indices_mappings_consistency
 from app.api.auth.permissions import Permissions
 from app.config import server
-from tracardi.domain.migration_payload import MigrationPayload
-from tracardi.process_engine.migration.migration_manager import MigrationManager, MigrationNotFoundException
-from tracardi.service.url_constructor import construct_elastic_url
-from tracardi.config import elastic, tracardi
+from ThamesThrive.domain.migration_payload import MigrationPayload
+from ThamesThrive.process_engine.migration.migration_manager import MigrationManager, MigrationNotFoundException
+from ThamesThrive.service.url_constructor import construct_elastic_url
+from ThamesThrive.config import elastic, ThamesThrive
 
 router = APIRouter(
     dependencies=[Depends(Permissions(roles=["admin", "developer", "maintainer"]))]
@@ -23,7 +23,7 @@ async def check_migration_consistency(version: str):
 
     """
     Compares the mappings and indices of the local settings to those in a database, and lists any errors found.
-    It also compares the number of records between the current version of tracardi and a previous version (see: prefix),
+    It also compares the number of records between the current version of ThamesThrive and a previous version (see: prefix),
     and if there are any discrepancies, it checks if they are acceptable differences. If they are, it logs the
     difference as an "INFO", otherwise it logs it as a "WARNING". It then returns a dictionary
     containing the errors found in both the mappings and the indices.
@@ -84,7 +84,7 @@ async def run_migration(migration: MigrationPayload):
         manager = MigrationManager(
             from_version=migration.from_version,
             from_prefix=migration.from_tenant_name,
-            to_version=MigrationManager.get_current_db_version_prefix(tracardi.version),  # Version as 081
+            to_version=MigrationManager.get_current_db_version_prefix(ThamesThrive.version),  # Version as 081
             to_prefix=tenant
         )
 
@@ -115,7 +115,7 @@ async def get_migration_schemas(from_db_version: str, from_tenant_name: str = No
             from_version=from_db_version,  # Version as 080
             from_prefix=from_tenant_name,
             # My current db version and tenant
-            to_version=MigrationManager.get_current_db_version_prefix(tracardi.version),  # Version as 081
+            to_version=MigrationManager.get_current_db_version_prefix(ThamesThrive.version),  # Version as 081
             to_prefix=tenant
         )
         return await manager.get_customized_schemas()
@@ -126,4 +126,4 @@ async def get_migration_schemas(from_db_version: str, from_tenant_name: str = No
 
 @router.get("/migrations", tags=["migration"], include_in_schema=server.expose_gui_api, response_model=list)
 async def get_migrations_for_current_version():
-    return MigrationManager.get_available_migrations_for_version(tracardi.version)
+    return MigrationManager.get_available_migrations_for_version(ThamesThrive.version)

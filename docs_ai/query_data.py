@@ -13,25 +13,25 @@ client = weaviate.Client(
     }
 )
 
-"What are the key definitions in tracardi"
+"What are the key definitions in ThamesThrive"
 "What is session"
 "How can I bind event to button click"
 "What is profile"
-"Where tracardi stores profile visits."
+"Where ThamesThrive stores profile visits."
 "What is dot notation."
 "How do I filter the data."
-"How do I import mongodb data to tracardi."
+"How do I import mongodb data to ThamesThrive."
 "I got error Invalid API"
-"How I I send email in Tracardi"  # *
-"Can I send marketing campaigns from tracardi"
-"Can I send SMSes with tracardi"  #
+"How I I send email in ThamesThrive"  # *
+"Can I send marketing campaigns from ThamesThrive"
+"Can I send SMSes with ThamesThrive"  #
 "How Do I install extensions"  #
-"Does Tracardi have Mysql Plugin?"
+"Does ThamesThrive have Mysql Plugin?"
 "What is the syntax for the IF condition?"
 "how to purge event, session, profile?"
 
 question = """
-What does staging mean in tracardi version?
+What does staging mean in ThamesThrive version?
 """
 
 question = question.strip("?!.")
@@ -46,7 +46,7 @@ nearText = {"concepts": [question]}
 
 result = (
     client.query
-        .get("Tracardi", ["question", "answer", "file"])
+        .get("ThamesThrive", ["question", "answer", "file"])
         .with_additional(["distance", "certainty"])
         .with_near_text(nearText)
         .with_limit(5)
@@ -55,7 +55,7 @@ result = (
 
 answers = []
 skip_answers = {}
-for item in result['data']['Get']['Tracardi']:
+for item in result['data']['Get']['ThamesThrive']:
     distance = item['_additional']['distance']
     certainty = item['_additional']['certainty']
     file = item['file']
@@ -95,7 +95,7 @@ for answer, distance, certainty, file in documents:
     n += 1
     context += f"\n\n-- Document {file} (Distance: {distance}, Certainty: {certainty}) --\n{answer}"
 
-prompt = f"""I have this documentation on Tracardi system. Answer question "{general_question} {question}". 
+prompt = f"""I have this documentation on ThamesThrive system. Answer question "{general_question} {question}". 
 Respond with one detailed answer. Respond only if you are sure of the answer correctness, otherwise say "I don't know answer
 to this question".
 
@@ -109,8 +109,8 @@ print(f"RPMPT: {prompt}")
 # print(chatgpt3_context)
 print("---CHAT4---")
 response = get_chat_gpt3_5_response(
-    system="You are an expert on Tracardi system with the access to MD files with documentation. "
-           "Your name is Tracardi Bot. "
+    system="You are an expert on ThamesThrive system with the access to MD files with documentation. "
+           "Your name is ThamesThrive Bot. "
            "You will be given a set of documents and their distance to question. "
            "The smaller distance the better source of information. Use the documents, "
            "to answer the question as good as possible using all the available information. "

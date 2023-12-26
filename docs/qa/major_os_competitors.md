@@ -1,8 +1,8 @@
-# What are major open-source  competitors to Tracardi?
+# What are major open-source  competitors to ThamesThrive?
 
 
 When it comes to open-source competitors in the customer data platform (CDP) space, there are a few notable options that
-provide similar functionality to Tracardi. Here are some major open-source competitors to Tracardi:
+provide similar functionality to ThamesThrive. Here are some major open-source competitors to ThamesThrive:
 
 1. Apache Unomi: Apache Unomi is an open-source CDP that allows businesses to collect, store, and manage customer data.
    It provides personalization and segmentation capabilities to deliver tailored customer experiences.
@@ -23,5 +23,5 @@ provide similar functionality to Tracardi. Here are some major open-source compe
 
 These open-source alternatives provide businesses with flexibility and customization options. However, it's important to
 note that open-source solutions may require more technical expertise and effort for setup, customization, and
-maintenance compared to commercial options like Tracardi. It's advisable to evaluate these alternatives based on your
+maintenance compared to commercial options like ThamesThrive. It's advisable to evaluate these alternatives based on your
 specific requirements and the level of support and community activity available for each project.

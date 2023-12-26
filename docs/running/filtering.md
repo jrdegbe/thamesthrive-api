@@ -1,6 +1,6 @@
 # Data searching
 
-Filtering is used in Tracardi to limit the number of event, profiles, etc. on the page. It uses a query parser that
+Filtering is used in ThamesThrive to limit the number of event, profiles, etc. on the page. It uses a query parser that
 allows to define the rules of filtering.
 
 The query string is parsed into a series of terms and operators. A term can be a single word a phrase, surrounded by
@@ -193,8 +193,8 @@ the previous query could be rewritten as:
 ---
 This documentation answer the following questions:
 
-* How to search for profile, session, and events in Tracardi GUI
-* How to search data in Tracardi?
-* How does Tracardi's query parser work?
+* How to search for profile, session, and events in ThamesThrive GUI
+* How to search data in ThamesThrive?
+* How does ThamesThrive's query parser work?
 * What is a query condition?
-* What is the syntax for searching, filtering in Tracardi?
+* What is the syntax for searching, filtering in ThamesThrive?

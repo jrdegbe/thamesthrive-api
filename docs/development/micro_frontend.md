@@ -1,13 +1,13 @@
 # Micro frontend applications
 
-Tracardi uses micro application to interact with customers. Micro-apps are regular ReactJs, or Angular, or plain
+ThamesThrive uses micro application to interact with customers. Micro-apps are regular ReactJs, or Angular, or plain
 Javascript apps that can be bundled into single javascript file and injected into the webpage.
 
 We use a ReactJs template repo for new ReactJs app.
 
-To start developing Micro Frontend App use the tracardi-uix-template on [http://github.com/tracardi/tracardi-uix-template](http://github.com/tracardi/tracardi-uix-template)
+To start developing Micro Frontend App use the ThamesThrive-uix-template on [http://github.com/ThamesThrive/ThamesThrive-uix-template](http://github.com/ThamesThrive/ThamesThrive-uix-template)
 
-1. Goto [http://github.com/tracardi/tracardi-uix-template](http://github.com/tracardi/tracardi-uix-template)
+1. Goto [http://github.com/ThamesThrive/ThamesThrive-uix-template](http://github.com/ThamesThrive/ThamesThrive-uix-template)
 2. Click button Use this template. __Big green button__ at the top right side of the screen. 
 3. Enter the name of your repository
 
@@ -19,9 +19,9 @@ folder and type
 This will install all the required dependencies.
 
 !!! Tip
-    If you would like to cooperate with other contributors on this app or want the repo to be part of Tracardi organization
+    If you would like to cooperate with other contributors on this app or want the repo to be part of ThamesThrive organization
     on the GitHub let us know (on
-    our [Slack workspace](https://join.slack.com/t/tracardi/shared_invite/zt-10y7w0o9y-PmCBnK9qywchmd1~KIER2Q)). We will
+    our [Slack workspace](https://join.slack.com/t/ThamesThrive/shared_invite/zt-10y7w0o9y-PmCBnK9qywchmd1~KIER2Q)). We will
     create a repo that you can fork.
 
 ## Source code
@@ -45,7 +45,7 @@ The other files are `package.js` and `README.md` with installation tips.
 Inside `src` folder you will find a `index.js` file. This is where your app starts. Please change the 
 
 ```javascript
-const widgetName = 'tracardi-uix-your-name'
+const widgetName = 'ThamesThrive-uix-your-name'
 ```
 
 to have the name of your app. 
@@ -66,13 +66,13 @@ function App({domElement}) {  // (1)
 export default App;
 ```
 
-1. Dom parameter used to read the configuration of the micro-frontend-app. The configuration will be filled in Tracardi and passed as data attributes.  
+1. Dom parameter used to read the configuration of the micro-frontend-app. The configuration will be filled in ThamesThrive and passed as data attributes.  
 
 This is because we need some way to pass the parameters to the app. And it is done by defining them inside the dom elements like this.
 
 ```html title="This is the example form index.html"
 
-<div class="tracardi-uix-your-name" data-attribute1="my-attribute1" data-attribute2="my-attribute1"></div>
+<div class="ThamesThrive-uix-your-name" data-attribute1="my-attribute1" data-attribute2="my-attribute1"></div>
 <script src="widget/index.js"></script>
 ```
 
@@ -83,7 +83,7 @@ This is because we need some way to pass the parameters to the app. And it is do
 ## Connecting the app container with the code
 
 You will need to define __connection between the HTML and your app__. The `src/index.js` file is responsible for this.
-It is done in `const widgetName = 'tracardi-uix-your-name'`
+It is done in `const widgetName = 'ThamesThrive-uix-your-name'`
 and `const widgetDivs = document.querySelectorAll('.'+widgetName)` line. You also need to reference this name
 in `index.html`. See the class of a div.
 
@@ -94,7 +94,7 @@ in `index.html`. See the class of a div.
     import ReactDOM from 'react-dom';
     import App from './App';
     
-    const widgetName = 'tracardi-uix-your-name'  // (1)
+    const widgetName = 'ThamesThrive-uix-your-name'  // (1)
     const widgetDivs = document.querySelectorAll('.'+widgetName)
     
     widgetDivs.forEach(Div => {
@@ -107,7 +107,7 @@ in `index.html`. See the class of a div.
     })
     ```
 
-    1. Your app placeholder class name. Please change it to yout app name and prefix it with: `tracardi-uix-`. This name must also be a class name for __div__ tag in `index.html`
+    1. Your app placeholder class name. Please change it to yout app name and prefix it with: `ThamesThrive-uix-`. This name must also be a class name for __div__ tag in `index.html`
 
 === "public/index.html"
 
@@ -120,7 +120,7 @@ in `index.html`. See the class of a div.
     </head>
     <body>
         <!-- (1) -->
-        <div class="tracardi-uix-your-name" data-attribute="my-attribute"></div> 
+        <div class="ThamesThrive-uix-your-name" data-attribute="my-attribute"></div> 
         <script src="../widget/index.js"></script>
     </body>
     </html>
@@ -251,7 +251,7 @@ To test if your app works as micro-app paste the bundled file `widget/index.js` 
     <noscript>You need to enable JavaScript to run this app.</noscript>
     
     <!-- (1) -->
-    <div class="tracardi-uix-cta-message"
+    <div class="ThamesThrive-uix-cta-message"
          data-title="title"
          data-message="message"
          data-cta="visit" data-cancel=""
@@ -271,21 +271,21 @@ To test if your app works as micro-app paste the bundled file `widget/index.js` 
 Now open the __index.html__ in the browser, and it should load your app and display it on top of the existing
 index.html. If the index.html does not have any html then it will be empty as in our example.
 
-## How Tracardi injects the app
+## How ThamesThrive injects the app
 
-Tracardi loads the app the same as we did it in the test example above. That means with a __script__ tag and a div
+ThamesThrive loads the app the same as we did it in the test example above. That means with a __script__ tag and a div
 container. It appends the needed tags at the bottom of the page. Like this.
 
 ```html title="This is the example form index.html"
 
-<div class="tracardi-uix-your-name" data-attribute="my-attribute"></div>
+<div class="ThamesThrive-uix-your-name" data-attribute="my-attribute"></div>
 <script src="widget/index.js"></script>
 ```
 
-## Passing data from Tracardi to micro app
+## Passing data from ThamesThrive to micro app
 
 The micro app may need configuration. For example the pop-up message app needs message and maybe location of the pop-up
-window. To configure the app and pass data from Tracardi use `data attributes`. It can be done in `src/App.js`
+window. To configure the app and pass data from ThamesThrive use `data attributes`. It can be done in `src/App.js`
 
 === "src/App.js"
 
@@ -319,7 +319,7 @@ window. To configure the app and pass data from Tracardi use `data attributes`. 
         <title>Title</title>
     </head>
     <body>
-        <div class="tracardi-uix-your-name" 
+        <div class="ThamesThrive-uix-your-name" 
              data-attribute-1="my-attribute-1"
              data-attribute-2="my-attribute-2"></div>
         <script src="widget/index.js"></script>

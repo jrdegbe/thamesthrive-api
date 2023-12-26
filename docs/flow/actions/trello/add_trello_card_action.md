@@ -13,7 +13,7 @@ on **error** port, if an error occurs.
 
 ## Trello Resource Configuration
 
-To begin working with Trello inside Tracardi, you need an API key and token. These can be typed inside Tracardi resources.
+To begin working with Trello inside ThamesThrive, you need an API key and token. These can be typed inside ThamesThrive resources.
 Resources can be found under Traffic -> Outbound resources. More information on how to create a resource can be found below.
 
 ### Trello API KEY
@@ -27,7 +27,7 @@ When the page loads you should see the header __Developer API Keys__ and a __Key
 164a9547a52d0951f3ed781b723d03c1b60d9abd
 ```
 
-You will need this key to copy to Trello Resource in Tracardi.
+You will need this key to copy to Trello Resource in ThamesThrive.
 
 ### Trello TOKEN
 
@@ -50,7 +50,7 @@ b723d03c1b60d9abd164a9547a52d0951f3ed781b164a9547a52d0951f3ed781723d0
 
 ### Trello Resource
 
-Now it is time to create a Tracardi Trello Resource.
+Now it is time to create a ThamesThrive Trello Resource.
 
 * Go to Traffic -> Outbound resources. 
 * Click new resource
@@ -107,10 +107,10 @@ Now it is time to create a Tracardi Trello Resource.
   }
 }
 ```
-**NOTE**: list_id parameter does not matter. Tracardi uses it to store ID of found list.
+**NOTE**: list_id parameter does not matter. ThamesThrive uses it to store ID of found list.
 It should be left as **""** or **null**.
 
 ## Warning
 
-If you have two lists with same names on one board, then Tracardi will pick one of them,
+If you have two lists with same names on one board, then ThamesThrive will pick one of them,
 There is no method of specifying which one will be picked.

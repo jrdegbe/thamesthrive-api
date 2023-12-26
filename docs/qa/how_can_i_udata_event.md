@@ -8,11 +8,11 @@ this can be achieved:
 1. **Elasticsearch Query:** While events themselves are immutable, you can use Elasticsearch queries to update event
    data.
 
-2. **Change event during processing:** In Tracardi, there is a plugin that allow you to perform transformations or
+2. **Change event during processing:** In ThamesThrive, there is a plugin that allow you to perform transformations or
    mappings on events in workflow. It is called `Copy data`. Confirm that you want to change event with `Update Event`
    action.
 
-3. **Post Collection Event to Event Mapping:** Commercial Tracardi provides a feature called "post collection event to
+3. **Post Collection Event to Event Mapping:** Commercial ThamesThrive provides a feature called "post collection event to
    event mapping." This feature allows you copy values between event properties after its being collected.
 
 ## Update event by query

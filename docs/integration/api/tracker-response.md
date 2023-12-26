@@ -1,6 +1,6 @@
 # Tracker response
 
-This is the example of the response from Tracardi after the events were collected.
+This is the example of the response from ThamesThrive after the events were collected.
 
 ```json
 {
@@ -34,9 +34,9 @@ This is the example of the response from Tracardi after the events were collecte
 }
 ```
 
-## Understanding Responses in Tracardi
+## Understanding Responses in ThamesThrive
 
-In Tracardi, responses play a crucial role in collecting and processing data from various ingestion pipelines and
+In ThamesThrive, responses play a crucial role in collecting and processing data from various ingestion pipelines and
 workflows that events pass through. Responses typically include the profile ID and may also contain additional data if
 configured.
 

@@ -1,19 +1,19 @@
-# The overall concept of segmentation in Tracardi
+# The overall concept of segmentation in ThamesThrive
 
-The overall concept of segmentation in Tracardi involves aggregating event data to facilitate the segmentation process
-or segmenting on profile data. Tracardi offers two types of segmentation: conditional and workflow. Conditional
+The overall concept of segmentation in ThamesThrive involves aggregating event data to facilitate the segmentation process
+or segmenting on profile data. ThamesThrive offers two types of segmentation: conditional and workflow. Conditional
 segmentation applies specific conditions to the data and identifies profiles that meet those conditions it does not
 check the events. On the other hand, workflow segmentation evaluates each profile and determines whether it should be
 assigned to a particular segment based on the workflow's logic. Workflow logic can aggregate events to retrieve more
 insights about profile past behaviour.
 
-# What types of segmentation algorithms are in tracardi?
+# What types of segmentation algorithms are in ThamesThrive?
 
-Tracardi utilizes a combination of conditional segmentation and workflow segmentation mechanisms. The segmentation
+ThamesThrive utilizes a combination of conditional segmentation and workflow segmentation mechanisms. The segmentation
 workflow applies conditions to the data and marks profiles that meet the specified criteria. The workflow segmentation
 processes each profile and determines whether it should be moved to a specific segment based on the workflow's logic.
 
-Therefore, the type of segmentation mechanism in Tracardi is a combination of conditional segmentation and workflow
+Therefore, the type of segmentation mechanism in ThamesThrive is a combination of conditional segmentation and workflow
 segmentation.
 
 # How can I achieve this use case: Create a segment based on the users who have transacted worth X USD in the last 30 days and have added Y USD to the wallet in the last 30 days. Looks like it is based on event properties. But I'm not sure how we can find the profiles that have X events with a value of property Y.

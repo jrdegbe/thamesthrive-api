@@ -3,35 +3,35 @@ from typing import Optional
 
 from fastapi import APIRouter, HTTPException, Depends, Response
 
-from tracardi.context import get_context
-from tracardi.domain.enum.production_draft import ProductionDraft
-from tracardi.domain.event_metadata import EventMetadata, EventPayloadMetadata
-from tracardi.domain.metadata import ProfileMetadata
-from tracardi.domain.named_entity import NamedEntity
-from tracardi.domain.payload.event_payload import EventPayload
-from tracardi.domain.payload.tracker_payload import TrackerPayload
-from tracardi.domain.time import EventTime, ProfileTime, Time
-from tracardi.exceptions.exception import StorageException
-from tracardi.domain.console import Console
-from tracardi.service.console_log import ConsoleLog
-from tracardi.service.secrets import encrypt
-from tracardi.service.storage.driver.elastic import flow as flow_db
-from tracardi.service.storage.driver.elastic import rule as rule_db
-from tracardi.service.storage.driver.elastic import event as event_db
-from tracardi.service.storage.driver.elastic import profile as profile_db
-from tracardi.service.storage.driver.elastic import session as session_db
-from tracardi.service.utils.getters import get_entity_id
-from tracardi.service.wf.domain.flow_history import FlowHistory
-from tracardi.service.wf.domain.work_flow import WorkFlow
-from tracardi.domain.flow_meta_data import FlowMetaData
-from tracardi.domain.entity import Entity
-from tracardi.domain.event import Event, EventSession
-from tracardi.domain.flow import Flow
-from tracardi.service.wf.domain.flow_graph import FlowGraph
-from tracardi.domain.flow import FlowRecord
-from tracardi.domain.profile import Profile
-from tracardi.domain.session import Session, SessionMetadata, SessionTime
-from tracardi.domain.value_object.bulk_insert_result import BulkInsertResult
+from ThamesThrive.context import get_context
+from ThamesThrive.domain.enum.production_draft import ProductionDraft
+from ThamesThrive.domain.event_metadata import EventMetadata, EventPayloadMetadata
+from ThamesThrive.domain.metadata import ProfileMetadata
+from ThamesThrive.domain.named_entity import NamedEntity
+from ThamesThrive.domain.payload.event_payload import EventPayload
+from ThamesThrive.domain.payload.tracker_payload import TrackerPayload
+from ThamesThrive.domain.time import EventTime, ProfileTime, Time
+from ThamesThrive.exceptions.exception import StorageException
+from ThamesThrive.domain.console import Console
+from ThamesThrive.service.console_log import ConsoleLog
+from ThamesThrive.service.secrets import encrypt
+from ThamesThrive.service.storage.driver.elastic import flow as flow_db
+from ThamesThrive.service.storage.driver.elastic import rule as rule_db
+from ThamesThrive.service.storage.driver.elastic import event as event_db
+from ThamesThrive.service.storage.driver.elastic import profile as profile_db
+from ThamesThrive.service.storage.driver.elastic import session as session_db
+from ThamesThrive.service.utils.getters import get_entity_id
+from ThamesThrive.service.wf.domain.flow_history import FlowHistory
+from ThamesThrive.service.wf.domain.work_flow import WorkFlow
+from ThamesThrive.domain.flow_meta_data import FlowMetaData
+from ThamesThrive.domain.entity import Entity
+from ThamesThrive.domain.event import Event, EventSession
+from ThamesThrive.domain.flow import Flow
+from ThamesThrive.service.wf.domain.flow_graph import FlowGraph
+from ThamesThrive.domain.flow import FlowRecord
+from ThamesThrive.domain.profile import Profile
+from ThamesThrive.domain.session import Session, SessionMetadata, SessionTime
+from ThamesThrive.domain.value_object.bulk_insert_result import BulkInsertResult
 from .auth.permissions import Permissions
 from ..config import server
 
@@ -421,7 +421,7 @@ async def debug_flow(flow: FlowGraph, event_id: Optional[str] = None):
             origin="profile",
             event_id=get_entity_id(flow_invoke_result.event),
             flow_id=flow.id,
-            module='tracardi_api.flow_endpoint',
+            module='ThamesThrive_api.flow_endpoint',
             class_name='log.class_name',
             type='debug_flow',
             message=str(e)

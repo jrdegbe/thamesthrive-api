@@ -2,7 +2,7 @@ from datetime import datetime
 
 from fastapi import APIRouter, Depends
 from app.config import server
-from tracardi.service.storage.driver.elastic import raw as raw_db
+from ThamesThrive.service.storage.driver.elastic import raw as raw_db
 from .auth.permissions import Permissions
 
 router = APIRouter(

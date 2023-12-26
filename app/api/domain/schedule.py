@@ -3,9 +3,9 @@ from typing import Dict, Optional, Union
 
 from cron_validator import CronValidator
 from pydantic import BaseModel, validator
-from tracardi.domain.entity import Entity
-from tracardi.domain.payload.tracker_payload import TrackerPayload
-from tracardi.domain.schedule import Schedule
+from ThamesThrive.domain.entity import Entity
+from ThamesThrive.domain.payload.tracker_payload import TrackerPayload
+from ThamesThrive.domain.schedule import Schedule
 
 
 class EventProperties(BaseModel):

@@ -1,9 +1,9 @@
-# How tracardi compares to other platforms in terms of pricing schemas
+# How ThamesThrive compares to other platforms in terms of pricing schemas
 
-In terms of pricing schemas, here's a comparison of Tracardi with the other platforms:
+In terms of pricing schemas, here's a comparison of ThamesThrive with the other platforms:
 
-1. Tracardi:
-    - Pricing: Tracardi has an open-source version that is free to use on-premises. The commercial version follows a
+1. ThamesThrive:
+    - Pricing: ThamesThrive has an open-source version that is free to use on-premises. The commercial version follows a
       fixed monthly payment regardless of the number of events processed or stored data. This pricing structure offers
       predictable costs without dependencies on data volume.
 

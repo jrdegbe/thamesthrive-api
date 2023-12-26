@@ -13,3 +13,4 @@ associated with webhook events effectively.
 When configuring webhook integrations, it is important to keep in mind that the default behavior does not include
 session and profile information. However, by extracting and manipulating the relevant data from the payload, users can
 integrate their desired session and profile details into webhook events seamlessly.
+

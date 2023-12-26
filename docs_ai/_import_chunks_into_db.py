@@ -13,7 +13,7 @@ def record_exists(client, hash):
 
     return (
         client.query
-            .get("Tracardi", ["question", "answer", 'file', 'hash'])
+            .get("ThamesThrive", ["question", "answer", 'file', 'hash'])
             .with_where(where_filter)
             .do()
     )
@@ -30,7 +30,7 @@ client = weaviate.Client(
 
 try:
     class_obj = {
-        "class": "Tracardi",
+        "class": "ThamesThrive",
         "vectorizer": "text2vec-openai",
         "moduleConfig": {
             "text2vec-openai": {
@@ -38,7 +38,7 @@ try:
             }
         }
     }
-    # client.schema.delete_class("Tracardi")
+    # client.schema.delete_class("ThamesThrive")
     client.schema.create_class(class_obj)
 except weaviate.exceptions.UnexpectedStatusCodeException:
     pass
@@ -60,5 +60,5 @@ with client.batch as batch:
         }
         print(properties)
         response = record_exists(client, hash)
-        print(len(response['data']['Get']['Tracardi']))
-        # client.batch.add_data_object(properties, "Tracardi")
+        print(len(response['data']['Get']['ThamesThrive']))
+        # client.batch.add_data_object(properties, "ThamesThrive")

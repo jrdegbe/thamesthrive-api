@@ -1,7 +1,7 @@
 # Logic notation
 
 Logic notation is the way in which logical concepts and their interpretations are expressed in natural languages.
-Tracardi uses logic notation in segment configuration, IF plugin action,or other conditional statements.
+ThamesThrive uses logic notation in segment configuration, IF plugin action,or other conditional statements.
 
 ## Syntax
 

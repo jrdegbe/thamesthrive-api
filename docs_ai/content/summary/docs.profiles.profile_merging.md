@@ -16,3 +16,4 @@ with the deleted profiles will be copied to the new merged profile.
 Profile propagation is also an important part of the merging process. This is the process of updating the reference to
 the new merged profile on all devices. The customer will have the same profile ID on both devices and all the data will
 be updated and merged, this way the system can have a complete customer view and provide a better customer experience.
+

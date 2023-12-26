@@ -1,6 +1,6 @@
-# What are the basic terms of Tracardi commercial agreement?
+# What are the basic terms of ThamesThrive commercial agreement?
 
-The basic terms of the standard Tracardi commercial license agreement are as follows:
+The basic terms of the standard ThamesThrive commercial license agreement are as follows:
 
 1. Order: The agreement is formed based on the order that references these terms and identifies the software, developer,
    and customer involved.

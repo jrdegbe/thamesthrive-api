@@ -8,3 +8,4 @@ In addition to the information about the ValidationError, this documentation tex
 resolve the issue. It explains that the user should send an empty object or an object with data in the post body/payload 
 in order to successfully call the webhook. This should resolve the ValidationError and allow the webhook to be called 
 without any further issues.
+

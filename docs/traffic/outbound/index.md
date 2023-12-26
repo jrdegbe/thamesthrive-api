@@ -1,6 +1,6 @@
 # Outbound traffic
 
-Tracardi can sync profiles with external systems. To do this use destinations.
+ThamesThrive can sync profiles with external systems. To do this use destinations.
 
 Destination is a set of credentials that point to an external system where the profile data will be sent when if
 changed. Destination require some resource, e.g. a API endpoint, queue service, etc. This is here you set all the
@@ -29,7 +29,7 @@ and fill the following fields:
   this field blank that means, that regardless of the quality of the data, it will be sent to the destination system. To
   write a correct condition please read [how to use logic notation](../../notations/logic_notation.md)
 * __Mapping__ - in this field we define the format of the data sent to the external system. The data is sent in the form
-  of JSON. The data schema in Tracardi may differ from the expected schema in the external system. Here we can remap the
+  of JSON. The data schema in ThamesThrive may differ from the expected schema in the external system. Here we can remap the
   data. Remapping is done by object
   templates. [Please read more on object templates](../../notations/object_template.md).
 * __Destination setting__ - There may be additional destination settings required. Please fill them. For example an API

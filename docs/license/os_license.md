@@ -1,6 +1,6 @@
 # Open-source license
 
-Tracardi is available under MIT with Common Clause.
+ThamesThrive is available under MIT with Common Clause.
 
 # MIT License
 
@@ -21,7 +21,7 @@ Without limiting other conditions in the License, the grant of rights under the 
 
 For purposes of the foregoing, “Sell” means practicing any or all of the rights granted to you under the License to provide to third parties, for a fee or other consideration (including without limitation fees for hosting or consulting/ support services related to the Software), a product or service whose value derives, entirely or substantially, from the functionality of the Software. Any license notice or attribution required by the License must also include this Commons Clause License Condition notice.
 
-Software: Tracardi
+Software: ThamesThrive
 
 License: MIT
 
@@ -31,5 +31,5 @@ Licensor: Risto Kowaczewski
 ## Q&A:
 
 * [Examples of allowed and not allowed usages under this license](../qa/example_of_not_allowed_usage_under_os.md) 
-* [Can I use Tracardi for my own project for free?](../qa/can_i_use_system_for_my_own_project.md)
-* [Do I need a commercial license to host Tracardi as SaaS?](../qa/do_i_need_license_for_saas.md)
+* [Can I use ThamesThrive for my own project for free?](../qa/can_i_use_system_for_my_own_project.md)
+* [Do I need a commercial license to host ThamesThrive as SaaS?](../qa/do_i_need_license_for_saas.md)

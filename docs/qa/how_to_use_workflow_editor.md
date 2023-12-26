@@ -1,8 +1,8 @@
 # How to use workflow editor?
 
-Here is a step-by-step guide on how to use the Workflow Editor in Tracardi:
+Here is a step-by-step guide on how to use the Workflow Editor in ThamesThrive:
 
-__Open the Workflow Editor__: When you start processing data in Tracardi, open the Workflow Editor. You will see a screen
+__Open the Workflow Editor__: When you start processing data in ThamesThrive, open the Workflow Editor. You will see a screen
 with all the nodes that you can put on the canvas.
 
 __Search for nodes__: On the left side of the screen, you can search for nodes by typing their names, such as "start node."

@@ -1,12 +1,12 @@
 # Load report data
 
 The Load report data plugin is used to load the results of a specified report into the payload. It allows you to select
-a report and provide the necessary configuration to retrieve the report data. This plugin is part of the Tracardi Pro
+a report and provide the necessary configuration to retrieve the report data. This plugin is part of the ThamesThrive Pro
 License.
 
 ## Description
 
-The Load report data plugin loads the results of a selected report and adds them to the payload. It uses the Tracardi
+The Load report data plugin loads the results of a selected report and adds them to the payload. It uses the ThamesThrive
 Reports to retrieve the report data based on the provided configuration.
 
 # Inputs and Outputs

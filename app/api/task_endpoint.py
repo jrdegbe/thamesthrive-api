@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends
 
-from tracardi.service.storage.driver.elastic import task as task_db
+from ThamesThrive.service.storage.driver.elastic import task as task_db
 from .auth.permissions import Permissions
 from ..config import server
-from tracardi.domain.task import Task
+from ThamesThrive.domain.task import Task
 
 router = APIRouter(
     dependencies=[Depends(Permissions(roles=["admin", "developer"]))]

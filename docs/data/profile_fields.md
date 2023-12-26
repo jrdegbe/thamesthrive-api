@@ -52,7 +52,7 @@
 ---
 This documentation answers the following questions
 
-* What are the fields and their descriptions associated with the profile data stored in Tracardi?
+* What are the fields and their descriptions associated with the profile data stored in ThamesThrive?
 * What is the purpose of the id field in the profile data?
 * What does the ids field represent in the profile data, and how is it used?
 * What metadata information is available in the metadata field of the profile data?

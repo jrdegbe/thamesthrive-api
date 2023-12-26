@@ -1,7 +1,7 @@
 from typing import Optional
 
 from pydantic import BaseModel
-from tracardi.domain.named_entity import NamedEntity
+from ThamesThrive.domain.named_entity import NamedEntity
 
 
 class TProMicroserviceCredentials(BaseModel):

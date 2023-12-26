@@ -1,15 +1,15 @@
 from typing import Optional
 
-from tracardi.config import tracardi
-from tracardi.context import Context, ServerContext
+from ThamesThrive.config import ThamesThrive
+from ThamesThrive.context import Context, ServerContext
 from starlette.types import ASGIApp, Receive, Scope, Send
 from app.api.auth.user_db import token2user
-from tracardi.service.license import License, MULTI_TENANT
+from ThamesThrive.service.license import License, MULTI_TENANT
 
 if License.has_license() and License.has_service(MULTI_TENANT):
-    from com_tracardi.service.tenant_manager import get_tenant_name_from_scope
+    from com_ThamesThrive.service.tenant_manager import get_tenant_name_from_scope
 else:
-    from tracardi.service.tenant_manager import get_tenant_name_from_scope
+    from ThamesThrive.service.tenant_manager import get_tenant_name_from_scope
 
 
 def _get_header_value(scope, key) -> Optional[str]:
@@ -25,7 +25,7 @@ def _get_header_value(scope, key) -> Optional[str]:
 
 def _get_context_object(scope) -> Context:
     # Default context comes from evn variable PRODUCTION
-    production = tracardi.version.production
+    production = ThamesThrive.version.production
 
     # If env variable set to PRODUCTION=yes there is no way to change it.
     # Production means production. Otherwise the context can be changed
@@ -36,7 +36,7 @@ def _get_context_object(scope) -> Context:
     if tenant is None:
         raise OSError(f"Can not find tenant for this URL. Reason: Hostname `{hostname}` must have 3 parts.")
 
-    if tracardi.multi_tenant and tenant.isnumeric():
+    if ThamesThrive.multi_tenant and tenant.isnumeric():
         raise OSError(f"Tenant name `{tenant}` is not correct. "
                       f"Reason: Tenant name must not be a number. Your API URL is {hostname}."
                       f"Your system is set-up to support multi-tenancy "

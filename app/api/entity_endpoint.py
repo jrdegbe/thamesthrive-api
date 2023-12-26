@@ -1,9 +1,9 @@
 from elasticsearch.exceptions import NotFoundError
 from fastapi import APIRouter, Depends, HTTPException
 
-from tracardi.domain.entity_index_mapping import EntityIndexMapping
-from tracardi.service.storage.driver.elastic import raw as raw_db
-from tracardi.service.storage.driver.elastic import entity as entity_db
+from ThamesThrive.domain.entity_index_mapping import EntityIndexMapping
+from ThamesThrive.service.storage.driver.elastic import raw as raw_db
+from ThamesThrive.service.storage.driver.elastic import entity as entity_db
 from .auth.permissions import Permissions
 from ..config import server
 

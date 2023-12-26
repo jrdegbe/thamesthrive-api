@@ -1,6 +1,6 @@
-site_name: Tracardi Documentation
+site_name: ThamesThrive Documentation
 site_description: Open-source Data Platform
-site_url: https://docs.tracardi.com
+site_url: https://docs.ThamesThrive.com
 dev_addr: "0.0.0.0:8585"
 markdown_extensions:
   - admonition
@@ -47,19 +47,19 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/tracardi
+      link: https://twitter.com/ThamesThrive
     - icon: fontawesome/brands/facebook
-      link: https://facebook.com/tracardi
+      link: https://facebook.com/ThamesThrive
     - icon: fontawesome/brands/github
-      link: https://github.com/Tracardi/tracardi
+      link: https://github.com/ThamesThrive/ThamesThrive
     - icon: fontawesome/brands/youtube
-      link: https://www.youtube.com/@tracardi
-copyright: Copyright &copy; 2020 - 2021 Tracardi
-repo_url: https://github.com/tracardi/tracardi-api
-repo_name: tracardi/tracardi-api
+      link: https://www.youtube.com/@ThamesThrive
+copyright: Copyright &copy; 2020 - 2021 ThamesThrive
+repo_url: https://github.com/ThamesThrive/ThamesThrive-api
+repo_name: ThamesThrive/ThamesThrive-api
 nav:
   - index.md
-  - what_is_tracardi.md
+  - what_is_ThamesThrive.md
   - Getting started:
       - getting_started/index.md
       - getting_started/architecture.md
@@ -81,7 +81,7 @@ nav:
           - installation/upgrades.md
 
   - Configuration:
-      - configuration/tracardi_configuration.md
+      - configuration/ThamesThrive_configuration.md
       - configuration/best_practises.md
       - Elasticsearch:
           - configuration/elasticsearch/elastic_https.md
@@ -91,7 +91,7 @@ nav:
           - configuration/elasticsearch/elastic_sniffing.md
       - Staging server:
           - configuration/staging/index.md
-      - configuration/tracardi_ssl.md
+      - configuration/ThamesThrive_ssl.md
   - Integration:
       - API:
           - integration/api/api-integration.md
@@ -132,7 +132,7 @@ nav:
       - data/profile_fields.md
       - profiles/profile_merging.md
       - profiles/profile_segmentation.md
-  # Description of tracardi resources that it can use to fetch data.
+  # Description of ThamesThrive resources that it can use to fetch data.
   - Resources:
       - resources/index.md
       - Documentation:
@@ -429,25 +429,25 @@ nav:
          - qa/what_is_session.md
          - qa/what_is_profile.md
        - Entities:
-         - qa/how_tracardi_uses_entities.md
+         - qa/how_ThamesThrive_uses_entities.md
 
 
      - Installation and upgrades:
-       - qa/how_to_upgrade_tracardi.md
+       - qa/how_to_upgrade_ThamesThrive.md
        - qa/what_is_major_version_upgrade.md
        - qa/what_is_minor_version_upgrade.md
-       - qa/what_is_tracardi_worker_responsible_for.md
-       - qa/how_tracardi_is_upgraded.md
+       - qa/what_is_ThamesThrive_worker_responsible_for.md
+       - qa/how_ThamesThrive_is_upgraded.md
        - qa/why_background_task_in_pending_state.md
        - qa/how_to_automate_new_tenant_creation_in_tms.md
        - qa/what_are_available_installation_types.md
        - qa/difference_between_major_and_minor_upgrades.md
        - qa/how_to_automate_obtaining_the_API_key.md
-       - qa/what_database_use_tracardi.md
+       - qa/what_database_use_ThamesThrive.md
        - Multi-tenancy:
          - qa/what_is_multi_tenant_setup.md
          - qa/how_do_i_setup_multi_tenant.md
-         - qa/how_to_configure_tracardi_to_be_multi_tenant.md
+         - qa/how_to_configure_ThamesThrive_to_be_multi_tenant.md
          - qa/what_are_the_pros_and cons_of_multi-tenant_setup.md
          - qa/how_do_i_setup_multi_tenant.md
          - qa/how_tenant_are_diffrenciated.md
@@ -456,7 +456,7 @@ nav:
            - qa/what_is_tms.md
            - qa/tenant_management_service_api.md
            - qa/what_is_tms_reponsible_for.md
-           - qa/how_to_integrate_TMS_with_Tracardi.md
+           - qa/how_to_integrate_TMS_with_ThamesThrive.md
 
      - Licensing:
         - qa/can_i_make_changes_to_code_under_com_license.md
@@ -487,7 +487,7 @@ nav:
        - qa/how_to_track_clicked_links.md
        - qa/how_to_bind_event_to_a_click.md
        - qa/how_to_send_event_on_a_click_that_goes_to_external_page.md
-       - qa/how_tracardi_loads_profile.md
+       - qa/how_ThamesThrive_loads_profile.md
        - qa/when_i_know_if_the_event_was_processed.md
 
      - Workflow:
@@ -496,7 +496,7 @@ nav:
        - qa/how_to_quickly_copy_data_from_node_to_node_in_wf.md
        - qa/how_to_delete_a_node.md
        - qa/my_workflow_is_not_working.md
-       - qa/what_plugins_has_tracardi.md
+       - qa/what_plugins_has_ThamesThrive.md
        - Extensions and plugins:
          - qa/how_can_i_install_extensions.md
          - qa/bulk/available_extensions_with_description.md
@@ -507,16 +507,16 @@ nav:
 
      - Commercial version:
        - qa/how_can_i_benefit_from_commercial_version.md
-       - qa/how_can_i_benefit_from_partnership_with_tracardi.md
+       - qa/how_can_i_benefit_from_partnership_with_ThamesThrive.md
        - qa/what_are_main_differences_between_os_and_com.md
        - qa/major_os_competitors.md
        - qa/pricing_comparation.md
 
        - Cost and Competitors:
-         - qa/what_is_the_cost_of_tracardi.md
-         - qa/what_is_the_difference_between_tracardi_and_segment.md
-         - qa/what_is_the_difference_between_zapier_and_tracardi.md
-         - qa/unomi_vs_tracardi.md
+         - qa/what_is_the_cost_of_ThamesThrive.md
+         - qa/what_is_the_difference_between_ThamesThrive_and_segment.md
+         - qa/what_is_the_difference_between_zapier_and_ThamesThrive.md
+         - qa/unomi_vs_ThamesThrive.md
 
      - Reporting:
        - qa/how_can_i_use_reports.md
@@ -525,7 +525,7 @@ nav:
 
      - Segmentation:
          - qa/how_to_add_segement_based_on_customer_visits.md
-         - qa/what_types_of_segmentation_has_tracardi.md
+         - qa/what_types_of_segmentation_has_ThamesThrive.md
          - qa/why_post_event_segmentation_does_not work.md
          - qa/what_are_examples_of_real_time_or_time_based_segmentations.md
          - qa/why_live_segmentation_does_not_work.md
@@ -536,46 +536,46 @@ nav:
 
      - Backups:
          - qa/does_tracarid_have_its_own_backup_system.md
-         - qa/how_backups_are_made_in_tracardi.md
+         - qa/how_backups_are_made_in_ThamesThrive.md
 
      - Data import:
-         - qa/can_tracardi_import_data_from_csv.md
-         - qa/how_to_import_data_to_tracardi.md
+         - qa/can_ThamesThrive_import_data_from_csv.md
+         - qa/how_to_import_data_to_ThamesThrive.md
          - qa/how_to_import_data_with_python.md
 
      - General:
        - qa/how_to_store_utms.md
        - qa/what_is_the_difference_between_event_traits_and_properties.md
-       - qa/how_many_records_can_tracardi_store.md
+       - qa/how_many_records_can_ThamesThrive_store.md
        - qa/how_to_fix_import_pending.md
        - qa/how_to_fix_webhook_validation_error.md
        - qa/how_to_pass_profile_id_from_domain_to_domain.md
-       - qa/who_is_tracardi_for.md
+       - qa/who_is_ThamesThrive_for.md
        - qa/can_i_send_marketing_campaigns.md
-       - qa/can_i_use_tracardi_for_free.md
-       - qa/can_tracardi_use_chatgpt.md
+       - qa/can_i_use_ThamesThrive_for_free.md
+       - qa/can_ThamesThrive_use_chatgpt.md
        - qa/how_can_i_filter_data.md
        - qa/can_i_add_custom_event_timestamp.md
        - qa/can_i_only_process_the_event.md
-       - qa/can_you_describe_tracardi_components.md
+       - qa/can_you_describe_ThamesThrive_components.md
        - qa/do_i_have_to_define_custom_properties_upfront.md
        - qa/hot_to_use_reports.md
        - qa/how_can_I_authorize_and_get_API_KEY.md
        - qa/how_pause_and_resume_works.md
        - qa/how_system_process_event_context.md
        - qa/how_to_purge_events_sessions_profiles.md
-       - qa/how_tracard_bot_works.md
-       - qa/what_are_parts_of_tracardi.md
+       - qa/how_ThamesThrive_bot_works.md
+       - qa/what_are_parts_of_ThamesThrive.md
        - qa/what_are_session-open_and_visit-open_meant_for.md
        - qa/what_is_customer_journey.md
        - qa/what_is_ephemeral_event_source.md
-       - qa/what_is_the_archtecture_of_tracardi.md
+       - qa/what_is_the_archtecture_of_ThamesThrive.md
        - qa/what_staging_means.md
-       - qa/when_can_i_use_tracardi_for_free.md
+       - qa/when_can_i_use_ThamesThrive_for_free.md
        - qa/where_to_store_custom_properties.md
 
        - qa/how_to_personalize_messages.md
-       - qa/how_tracardi_records_vistits.md
+       - qa/how_ThamesThrive_records_vistits.md
        - qa/what_are_predefined_event_types.md
        - qa/what_is_dot_notation.md
 

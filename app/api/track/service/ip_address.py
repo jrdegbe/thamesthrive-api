@@ -13,3 +13,4 @@ def get_ip_address(request: Request) -> str:
     if server.x_forwarded_ip_header is not None and server.x_forwarded_ip_header in request.headers:
         return request.headers[server.x_forwarded_ip_header]
     return request.client.host
+

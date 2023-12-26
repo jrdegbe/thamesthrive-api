@@ -19,4 +19,4 @@ The following field types can be used in plugin's forms:
 * bool          
 * contentInput
 
-The list of form fields is getting bigger with every Tracardi release.
+The list of form fields is getting bigger with every ThamesThrive release.

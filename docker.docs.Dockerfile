@@ -1,5 +1,5 @@
 FROM python:3.10
-MAINTAINER office@tracardi.com
+MAINTAINER office@ThamesThrive.com
 
 RUN apt-get update
 RUN apt-get install -y git

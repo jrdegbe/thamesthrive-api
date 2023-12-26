@@ -9,12 +9,12 @@ from starlette.responses import JSONResponse
 from app.api.auth.permissions import Permissions
 from app.config import server
 from app.service.error_converter import convert_errors
-from tracardi.domain.config_validation_payload import ConfigValidationPayload
-from tracardi.domain.record.flow_action_plugin_record import FlowActionPluginRecord
-from tracardi.service.module_loader import is_coroutine
-from tracardi.service.storage.driver.elastic import action as action_db
+from ThamesThrive.domain.config_validation_payload import ConfigValidationPayload
+from ThamesThrive.domain.record.flow_action_plugin_record import FlowActionPluginRecord
+from ThamesThrive.service.module_loader import is_coroutine
+from ThamesThrive.service.storage.driver.elastic import action as action_db
 from fastapi.encoders import jsonable_encoder
-from tracardi.service.module_loader import import_package, load_callable
+from ThamesThrive.service.module_loader import import_package, load_callable
 
 router = APIRouter(
     dependencies=[Depends(Permissions(roles=["admin", "developer"]))]
@@ -28,7 +28,7 @@ async def get_data_for_plugin(module: str, endpoint_function: str, request: Requ
     """
 
     try:
-        if not module.startswith('tracardi.process_engine') and not module.startswith('com_tracardi.action'):
+        if not module.startswith('ThamesThrive.process_engine') and not module.startswith('com_ThamesThrive.action'):
             raise HTTPException(status_code=404, detail="This is not helper endpoint.")
 
         module = import_package(module)

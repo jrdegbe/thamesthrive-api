@@ -1,11 +1,11 @@
-# Basic code template for tracardi plugin?
+# Basic code template for ThamesThrive plugin?
 
-To write a plugin in Tracardi, you typically follow a certain pattern in your Python code. Here's an example of what a
+To write a plugin in ThamesThrive, you typically follow a certain pattern in your Python code. Here's an example of what a
 simple code template for a custom plugin may look like:
 
 ```python
-from tracardi.service.plugin.runner import ActionRunner
-from tracardi.service.plugin.domain.result import Result
+from ThamesThrive.service.plugin.runner import ActionRunner
+from ThamesThrive.service.plugin.domain.result import Result
 
 
 class FlowWalker(ActionRunner):
@@ -29,10 +29,10 @@ class FlowWalker(ActionRunner):
 
 Here's a breakdown of the main components of a plugin:
 
-1. First, import the required modules from the Tracardi package.
+1. First, import the required modules from the ThamesThrive package.
 
 2. Then, create a class for your plugin that inherits from `ActionRunner`. This makes your class a plugin, capable of
-   being run by Tracardi.
+   being run by ThamesThrive.
 
 3. The `__init__` method is the initializer for your class. You can do any necessary setup here.
 
@@ -52,9 +52,9 @@ Note that plugins should b register in the system. Check the documentation on ho
 This document answers the questions:
 - How to write a custom plugin?
 
-# Where should I place plugins in tracardi code?
+# Where should I place plugins in ThamesThrive code?
 
-In Tracardi, you should place your plugins in the `tracardi/process_engine/action/v1` folder. The recommended way to
+In ThamesThrive, you should place your plugins in the `ThamesThrive/process_engine/action/v1` folder. The recommended way to
 structure the code for your plugin is to create a folder with the plugin name and place the `plugin.py` file inside it.
 
 Here's an example of how you can organize your plugin files:
@@ -66,7 +66,7 @@ Here's an example of how you can organize your plugin files:
 The file structure would look like this:
 
 ```
-tracardi/
+ThamesThrive/
 └── process_engine/
     └── action/
         └── v1/
@@ -74,7 +74,7 @@ tracardi/
                 └── plugin.py
 ```
 
-By following this structure, you ensure that your plugin is placed in the appropriate directory within the Tracardi
+By following this structure, you ensure that your plugin is placed in the appropriate directory within the ThamesThrive
 codebase. This makes it easier to manage and maintain your plugins in a standardized manner.
 
 ---
@@ -83,8 +83,8 @@ This document answers the questions:
 
 # My plugin is not visible on plugin list?
 
-If your plugin is not visible on the plugin list in Tracardi, it is possible that you forgot to register the plugin in
-the `tracardi/service/setup/setup_plugins.py` file. To resolve this issue, follow these steps:
+If your plugin is not visible on the plugin list in ThamesThrive, it is possible that you forgot to register the plugin in
+the `ThamesThrive/service/setup/setup_plugins.py` file. To resolve this issue, follow these steps:
 
 1. Open the `setup_plugins.py` file in a text editor.
 2. Locate the section where other plugins are registered.
@@ -104,24 +104,24 @@ the `tracardi/service/setup/setup_plugins.py` file. To resolve this issue, follo
    saved.
 5. Provide the necessary initialization data for your plugin in the `init` and `resource` fields.
 6. Save the `setup_plugins.py` file.
-7. Restart the Tracardi service for the changes to take effect.
-8. After restarting, your plugin should be visible on the plugin list in Tracardi.
+7. Restart the ThamesThrive service for the changes to take effect.
+8. After restarting, your plugin should be visible on the plugin list in ThamesThrive.
 
-By adding the plugin registration code to the `setup_plugins.py` file, you inform Tracardi about the existence of your
+By adding the plugin registration code to the `setup_plugins.py` file, you inform ThamesThrive about the existence of your
 plugin and make it accessible through the user interface.
 
-# Give me a fully working example of the tracardi class with description?
+# Give me a fully working example of the ThamesThrive class with description?
 
 Here's the whole code with descriptions for easier understanding:
 
 ```python
 from pydantic import validator
-from tracardi.service.plugin.runner import ActionRunner
-from tracardi.service.plugin.domain.result import Result
-from tracardi.service.plugin.domain.register import Plugin, Spec, MetaData, Documentation, PortDoc, Form, FormGroup,
+from ThamesThrive.service.plugin.runner import ActionRunner
+from ThamesThrive.service.plugin.domain.result import Result
+from ThamesThrive.service.plugin.domain.register import Plugin, Spec, MetaData, Documentation, PortDoc, Form, FormGroup,
 
 FormComponent, FormField
-from tracardi.service.plugin.domain.config import PluginConfig
+from ThamesThrive.service.plugin.domain.config import PluginConfig
 from password_generator import PasswordGenerator
 
 
@@ -266,23 +266,23 @@ def register() -> Plugin:
     )
 ```
 
-This code defines a Tracardi plugin that generates passwords based on user-defined configuration. Here's a breakdown of
+This code defines a ThamesThrive plugin that generates passwords based on user-defined configuration. Here's a breakdown of
 the code:
 
 1. Import Statements:
 
 ```python
 from pydantic import validator
-from tracardi.service.plugin.runner import ActionRunner
-from tracardi.service.plugin.domain.result import Result
-from tracardi.service.plugin.domain.register import Plugin, Spec, MetaData, Documentation, PortDoc, Form, FormGroup,
+from ThamesThrive.service.plugin.runner import ActionRunner
+from ThamesThrive.service.plugin.domain.result import Result
+from ThamesThrive.service.plugin.domain.register import Plugin, Spec, MetaData, Documentation, PortDoc, Form, FormGroup,
     FormComponent, FormField
-from tracardi.service.plugin.domain.config import PluginConfig
+from ThamesThrive.service.plugin.domain.config import PluginConfig
 from password_generator import PasswordGenerator
 ```
 
 The import statements bring in the necessary modules and classes for the plugin. These include Pydantic for
-configuration validation, Tracardi classes for plugin registration, result handling, and form generation, and the
+configuration validation, ThamesThrive classes for plugin registration, result handling, and form generation, and the
 PasswordGenerator class for generating passwords.
 
 2. Configuration Class:
@@ -339,7 +339,7 @@ class PasswordGeneratorAction(ActionRunner):
 ```
 
 The `PasswordGeneratorAction` class is the action runner for the plugin. It inherits from the `ActionRunner` class
-provided by Tracardi. It has two main methods:
+provided by ThamesThrive. It has two main methods:
 
 - The `set_up` method is called during the setup phase of the action and initializes the password generator with the
   provided configuration.
@@ -414,7 +414,7 @@ The `register` function returns a `Plugin` instance that represents the plugin r
 - Metadata information such as the plugin name, description, icon, group, and documentation details including inputs and
   outputs descriptions.
 
-By using this code template, you can create your own Tracardi plugins that generate passwords or perform other custom
+By using this code template, you can create your own ThamesThrive plugins that generate passwords or perform other custom
 actions with configurable settings.
 
 ---

@@ -7,9 +7,9 @@ list of action nodes is constantly extended.
 
 ## Actions
 
-Tracardi is an extendable system. It is build in a way that anyone with basic knowledge of python can add new action
-nodes. That's why you can find a lot of plug-ins for Tracardi on the Internet. New actions can be installed on the system simply
-by adding its module name. Tracardi will then download the plugin code and install it. See more about plugins installation 
+ThamesThrive is an extendable system. It is build in a way that anyone with basic knowledge of python can add new action
+nodes. That's why you can find a lot of plug-ins for ThamesThrive on the Internet. New actions can be installed on the system simply
+by adding its module name. ThamesThrive will then download the plugin code and install it. See more about plugins installation 
 in plugins section.
 
 ### Action configuration
@@ -30,7 +30,7 @@ be self-explanatory so there is no additional documentation for this.
 
 ## Workflow staging
 
-Tracardi automatically saves workflow changes. This means that any change or error in workflow could break the running
+ThamesThrive automatically saves workflow changes. This means that any change or error in workflow could break the running
 system. Therefore, workflows are in 2 different stages. One is production stage. This is the copy of a working workflow. 
 This workflow is running and the data is processed. It can not be changed. The second stage is development stage. This is a copy
 of a workflow that the user is editing. The change in this workflow is saved every 3 seconds. At some point it will become

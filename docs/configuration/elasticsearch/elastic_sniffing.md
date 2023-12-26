@@ -28,7 +28,7 @@ When you enable sniffing, you’ll make your application more resilient and able
 you should know your infrastructure, so you can decide what the best solution to adopt is. The best solution might even
 be to not adopt sniffing.
 
-Tracardi has some configuration that can be adopted to turn on of off sniffing. See `tracardi configuration` to get more
+ThamesThrive has some configuration that can be adopted to turn on of off sniffing. See `ThamesThrive configuration` to get more
 information on how to configure sniffing.
 
 ## Sniffing at startup

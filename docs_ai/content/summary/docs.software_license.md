@@ -1,4 +1,4 @@
-This documentation provides information about the software Tracardi, which is available under the MIT license with the
+This documentation provides information about the software ThamesThrive, which is available under the MIT license with the
 Common Clause. The MIT license grants permission to any person to use, copy, modify, merge, publish, distribute,
 sublicense, and/or sell copies of the software, as long as the copyright notice and permission notice are included in
 all copies or substantial portions of the software. The software is provided "as is" without any warranty, express or

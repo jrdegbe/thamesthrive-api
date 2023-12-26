@@ -1,6 +1,6 @@
 ## Custom event types
 
-In addition to the pre-built event types, Tracardi also allows users to create custom event types. This feature is
+In addition to the pre-built event types, ThamesThrive also allows users to create custom event types. This feature is
 available in the commercial version and allows users to define their own event types and properties.
 
 When creating a custom event type, users can specify which properties to copy and which to ignore. This allows for

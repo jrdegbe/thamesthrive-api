@@ -1,24 +1,24 @@
-# Write some simple code of tracardi plugin
+# Write some simple code of ThamesThrive plugin
 
-The purpose of writing code for a Tracardi plugin is to extend Tracardi's base functionalities by introducing new
+The purpose of writing code for a ThamesThrive plugin is to extend ThamesThrive's base functionalities by introducing new
 actions or nodes to the existing workflow. By creating plugins, we can add features or functionality that control and
-process the flow of data within Tracardi. These plugins can perform various tasks, such as data transformation, decision
+process the flow of data within ThamesThrive. These plugins can perform various tasks, such as data transformation, decision
 making based on data properties, communication with external resources, or any custom functionality required by the
 user.
 
-Essentially, a plugin acts as an independent module within the Tracardi workflow system, representing a unit of work. A
+Essentially, a plugin acts as an independent module within the ThamesThrive workflow system, representing a unit of work. A
 plugin would have an input, a program that processes this input, and an output. In addition, plugins also have a
 configuration that defines how they should behave, including information like how to connect to an external database.
 
 Here's an example of a simple plugin:
 
-This is a Python class representing a Tracardi plugin. The FlowWalker plugin scans the execution flow and processes each
+This is a Python class representing a ThamesThrive plugin. The FlowWalker plugin scans the execution flow and processes each
 node accordingly.
 
 ```python
-from tracardi.service.plugin.domain.register import Plugin, Spec, MetaData, Documentation, PortDoc
-from tracardi.service.plugin.runner import ActionRunner
-from tracardi.service.plugin.domain.result import Result
+from ThamesThrive.service.plugin.domain.register import Plugin, Spec, MetaData, Documentation, PortDoc
+from ThamesThrive.service.plugin.runner import ActionRunner
+from ThamesThrive.service.plugin.domain.result import Result
 
 
 class FlowWalker(ActionRunner):
@@ -86,7 +86,7 @@ needs of your project or workflow.
 
 # How to register a custom plugin in the system?
 
-When you finished coding you custom plugin go to `tracardi/service/setup/setup_plugins.py` and add to
+When you finished coding you custom plugin go to `ThamesThrive/service/setup/setup_plugins.py` and add to
 
 ```python 
 installed_plugins: Dict[str, PluginMetadata] 
@@ -107,13 +107,13 @@ the following line:
 ```
 
 Replace the `module-where-the-plugin-code-is-saved` with the full path to module
-like `tracardi.process_engine.action.v1.flow_walker` where the flow_walker is the python file.
+like `ThamesThrive.process_engine.action.v1.flow_walker` where the flow_walker is the python file.
 
 Then click install plugin in the `Maintainace/Action Plugin-Ins` the button Plugins or Reinstall plugins.
 
 # Write an example of plugin form
 
-An exemplary plugin form in Tracardi could be the "Event type plugin configuration" that has been described in the
+An exemplary plugin form in ThamesThrive could be the "Event type plugin configuration" that has been described in the
 provided document. Here is its structure:
 
 ```python
@@ -156,8 +156,8 @@ The form array should be referenced in `register` function in Plugin object prop
 
 ```python
 
-from tracardi.service.plugin.domain.register import Plugin, Spec, MetaData
-from tracardi.service.plugin.domain.register import Form, FormGroup, FormField, FormComponent  # 
+from ThamesThrive.service.plugin.domain.register import Plugin, Spec, MetaData
+from ThamesThrive.service.plugin.domain.register import Form, FormGroup, FormField, FormComponent  # 
 
 # this is the function that will be called to get the data of plugin when it is registered.
 def register() -> Plugin:
@@ -259,9 +259,9 @@ documentation.
 # What is a simple code template for custom plugin?
 
 ```python
-from tracardi.service.plugin.domain.register import Plugin, Spec, MetaData, Documentation, PortDoc
-from tracardi.service.plugin.runner import ActionRunner
-from tracardi.service.plugin.domain.result import Result
+from ThamesThrive.service.plugin.domain.register import Plugin, Spec, MetaData, Documentation, PortDoc
+from ThamesThrive.service.plugin.runner import ActionRunner
+from ThamesThrive.service.plugin.domain.result import Result
 
 
 class FlowWalker(ActionRunner):

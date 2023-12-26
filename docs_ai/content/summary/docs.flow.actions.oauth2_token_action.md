@@ -5,3 +5,4 @@ When using the form, the user must select the API endpoint resource from which t
 When using the advanced config, the user must provide a JSON object with the source (id and name of the API endpoint resource) and the destination (dot path to the destination field, which must start with 'payload@'). 
 
 This plugin is useful for getting an OAuth2 token from an API endpoint resource and storing it in the desired field.
+

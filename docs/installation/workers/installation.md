@@ -1,7 +1,7 @@
 # Workers Installation
 
-Tracardi relies on four different workers to ensure smooth operations and efficient processing of data. Each worker
-serves a specific purpose in the Tracardi ecosystem. Below are details about each worker and instructions on how to set
+ThamesThrive relies on four different workers to ensure smooth operations and efficient processing of data. Each worker
+serves a specific purpose in the ThamesThrive ecosystem. Below are details about each worker and instructions on how to set
 them up.
 
 ## Open-source workers
@@ -9,14 +9,14 @@ them up.
 ### 1. Migration and Import Worker
 
 The Migration and Import Worker is responsible for system upgrades and data import tasks, which are carried out in the
-background. It ensures a seamless transition when updating the Tracardi system and handles data imports efficiently.
+background. It ensures a seamless transition when updating the ThamesThrive system and handles data imports efficiently.
 
 To run the Migration and Import Worker, execute the following Docker command:
 
 ```bash
 docker run \
 -e REDIS_HOST=redis://<redis-ip>:6379 \
-tracardi/update-worker:0.8.1
+ThamesThrive/update-worker:0.8.1
 ```
 
 Please ensure that you replace `<redis-ip>` with the actual IP address of your Redis instance.
@@ -26,7 +26,7 @@ Please ensure that you replace `<redis-ip>` with the actual IP address of your R
 In order to install commercial version you will need to log-in to docker hub with our credentials.
 
 ```
-docker login -u tracardi -p <token>
+docker login -u ThamesThrive -p <token>
 ```
 
 And paste the credentials that we have sent you.
@@ -59,7 +59,7 @@ docker run \
 -e ELASTIC_HOST=http://<elastic-ip>:9200 \
 -e REDIS_HOST=redis://<redis-ip>:6379 \
 -e LOGGING_LEVEL=info \
-tracardi/com-tracardi-segmentation-worker:0.8.1
+ThamesThrive/com-ThamesThrive-segmentation-worker:0.8.1
 ```
 
 ### 3. Scheduler Worker
@@ -74,7 +74,7 @@ docker run \
 -e ELASTIC_HOST=http://<elastic-ip>:9200 \
 -e REDIS_HOST=<redis-ip> \
 -e LOGGING_LEVEL=info \
-tracardi/com-tracardi-scheduler-worker:0.8.1
+ThamesThrive/com-ThamesThrive-scheduler-worker:0.8.1
 ```
 
 ### 4. Post-Collection Worker
@@ -87,7 +87,7 @@ docker run \
 -e ELASTIC_HOST=http://<elastic-ip>:9200 \
 -e REDIS_HOST=redis://<redis-ip>:6379 \
 -e LOGGING_LEVEL=info \
-tracardi/com-tracardi-coping-worker:0.8.1
+ThamesThrive/com-ThamesThrive-coping-worker:0.8.1
 ```
 
 ### 5. Trigger Worker
@@ -99,5 +99,5 @@ docker run \
 -e ELASTIC_HOST=http://<elastic-ip>:9200 \
 -e REDIS_HOST=redis://<redis-ip>:6379 \
 -e LOGGING_LEVEL=info \
-tracardi/com-tracardi-trigger-worker:0.8.1
+ThamesThrive/com-ThamesThrive-trigger-worker:0.8.1
 ```

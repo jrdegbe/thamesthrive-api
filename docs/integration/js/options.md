@@ -1,12 +1,12 @@
 # Event options
 
-Event options in Tracardi allow you to define the behavior of events and add contextual information associated with an
-event. When events are triggered using the Tracardi JavaScript snippet, they automatically include default context
+Event options in ThamesThrive allow you to define the behavior of events and add contextual information associated with an
+event. When events are triggered using the ThamesThrive JavaScript snippet, they automatically include default context
 information, such as browser information and metadata, to provide additional details about the event.
 
 ## Default Event Context in JavaScript Snippet
 
-The default event context attached by the Tracardi JavaScript snippet includes the following information:
+The default event context attached by the ThamesThrive JavaScript snippet includes the following information:
 
 ```json
 {
@@ -32,7 +32,7 @@ and query), and browsing history length. It also includes the IP address of the 
 
 !!! Tip
 
-    When working with Tracardi, you have the option to configure whether or not to include page data in the context of 
+    When working with ThamesThrive, you have the option to configure whether or not to include page data in the context of 
     each event. This configuration is done at the tracker level and can be customized according to your requirements. 
     By adjusting the tracker context configuration, you can easily control whether or not page data is sent along with 
     each event, providing you with flexibility and control over the data captured and processed.
@@ -40,7 +40,7 @@ and query), and browsing history length. It also includes the IP address of the 
 ## Customizing Event Context
 
 You can add additional context information to events by including a "context" key in the options when triggering events
-using the Tracardi JavaScript snippet. For example:
+using the ThamesThrive JavaScript snippet. For example:
 
 ```javascript title="Example" linenums="1" hl_lines="5"
 window.tracker.track(
@@ -56,16 +56,16 @@ allows you to include additional information that is relevant to your specific u
 
 ## Beacon tracks
 
-Beacon events in Tracardi are events that are sent even if the customer leaves the page. These events allow you to track
+Beacon events in ThamesThrive are events that are sent even if the customer leaves the page. These events allow you to track
 user interactions that may occur after a user has navigated away from a page, providing valuable insights into user
 behavior.
 
-To configure a beacon event in Tracardi, you can add the asBeacon: true option to the track configuration. This
+To configure a beacon event in ThamesThrive, you can add the asBeacon: true option to the track configuration. This
 indicates that the event should be sent as a beacon event.
 
 ### Example of Beacon Event
 
-Here is an example of how to configure a beacon event in Tracardi:
+Here is an example of how to configure a beacon event in ThamesThrive:
 
 ```javascript title="Example" linenums="1"
 window.tracker.track("page-view", {}, {"fire": true, asBeacon: true});

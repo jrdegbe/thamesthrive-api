@@ -3,7 +3,7 @@
 To load a profile, two identifiers are used: session_id and profile_id. Both of them are optional, so we have four
 different loading scenarios:
 
-1. If the session exists and the profile exists in the Tracardi database, both the profile and the session are loaded
+1. If the session exists and the profile exists in the ThamesThrive database, both the profile and the session are loaded
    from the database.
 2. If the session exists but the profile does not exist in the database, a new profile is created and saved to the
    database, and the existing session is loaded.

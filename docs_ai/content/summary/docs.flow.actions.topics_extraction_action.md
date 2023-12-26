@@ -9,3 +9,4 @@ language detection.
 
 For advanced configuration, the user must provide a JSON object containing the name and ID of their MeaningCloud
 resource, the path to the text to analyze, and the path to the language code or language itself.
+

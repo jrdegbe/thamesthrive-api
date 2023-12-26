@@ -1,13 +1,13 @@
-# Commercial Tracardi with docker compose
+# Commercial ThamesThrive with docker compose
 
-This guide provides a brief introduction on how to install and test the commercial version of Tracardi using
+This guide provides a brief introduction on how to install and test the commercial version of ThamesThrive using
 docker-compose. Please note that this installation is not intended for production use, but rather for testing purposes
 only.
 
 In order to install commercial version you will need to log-in to docker hub with our credentials.
 
 ```
-docker login -u tracardi -p <token>
+docker login -u ThamesThrive -p <token>
 ```
 
 And paste the credentials that we have sent you.
@@ -27,18 +27,18 @@ set -a
 source .env-docker
 ```
 
-## Clone Tracardi API
+## Clone ThamesThrive API
 
 ```bash
-git clone https://github.com/Tracardi/tracardi-api.git
+git clone https://github.com/ThamesThrive/ThamesThrive-api.git
 ```
 
 ## Run docker compose
 
-Go to TRACARDI API folder, and run one line command:
+Go to ThamesThrive API folder, and run one line command:
 
 ```bash
-cd tracardi-api
+cd ThamesThrive-api
 docker-compose -f com-docker-compose.yaml up
 ```
 
@@ -48,9 +48,9 @@ docker-compose -f com-docker-compose.yaml up
 
 !!! Warning
 
-    Tracardi, to operate with its full range of features, requires the presence of specific crontab jobs. 
+    ThamesThrive, to operate with its full range of features, requires the presence of specific crontab jobs. 
     It's important to note that when using Docker Compose, these crontab jobs are not automatically included as 
-    part of the setup. Therefore, to ensure that Tracardi functions as intended, it is essential to perform an 
+    part of the setup. Therefore, to ensure that ThamesThrive functions as intended, it is essential to perform an 
     additional crontab installation.
 
 ## Upgrading docker compose
@@ -68,13 +68,13 @@ docker-compose -f com-docker-compose.yaml up
    To upgrade to the latest version, fetch the latest Docker images for the components. Run the following commands in your terminal:
 
    ```bash
-   docker pull tracardi/tracardi-api:0.8.1
-   docker pull tracardi/tracardi-gui:0.8.1
-   docker pull tracardi/update-worker:0.8.1
-   docker pull tracardi/com-tracardi-segmentation-worker:0.8.1
-   docker pull tracardi/com-tracardi-scheduler-worker:0.8.1
-   docker pull tracardi/com-tracardi-coping-worker:0.8.1
-   docker pull tracardi/com-tracardi-trigger-worker:0.8.1
+   docker pull ThamesThrive/ThamesThrive-api:0.8.1
+   docker pull ThamesThrive/ThamesThrive-gui:0.8.1
+   docker pull ThamesThrive/update-worker:0.8.1
+   docker pull ThamesThrive/com-ThamesThrive-segmentation-worker:0.8.1
+   docker pull ThamesThrive/com-ThamesThrive-scheduler-worker:0.8.1
+   docker pull ThamesThrive/com-ThamesThrive-coping-worker:0.8.1
+   docker pull ThamesThrive/com-ThamesThrive-trigger-worker:0.8.1
    ```
 
 ## Handling Errors
@@ -82,7 +82,7 @@ docker-compose -f com-docker-compose.yaml up
 If you encounter errors while bringing up the upgraded Docker Compose setup, it might be necessary to address these
 errors by deleting certain components. Follow the steps below:
 
-- To stop all running containers (make sure that there are no other container running but the tracardi containers),
+- To stop all running containers (make sure that there are no other container running but the ThamesThrive containers),
   execute:
 
   ```bash

@@ -8,4 +8,4 @@ calls, text messaging, media and files in private chats or as part of communitie
 1. In your application open __Server setting__ and go into the __Integrations__
 2. Click __Create Webhook__
 3. Type __Name__ for your webhook and choose what __channel__ the Webhook posts to
-4. Click __Copy Webhook URL__ and paste it into Tracardi resource __URL__ field.
+4. Click __Copy Webhook URL__ and paste it into ThamesThrive resource __URL__ field.

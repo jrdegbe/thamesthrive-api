@@ -17,7 +17,7 @@
     - `valid`: Represents the validity status of the event.
     - `warning`: Indicates if there are any warnings associated with the event.
     - `error`: Indicates if there are any errors associated with the event.
-    - `instance`: Contains information about the instance of Tracardi where the event was processed.
+    - `instance`: Contains information about the instance of ThamesThrive where the event was processed.
     - `debug`: Indicates if the event is in debug mode.
 - `type`: This field represents the event type, usually expressed as a slug derived from the event name. It is lowercase
   with hyphens replacing spaces.

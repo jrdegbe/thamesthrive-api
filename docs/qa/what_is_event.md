@@ -1,11 +1,11 @@
 # What is event?
 
-In the context of Tracardi, an event refers to a piece of data that represents an action, occurrence, or happening
-within a system. Events are fundamental units of data collected and processed by Tracardi to analyze user behavior,
+In the context of ThamesThrive, an event refers to a piece of data that represents an action, occurrence, or happening
+within a system. Events are fundamental units of data collected and processed by ThamesThrive to analyze user behavior,
 system interactions, and other activities. Each event contains specific characteristics or attributes, known as event
 properties, which provide valuable information about the event, such as its timestamp, source, and relevant details.
 
-Tracardi uses events to track and understand user interactions, record system activities, and trigger specific workflows
+ThamesThrive uses events to track and understand user interactions, record system activities, and trigger specific workflows
 based on event data. Events play a crucial role in data processing and analysis, enabling businesses to gain insights
 into user journeys, detect patterns, and make informed decisions based on the data collected from various sources.
 
@@ -42,10 +42,10 @@ Event consist of:
     - Allows businesses to handle different types of events differently and route them to appropriate workflows.
 
 2. Events Synchronization:
-    - Process of managing the order in which events are processed in Tracardi.
+    - Process of managing the order in which events are processed in ThamesThrive.
     - Ensures events for a specific profile are processed sequentially, while events for different profiles are
       processed sequentially but in parallel to each other.
 
-In summary, events in Tracardi carry various properties and traits, and they can be routed and synchronized to undergo
+In summary, events in ThamesThrive carry various properties and traits, and they can be routed and synchronized to undergo
 different workflows for analysis and processing. The information gathered from events helps businesses gain valuable
 insights into user behavior and make informed decisions based on the data collected.

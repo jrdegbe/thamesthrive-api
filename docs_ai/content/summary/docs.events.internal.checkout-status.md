@@ -5,3 +5,4 @@ The documentation also provides a table of expected properties for the event, wh
 The documentation also explains how auto indexing works and how it helps to make data easy to find by creating a structure that organizes the data. It provides a table that describes which event property will be copied to event traits, and states that data will not be copied to the profile.
 
 Finally, the documentation provides a JSON example of event properties. This example includes the type of the event, which is "checkout-status", and the properties, which are "status" and "id".
+

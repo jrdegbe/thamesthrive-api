@@ -1,6 +1,6 @@
-# What extensions are in Tracardi
+# What extensions are in ThamesThrive
 
-List of available Tracardi extensions:
+List of available ThamesThrive extensions:
 
 * ActiveCampaign
 * Airtable

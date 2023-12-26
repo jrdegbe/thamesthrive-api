@@ -4,13 +4,13 @@ from typing import Optional
 from fastapi import APIRouter, HTTPException
 from pytimeparse.timeparse import timeparse
 
-from tracardi.domain.consent_type import ConsentType
-from tracardi.domain.payload.customer_consent import CustomerConsent
-from tracardi.domain.profile import Profile, ConsentRevoke
-from tracardi.service.storage.driver.elastic import session as session_db
-from tracardi.service.storage.driver.elastic import event_source as event_source_db
-from tracardi.service.storage.driver.elastic import profile as profile_db
-from tracardi.service.storage.driver.elastic import consent_type as consent_type_db
+from ThamesThrive.domain.consent_type import ConsentType
+from ThamesThrive.domain.payload.customer_consent import CustomerConsent
+from ThamesThrive.domain.profile import Profile, ConsentRevoke
+from ThamesThrive.service.storage.driver.elastic import session as session_db
+from ThamesThrive.service.storage.driver.elastic import event_source as event_source_db
+from ThamesThrive.service.storage.driver.elastic import profile as profile_db
+from ThamesThrive.service.storage.driver.elastic import consent_type as consent_type_db
 
 router = APIRouter()
 

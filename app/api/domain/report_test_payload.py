@@ -1,4 +1,4 @@
-from tracardi.domain.report import Report
+from ThamesThrive.domain.report import Report
 from pydantic import BaseModel
 from typing import Dict, Any
 

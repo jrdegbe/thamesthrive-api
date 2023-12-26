@@ -4,7 +4,7 @@ from lark.exceptions import LarkError
 
 from app.api.auth.permissions import Permissions
 from app.config import server
-from tracardi.process_engine.tql.condition import Condition
+from ThamesThrive.process_engine.tql.condition import Condition
 
 router = APIRouter(
     dependencies=[Depends(Permissions(roles=["admin", "developer", "marketer"]))]

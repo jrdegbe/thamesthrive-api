@@ -145,7 +145,7 @@ For this purpose, we will create a resource that will have the following data
 }
 ```
 
-The resources are created in the `tracardi/service/setup/setup_resources.py` directory
+The resources are created in the `ThamesThrive/service/setup/setup_resources.py` directory
 
 We add the following code to the `get_resource_types()` function
 
@@ -170,10 +170,10 @@ ResourceSettings(
 4. The tag that describes the resource. It is used to filter the resources in the plugin form.
 5. Resource configuration `*.md` file name __containing documentation__ on how to get authorization data, e.g. 
    when the resource is an external system. 
-6. The documentation file is located in the __tracardi-api/docs/resources__ directory
+6. The documentation file is located in the __ThamesThrive-api/docs/resources__ directory
 
 This is the set of data the system needs to add a resource. After restarting the server, we can click on `Resources` in
-the Tracardi GUI menu, then `Add new resource` and the list of resources will include `Custom API URL`. The resource we just created.
+the ThamesThrive GUI menu, then `Add new resource` and the list of resources will include `Custom API URL`. The resource we just created.
 The form will also include an object:
 
 ```json
@@ -192,7 +192,7 @@ Once we have a resource, we can load it in our plugin. We do this in the `set_up
 to the `set_up` method
 
 ```python
-from tracardi.service.storage.driver.elastic import resource as resource_db
+from ThamesThrive.service.storage.driver.elastic import resource as resource_db
 
 resource = await resource_db.load (config.resource.id) # (1)
 self.credentials = resource.credentials.get_credentials (self, output = MyResourceConfig) # (2)
@@ -211,7 +211,7 @@ the `ResourceSettings` object above and a user filled when creating the resource
 The whole `set_up` method should look like this:
 
 ```python
-from tracardi.service.storage.driver.elastic import resource as resource_db
+from ThamesThrive.service.storage.driver.elastic import resource as resource_db
 
 class MyPlugin (ActionRunner):
 
@@ -247,9 +247,9 @@ it in this line:
 
 In `output=MyResourceConfig`, I requested that the credentials loaded from the resource be in the form of a
 `MyResourceConfig` object. I don't have it yet, so let's create it. We usually store resource objects in the
-directory: `tracardi/domain/resources`
+directory: `ThamesThrive/domain/resources`
 
-=== "tracardi/domain/resources/my_resource_config.py"
+=== "ThamesThrive/domain/resources/my_resource_config.py"
     ```python
     from pydantic import BaseModel, AnyHttpUrl
     from typing import Optional 
@@ -316,7 +316,7 @@ def register () -> Plugin:
 We also need to extend the configuration validation object.
 
 ```python hl_lines="4"
-from tracardi.domain.named_entity import NamedEntity
+from ThamesThrive.domain.named_entity import NamedEntity
 
 class Configuration(PluginConfig):
     resource: NamedEntity # (1)
@@ -337,7 +337,7 @@ class Configuration(PluginConfig):
 
 ```
 
-1. NamedEntity is an object containing __id and name__. It is already defined in Tracardi.
+1. NamedEntity is an object containing __id and name__. It is already defined in ThamesThrive.
 
 
 ### Resource select field

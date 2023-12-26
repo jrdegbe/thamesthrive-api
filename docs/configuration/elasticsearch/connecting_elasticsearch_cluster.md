@@ -1,6 +1,6 @@
 ## Connecting to elastic cluster
 
-To connect to elastic cluster you must provide location to all cluster nodes. To configure Tracardi connection to
+To connect to elastic cluster you must provide location to all cluster nodes. To configure ThamesThrive connection to
 elastic change ELASTIC_HOST in docker-standalone.yaml file.
 
 ```yaml
@@ -11,7 +11,7 @@ If your cluster is behind a reverse proxy you will need only one url.
 
 ### SSL and Authentication
 
-You can configure Tracardi to use SSL for connecting to your elasticsearch cluster. Use RFC-1738 to specify the urls:
+You can configure ThamesThrive to use SSL for connecting to your elasticsearch cluster. Use RFC-1738 to specify the urls:
 
 ```yaml
     ELASTIC_HOST: "https://user:secret@node-1:443,https://user:secret@node-2:443,https://user:secret@node-3:443"
@@ -80,5 +80,5 @@ If your instance of elasticsearch or opensearch has certs that can not be verifi
 ### Other connection types
 
 If there is a need for more advanced connection configuration the change in /app/globals/elastic_client.py should handle
-all mare advanced connection types from Tracardi to elastic. 
+all mare advanced connection types from ThamesThrive to elastic. 
 
