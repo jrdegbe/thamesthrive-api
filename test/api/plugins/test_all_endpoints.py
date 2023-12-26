@@ -1,11 +1,11 @@
 from typing import Tuple, Union, Iterator
 
-from tracardi.domain.settings import Settings
-from tracardi.service.module_loader import load_callable, import_package
-from tracardi.service.plugin.domain.register import Plugin
-from tracardi.service.plugin.runner import ActionRunner
-from tracardi.service.setup.domain.plugin_metadata import PluginMetadata
-from tracardi.service.setup.setup_plugins import installed_plugins, test_plugins
+from  ThamesThrive .domain.settings import Settings
+from  ThamesThrive .service.module_loader import load_callable, import_package
+from  ThamesThrive .service.plugin.domain.register import Plugin
+from  ThamesThrive .service.plugin.runner import ActionRunner
+from  ThamesThrive .service.setup.domain.plugin_metadata import PluginMetadata
+from  ThamesThrive .service.setup.setup_plugins import installed_plugins, test_plugins
 
 
 def _load_plugin_registry_metadata(plugin_module) -> Plugin:
@@ -57,7 +57,7 @@ def test_should_all_plugins_not_fail_on_init():
 
 
 async def test_should_set_up_plugin():
-    module_name = "tracardi.process_engine.action.v1.traits.copy_trait_action"
+    module_name = " ThamesThrive .process_engine.action.v1.traits.copy_trait_action"
     class_name = "CopyTraitAction"
     module = import_package(module_name)
     plugin_class = load_callable(module, class_name)

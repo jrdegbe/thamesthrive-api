@@ -1,7 +1,7 @@
 import json
 from uuid import uuid4
 
-from tracardi.domain.resource import Resource
+from  ThamesThrive .domain.resource import Resource
 from test.utils import Endpoint
 
 endpoint = Endpoint()

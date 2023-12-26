@@ -1,8 +1,8 @@
 from uuid import uuid4
 
 from app.api.auth.user_db import TokenDb
-from tracardi.context import ServerContext, Context
-from tracardi.domain.user import User
+from  ThamesThrive .context import ServerContext, Context
+from  ThamesThrive .domain.user import User
 
 
 def test_user_set_delete():

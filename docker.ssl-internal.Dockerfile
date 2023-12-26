@@ -39,7 +39,7 @@ RUN mv docs app
 
 ENV VARIABLE_NAME="application"
 
-RUN pip show tracardi
+RUN pip show  ThamesThrive 
 RUN pip list
 
 EXPOSE 443

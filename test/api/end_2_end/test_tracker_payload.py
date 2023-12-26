@@ -34,7 +34,7 @@ def test_track_payload():
         if 'event' not in result:
             raise ValueError(
                 'Could not perform test due to bad server configuration. No debugging allowed. '
-                'Start Tracardi with TRACK_DEBUG=yes.')
+                'Start  ThamesThrive  with TRACK_DEBUG=yes.')
 
         assert len(result['event']['ids']) == 3  # Event, Session opened, Profile Created
 

@@ -1,9 +1,9 @@
 from datetime import datetime
 
-from tracardi.context import ServerContext, Context
+from  ThamesThrive .context import ServerContext, Context
 
 from test.utils import Endpoint, get_test_tenant
-from tracardi.service.storage.index import Resource
+from  ThamesThrive .service.storage.index import Resource
 
 endpoint = Endpoint()
 

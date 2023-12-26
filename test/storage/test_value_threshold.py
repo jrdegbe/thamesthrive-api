@@ -2,8 +2,8 @@ import asyncio
 
 from time import sleep
 
-from tracardi.context import ServerContext, Context
-from tracardi.service.value_threshold_manager import ValueThresholdManager
+from  ThamesThrive .context import ServerContext, Context
+from  ThamesThrive .service.value_threshold_manager import ValueThresholdManager
 
 
 async def _should_save_and_load_value_threshold():

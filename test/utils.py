@@ -5,9 +5,9 @@ from typing import Optional
 import requests
 from dotenv import load_dotenv
 
-from tracardi.config import tracardi
-from tracardi.domain.profile import Profile
-from tracardi.domain.session import Session, SessionMetadata
+from  ThamesThrive .config import  ThamesThrive 
+from  ThamesThrive .domain.profile import Profile
+from  ThamesThrive .domain.session import Session, SessionMetadata
 
 load_dotenv()
 
@@ -22,8 +22,8 @@ def get_tenant_name_from_host(hostname) -> Optional[str]:
 
 
 def get_test_tenant():
-    if not tracardi.multi_tenant:
-        tenant = tracardi.version.name
+    if not  ThamesThrive .multi_tenant:
+        tenant =  ThamesThrive .version.name
     else:
         host = os.environ.get('HOST', None)
         if host is None:
@@ -65,7 +65,7 @@ class Endpoint:
         if response.status_code == 200:
             return "{} {}".format(data['token_type'], data['access_token'])
         else:
-            raise ConnectionError(f"Tracardi connection error status {response.status_code}. Details: {data}")
+            raise ConnectionError(f" ThamesThrive  connection error status {response.status_code}. Details: {data}")
 
     def request(self, endpoint, data=None, params=None, method='POST'):
         return requests.request(

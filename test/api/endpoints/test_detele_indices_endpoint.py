@@ -1,11 +1,11 @@
-from tracardi.config import tracardi
+from  ThamesThrive .config import  ThamesThrive 
 from test.utils import Endpoint
 
 endpoint = Endpoint()
 
 
 def test_should_not_delete_currently_used_version():
-    version = tracardi.version.version
+    version =  ThamesThrive .version.version
     response = endpoint.delete(f'/indices/version/{version}')
     assert response.status_code == 409
 

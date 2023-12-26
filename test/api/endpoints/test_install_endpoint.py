@@ -28,7 +28,7 @@ def test_should_install_system():
     response = endpoint.post("/install", data={
         "username": 'a@a.pl',
         "password": "a",
-        "token": "tracardi",
+        "token": " ThamesThrive ",
         "needs_admin": True
     })
     result = response.json()
@@ -46,4 +46,4 @@ def test_should_install_system_plugins():
     result = response.json()
     assert 'registered' in result
     assert isinstance(result['registered'], list)
-    assert 'tracardi.process_engine.action.v1.flow.start.start_action' in result['registered']
+    assert ' ThamesThrive .process_engine.action.v1.flow.start.start_action' in result['registered']

@@ -3,13 +3,13 @@ import threading
 from time import time, sleep
 from uuid import uuid4
 
-from tracardi.process_engine.action.v1.flow.start.start_action import StartAction
+from  ThamesThrive .process_engine.action.v1.flow.start.start_action import StartAction
 
-from tracardi.process_engine.action.v1.increase_views_action import IncreaseViewsAction
-from tracardi.domain.flow import Flow
-from tracardi.process_engine.action.v1.end_action import EndAction
+from  ThamesThrive .process_engine.action.v1.increase_views_action import IncreaseViewsAction
+from  ThamesThrive .domain.flow import Flow
+from  ThamesThrive .process_engine.action.v1.end_action import EndAction
 from test.api.endpoints.test_event_source_endpoint import _create_event_source
-from tracardi.service.wf.service.builders import action
+from  ThamesThrive .service.wf.service.builders import action
 from test.utils import Endpoint
 
 endpoint = Endpoint()

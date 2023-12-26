@@ -1,5 +1,5 @@
 from test.utils import Endpoint
-from tracardi.domain.segment import Segment
+from  ThamesThrive .domain.segment import Segment
 
 endpoint = Endpoint()
 

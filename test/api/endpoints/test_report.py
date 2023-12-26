@@ -2,7 +2,7 @@ from uuid import uuid4
 
 from .test_event_endpoint import _make_event
 from test.utils import Endpoint
-from tracardi.domain.report import Report
+from  ThamesThrive .domain.report import Report
 
 endpoint = Endpoint()
 

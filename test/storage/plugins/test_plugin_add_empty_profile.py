@@ -1,10 +1,10 @@
-from tracardi.domain.entity import Entity
-from tracardi.domain.event_metadata import EventMetadata
-from tracardi.domain.time import EventTime
-from tracardi.domain.session import Session, SessionMetadata
-from tracardi.domain.event import Event, EventSession
-from tracardi.process_engine.action.v1.internal.add_empty_profile.plugin import AddEmptyProfileAction
-from tracardi.service.plugin.service.plugin_runner import run_plugin
+from  ThamesThrive .domain.entity import Entity
+from  ThamesThrive .domain.event_metadata import EventMetadata
+from  ThamesThrive .domain.time import EventTime
+from  ThamesThrive .domain.session import Session, SessionMetadata
+from  ThamesThrive .domain.event import Event, EventSession
+from  ThamesThrive .process_engine.action.v1.internal.add_empty_profile.plugin import AddEmptyProfileAction
+from  ThamesThrive .service.plugin.service.plugin_runner import run_plugin
 
 
 def test_plugin_add_empty_profile():

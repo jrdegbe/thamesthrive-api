@@ -1,7 +1,7 @@
 from time import sleep
 
-from tracardi.context import ServerContext, Context
-from tracardi.service.storage.redis.cache import RedisCache
+from  ThamesThrive .context import ServerContext, Context
+from  ThamesThrive .service.storage.redis.cache import RedisCache
 
 
 def test_redis_cache():

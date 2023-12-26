@@ -1,4 +1,4 @@
-from tracardi.context import ServerContext, Context
+from  ThamesThrive .context import ServerContext, Context
 from test.utils import get_test_tenant
 
 with ServerContext(Context(production=False, tenant=get_test_tenant())):
@@ -9,14 +9,14 @@ with ServerContext(Context(production=False, tenant=get_test_tenant())):
     import pytest
 
     from test.api.endpoints.test_event_source_endpoint import _create_event_source
-    from tracardi.domain.profile import Profile
-    from tracardi.exceptions.exception import DuplicatedRecordException
-    from tracardi.service.storage.driver.elastic import event as event_db
-    from tracardi.service.storage.driver.elastic import session as session_db
-    from tracardi.service.storage.driver.elastic import profile as profile_db
-    from tracardi.service.storage.elastic_client import ElasticClient
-    from tracardi.service.storage.factory import storage_manager
-    from tracardi.service.storage.index import Resource
+    from  ThamesThrive .domain.profile import Profile
+    from  ThamesThrive .exceptions.exception import DuplicatedRecordException
+    from  ThamesThrive .service.storage.driver.elastic import event as event_db
+    from  ThamesThrive .service.storage.driver.elastic import session as session_db
+    from  ThamesThrive .service.storage.driver.elastic import profile as profile_db
+    from  ThamesThrive .service.storage.elastic_client import ElasticClient
+    from  ThamesThrive .service.storage.factory import storage_manager
+    from  ThamesThrive .service.storage.index import Resource
 
     endpoint = Endpoint()
     month = datetime.now().month

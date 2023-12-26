@@ -1,9 +1,9 @@
-from tracardi.context import Context, ServerContext
+from  ThamesThrive .context import Context, ServerContext
 
 from test.utils import Endpoint, get_test_tenant
 from uuid import uuid4
 
-from tracardi.domain.named_entity import NamedEntity
+from  ThamesThrive .domain.named_entity import NamedEntity
 
 with ServerContext(Context(production=False, tenant=get_test_tenant())):
     endpoint = Endpoint()

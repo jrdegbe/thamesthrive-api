@@ -1,7 +1,7 @@
 from time import sleep
 from uuid import uuid4
 
-from tracardi.config import tracardi
+from  ThamesThrive .config import  ThamesThrive 
 from .test_event_source_endpoint import _create_event_source
 from test.utils import Endpoint
 
@@ -410,7 +410,7 @@ def test_should_get_one_event():
         assert response.status_code == 200
         result = response.json()
 
-        if tracardi.track_debug:
+        if  ThamesThrive .track_debug:
             assert result['event']['id'] == event_id
             assert result['event']['profile']['id'] == profile_id
         assert result['event']['properties'] == payload['events'][0]['properties']

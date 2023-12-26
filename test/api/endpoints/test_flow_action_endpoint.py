@@ -4,10 +4,10 @@ from uuid import uuid4
 
 from requests import Response
 
-from tracardi.domain.flow_action_plugin import FlowActionPlugin
-from tracardi.domain.metadata import Metadata
-from tracardi.domain.time import Time
-from tracardi.service.plugin.domain.register import Plugin, Spec, MetaData
+from  ThamesThrive .domain.flow_action_plugin import FlowActionPlugin
+from  ThamesThrive .domain.metadata import Metadata
+from  ThamesThrive .domain.time import Time
+from  ThamesThrive .service.plugin.domain.register import Plugin, Spec, MetaData
 from test.utils import Endpoint
 
 endpoint = Endpoint()

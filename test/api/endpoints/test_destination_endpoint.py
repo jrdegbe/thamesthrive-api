@@ -1,7 +1,7 @@
 import json
 
-from tracardi.domain.destination import DestinationConfig, Destination
-from tracardi.domain.resource import Resource
+from  ThamesThrive .domain.destination import DestinationConfig, Destination
+from  ThamesThrive .domain.resource import Resource
 from test.utils import Endpoint
 
 endpoint = Endpoint()
@@ -147,8 +147,8 @@ def test_should_return_destinations_types():
     response = endpoint.get(f'/destinations/type')
     assert response.status_code == 200
     result = response.json()
-    assert 'tracardi.process_engine.destination.http_connector.HttpConnector' in result.keys()
-    assert 'tracardi.process_engine.destination.mautic_connector.MauticConnector' in result.keys()
+    assert ' ThamesThrive .process_engine.destination.http_connector.HttpConnector' in result.keys()
+    assert ' ThamesThrive .process_engine.destination.mautic_connector.MauticConnector' in result.keys()
 
 
 def test_should_return_destinations_by_tag():
@@ -175,7 +175,7 @@ def test_should_return_destinations_resources():
         type='http',
         name="res1",
         credentials={},
-        destination=DestinationConfig(package='tracardi.process_engine.destination.http_connector.HttpConnector')
+        destination=DestinationConfig(package=' ThamesThrive .process_engine.destination.http_connector.HttpConnector')
     )
     response = endpoint.post('/resource', data=json.loads(resource.json()))
     assert response.status_code == 200
@@ -188,7 +188,7 @@ def test_should_return_destinations_resources():
         assert 'res1' in result
         assert result['res1']['id'] == 'res1'
         assert result['res1']['destination'][
-                   'package'] == 'tracardi.process_engine.destination.http_connector.HttpConnector'
+                   'package'] == ' ThamesThrive .process_engine.destination.http_connector.HttpConnector'
     finally:
         response = endpoint.delete(f'/destination/id1')
         assert response.status_code == 200

@@ -1,7 +1,7 @@
 import asyncio
 
-from tracardi.process_engine.tql.parser import Parser
-from tracardi.process_engine.tql.transformer.filter_transformer import FilterTransformer
+from  ThamesThrive .process_engine.tql.parser import Parser
+from  ThamesThrive .process_engine.tql.transformer.filter_transformer import FilterTransformer
 
 
 async def main():

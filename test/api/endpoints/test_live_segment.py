@@ -1,7 +1,7 @@
 from uuid import uuid4
 
 from test.utils import Endpoint
-from tracardi.domain.live_segment import LiveSegment
+from  ThamesThrive .domain.live_segment import LiveSegment
 
 endpoint = Endpoint()
 

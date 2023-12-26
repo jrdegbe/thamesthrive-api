@@ -35,7 +35,7 @@ def test_session_not_exists_profile_not_exists():
         if 'event' not in result:
             raise ValueError(
                 'Could not perform test due to bad server configuration. No debugging allowed. '
-                'Start Tracardi with TRACK_DEBUG=yes.')
+                'Start  ThamesThrive  with TRACK_DEBUG=yes.')
 
         assert result['session']['saved'] == 1
         assert result['event']['saved'] == 1
