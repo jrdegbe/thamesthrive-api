@@ -111,3 +111,4 @@ venv.bak/
 
 .run/
 /.env-docker
+.DS_Store
